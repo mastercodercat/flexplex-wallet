@@ -1,25 +1,14 @@
-<p align="center"><img src="https://i.imgur.com/a9QWW0v.png"></p>
+# Gameplex Wallet
 
-## Usage
+A Gaming Community Focused wallet with integrations with Unity and Unreal Engine. Uses a Secure backend infrastraucture to communicate with any application.
 
-### Create an App
+![](GameplexWallet.png)
 
-```
-# with npx
-$ npx create-nextron-app my-app --example with-typescript-tailwindcss
-
-# with yarn
-$ yarn create nextron-app my-app --example with-typescript-tailwindcss
-
-# with pnpx
-$ pnpx create-nextron-app my-app --example with-typescript-tailwindcss
-```
+## Getting started - Development
 
 ### Install Dependencies
 
 ```
-$ cd my-app
-
 # using yarn or npm
 $ yarn (or `npm install`)
 
@@ -27,7 +16,7 @@ $ yarn (or `npm install`)
 $ pnpm install --shamefully-hoist
 ```
 
-### Use it
+### Start
 
 ```
 # development mode
