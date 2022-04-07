@@ -1,7 +1,7 @@
 import { ComponentProps, FC } from 'react';
 import classNames from 'classnames';
 
-type Color = 'blue' | 'alternative' | 'dark' | 'light' | 'green' | 'red' | 'yellow' | 'purple';
+type Color = 'blue' | 'alternative' | 'dark' | 'light' | 'green' | 'red' | 'yellow' | 'purple' | 'custom';
 type GradientMonochrome = 'blue' | 'green' | 'cyan' | 'teal' | 'lime' | 'red' | 'pink' | 'purple';
 type GradientDuoTone =
   | 'purpleToBlue'
@@ -30,7 +30,7 @@ const colorClasses: Record<Color, string> = {
   blue: 'text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 disabled:hover:bg-blue-700 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800 dark:disabled:hover:bg-blue-600',
   alternative:
     'text-gray-900 bg-white border border-gray-200 hover:bg-gray-100 hover:text-blue-700 disabled:hover:bg-white focus:ring-blue-700 focus:text-blue-700 dark:bg-transparent dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700 focus:ring-2 dark:disabled:hover:bg-gray-800',
-  dark: 'text-white bg-gray-800 hover:bg-gray-900 focus:ring-4 focus:ring-gray-300 disabled:hover:bg-gray-800 dark:bg-gray-800 dark:hover:bg-gray-700 dark:focus:ring-gray-800 dark:border-gray-700 dark:disabled:hover:bg-gray-800',
+  dark: 'text-white bg-black hover:bg-gray-900 focus:ring-4 focus:ring-gray-300 disabled:hover:bg-gray-800 dark:bg-black dark:hover:bg-gray-700 dark:focus:ring-gray-800 dark:border-gray-700 dark:disabled:hover:bg-gray-800',
   light:
     'text-gray-900 bg-white border border-gray-300 hover:bg-gray-100 focus:ring-4 focus:ring-blue-300 disabled:hover:bg-white dark:bg-gray-600 dark:text-white dark:border-gray-600 dark:hover:bg-gray-700 dark:hover:border-gray-700 dark:focus:ring-gray-800 dark:disabled:hover:bg-gray-600',
   green:
@@ -40,6 +40,8 @@ const colorClasses: Record<Color, string> = {
     'text-white bg-yellow-400 hover:bg-yellow-500 focus:ring-4 focus:ring-yellow-300 disabled:hover:bg-yellow-400 dark:focus:ring-yellow-900 dark:disabled:hover:bg-yellow-400',
   purple:
     'text-white bg-purple-700 hover:bg-purple-800 focus:ring-4 focus:ring-purple-300 disabled:hover:bg-purple-700 dark:bg-purple-600 dark:hover:bg-purple-700 dark:focus:ring-purple-900 dark:disabled:hover:bg-purple-600',
+  custom:
+    'text-white bg-[#01B76B] hover:bg-[#008f53] focus:ring-4 focus:ring-[#00e083] disabled:hover:bg-[#01B76B] dark:bg-[#00c774] dark:hover:bg-[#01B76B] dark:focus:ring-[#008f53] dark:disabled:hover:bg-[#00c774]',
 };
 
 const gradientMonochromeClasses: Record<GradientMonochrome, string> = {
@@ -126,7 +128,7 @@ export const Button: FC<ButtonProps> = ({
     >
       <span
         className={classNames('flex items-center', sizeClasses[size], outline && pill ? 'rounded-full' : 'rounded-md', {
-          'bg-white text-gray-900 transition-all duration-75 ease-in group-hover:bg-opacity-0 group-hover:text-inherit dark:bg-gray-900 dark:text-white':
+          'bg-white text-[#121212] transition-all duration-75 ease-in group-hover:bg-opacity-0 group-hover:text-inherit dark:bg-[#121212] dark:text-white':
             outline,
           'rounded-r-none': positionInGroup === 'start',
           '!rounded-none': positionInGroup === 'middle',

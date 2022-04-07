@@ -4,6 +4,14 @@ import Link from 'next/link';
 import NavBar from '../components/NavBar';
 import MyCollection from "../components/MyCollection";
 
+
+const navigation = [
+  { name: 'My Collection', href: '/home', active: true },
+  { name: 'Swap', href: '/swap', active: false },
+  { name: 'Activity', href: '/activity', active: false },
+  { name: 'Settings', href: '/settings', active: false },
+]
+
 function Home() {
   return (
     <React.Fragment>
@@ -12,7 +20,7 @@ function Home() {
       </Head>
       <div className='w-full min-h-screen'>
         {/* Navbar */}
-        <NavBar></NavBar>
+        <NavBar navigation={navigation} showBrand={true}></NavBar>
 
         {/* Divider */}
         <div className='w-full h-px bg-[#272727]'></div>
