@@ -79,7 +79,7 @@ export default function ActivityView() {
                             <Button
                                 pill={true}
                                 outline={true}
-                                color="green"
+                                color="custom"
                             >
                                 7 Days
                             </Button>
@@ -87,7 +87,7 @@ export default function ActivityView() {
                             <Button
                                 pill={true}
                                 outline={true}
-                                color="green"
+                                color="custom"
                             >
                                 24 Days
                             </Button>
@@ -95,7 +95,7 @@ export default function ActivityView() {
                             <Button
                                 pill={true}
                                 outline={true}
-                                color="green"
+                                color="custom"
                             >
                                 30 Days
                             </Button>
