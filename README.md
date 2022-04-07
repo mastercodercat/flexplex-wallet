@@ -2,6 +2,8 @@
 
 A Gaming Community Focused wallet with integrations with Unity and Unreal Engine. Uses a Secure backend infrastraucture to communicate with any application.
 
+![](Banner.png)
+
 ![](GameplexWallet.png)
 
 ## Getting started - Development
