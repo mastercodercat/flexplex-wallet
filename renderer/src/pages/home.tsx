@@ -30,7 +30,9 @@ function Home() {
           {/* Left section */}
           <div className='w-full md:w-[30%]'>
             <div className='flex flex-col md:flex-row'>
-              <div className='w-full md:w-1/2'>Half</div>
+              <div className='mx-auto'>
+                Assets Side
+              </div>
             </div>
           </div>
 

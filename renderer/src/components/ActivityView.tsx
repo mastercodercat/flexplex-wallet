@@ -8,7 +8,7 @@ function classNames(...classes) {
   }
 
 export default function ActivityView() {
-    let [categories] = useState({
+    let [token_categories] = useState({
         Received: [
           {
             id: 1,
@@ -107,6 +107,104 @@ export default function ActivityView() {
         ],
       })
 
+      let [nft_categories] = useState({
+        Completed: [
+          {
+            id: 1,
+            amount: 'Received 2 SOL',
+            from: 'HZsBN4vygsuzDSFvqCcqna4QkFSdxBhyzFsSzSgXZVFW',
+            date: '5h ago',
+          },
+          {
+            id: 2,
+            amount: 'Received 2 SOL',
+            from: 'HZsBN4vygsuzDSFvqCcqna4QkFSdxBhyzFsSzSgXZVFW',
+            date: '5h ago',
+          },
+          {
+            id: 3,
+            amount: 'Received 2 SOL',
+            from: 'HZsBN4vygsuzDSFvqCcqna4QkFSdxBhyzFsSzSgXZVFW',
+            date: '5h ago',
+          },
+          {
+            id: 4,
+            amount: 'Received 2 SOL',
+            from: 'HZsBN4vygsuzDSFvqCcqna4QkFSdxBhyzFsSzSgXZVFW',
+            date: '5h ago',
+          },
+          {
+            id: 5,
+            amount: 'Received 2 SOL',
+            from: 'HZsBN4vygsuzDSFvqCcqna4QkFSdxBhyzFsSzSgXZVFW',
+            date: '5h ago',
+          },
+        ],
+        Pending: [
+          {
+            id: 1,
+            amount: 'Sent 2.5 SOL',
+            from: 'HZsBN4vygsuzDSFvqCcqna4QkFSdxBhyzFsSzSgXZVFW',
+            date: '5h ago',
+          },
+          {
+            id: 2,
+            amount: 'Sent 2.5 SOL',
+            from: 'HZsBN4vygsuzDSFvqCcqna4QkFSdxBhyzFsSzSgXZVFW',
+            date: '5h ago',
+          },
+          {
+            id: 3,
+            amount: 'Sent 2.5 SOL',
+            from: 'HZsBN4vygsuzDSFvqCcqna4QkFSdxBhyzFsSzSgXZVFW',
+            date: '5h ago',
+          },
+          {
+            id: 4,
+            amount: 'Sent 2.5 SOL',
+            from: 'HZsBN4vygsuzDSFvqCcqna4QkFSdxBhyzFsSzSgXZVFW',
+            date: '5h ago',
+          },
+          {
+            id: 5,
+            amount: 'Sent 2.5 SOL',
+            from: 'HZsBN4vygsuzDSFvqCcqna4QkFSdxBhyzFsSzSgXZVFW',
+            date: '5h ago',
+          },
+        ],
+        Cancelled: [
+          {
+            id: 1,
+            amount: 'Added 1 SOL',
+            from: 'HZsBN4vygsuzDSFvqCcqna4QkFSdxBhyzFsSzSgXZVFW',
+            date: '5h ago',
+          },
+          {
+            id: 2,
+            amount: 'Added 1 SOL',
+            from: 'HZsBN4vygsuzDSFvqCcqna4QkFSdxBhyzFsSzSgXZVFW',
+            date: '5h ago',
+          },
+          {
+            id: 3,
+            amount: 'Added 1 SOL',
+            from: 'HZsBN4vygsuzDSFvqCcqna4QkFSdxBhyzFsSzSgXZVFW',
+            date: '5h ago',
+          },
+          {
+            id: 4,
+            amount: 'Added 1 SOL',
+            from: 'HZsBN4vygsuzDSFvqCcqna4QkFSdxBhyzFsSzSgXZVFW',
+            date: '5h ago',
+          },
+          {
+            id: 5,
+            amount: 'Added 1 SOL',
+            from: 'HZsBN4vygsuzDSFvqCcqna4QkFSdxBhyzFsSzSgXZVFW',
+            date: '5h ago',
+          },
+        ],
+      })
       
     return (
         <div className="max-w-5xl mx-auto px-2 sm:px-6 lg:px-8">
@@ -155,12 +253,12 @@ export default function ActivityView() {
                   <div className="w-full px-2 py-8 sm:px-0">
                     <Tab.Group>
                       <Tab.List className="flex max-w-sm p-1 pb-0 space-x-1 bg-[#121212] rounded-xl">
-                        {Object.keys(categories).map((category) => (
+                        {Object.keys(token_categories).map((category) => (
                           <Tab
                             key={category}
                             className={({ selected }) =>
                               classNames(
-                                'w-full py-2.5 mb-0 text-sm leading-5 font-medium text-[#FAFAFA] inline-block rounded-t-lg',
+                                'w-full py-2.5 mb-0 text-sm leading-5 text-[#FAFAFA] inline-block rounded-t-lg',
                                 'focus:outline-none',
                                 selected
                                   ? 'text-black bg-gradient-to-r from-[#02FF63] to-[#01B76B] shadow'
@@ -175,7 +273,7 @@ export default function ActivityView() {
                       </Tab.List>
                       <Tab.Panels className="mt-0">
 
-                        {Object.values(categories).map((txs, idx) => (
+                        {Object.values(token_categories).map((txs, idx) => (
                           <Tab.Panel
                             key={idx}
                           >
@@ -222,12 +320,12 @@ export default function ActivityView() {
                   <div className="w-full px-2 py-8 sm:px-0">
                     <Tab.Group>
                       <Tab.List className="flex max-w-sm p-1 pb-0 space-x-1 bg-[#121212] rounded-xl">
-                        {Object.keys(categories).map((category) => (
+                        {Object.keys(nft_categories).map((category) => (
                           <Tab
                             key={category}
                             className={({ selected }) =>
                               classNames(
-                                'w-full py-2.5 mb-0 text-sm leading-5 font-medium text-[#FAFAFA] inline-block rounded-t-lg',
+                                'w-full py-2.5 mb-0 text-sm leading-5 text-[#FAFAFA] inline-block rounded-t-lg',
                                 'focus:outline-none',
                                 selected
                                   ? 'text-black bg-gradient-to-r from-[#02FF63] to-[#01B76B] shadow'
@@ -242,7 +340,7 @@ export default function ActivityView() {
                       </Tab.List>
                       <Tab.Panels className="mt-0">
 
-                        {Object.values(categories).map((txs, idx) => (
+                        {Object.values(nft_categories).map((txs, idx) => (
                           <Tab.Panel
                             key={idx}
                           >
