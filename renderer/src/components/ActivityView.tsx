@@ -9,165 +9,285 @@ function classNames(...classes) {
 
 export default function ActivityView() {
     let [categories] = useState({
-        Recent: [
+        Received: [
           {
             id: 1,
-            title: 'Does drinking coffee make you smarter?',
+            amount: 'Received 2 SOL',
+            from: 'HZsBN4vygsuzDSFvqCcqna4QkFSdxBhyzFsSzSgXZVFW',
             date: '5h ago',
-            commentCount: 5,
-            shareCount: 2,
           },
           {
             id: 2,
-            title: "So you've bought coffee... now what?",
-            date: '2h ago',
-            commentCount: 3,
-            shareCount: 2,
+            amount: 'Received 2 SOL',
+            from: 'HZsBN4vygsuzDSFvqCcqna4QkFSdxBhyzFsSzSgXZVFW',
+            date: '5h ago',
+          },
+          {
+            id: 3,
+            amount: 'Received 2 SOL',
+            from: 'HZsBN4vygsuzDSFvqCcqna4QkFSdxBhyzFsSzSgXZVFW',
+            date: '5h ago',
+          },
+          {
+            id: 4,
+            amount: 'Received 2 SOL',
+            from: 'HZsBN4vygsuzDSFvqCcqna4QkFSdxBhyzFsSzSgXZVFW',
+            date: '5h ago',
+          },
+          {
+            id: 5,
+            amount: 'Received 2 SOL',
+            from: 'HZsBN4vygsuzDSFvqCcqna4QkFSdxBhyzFsSzSgXZVFW',
+            date: '5h ago',
           },
         ],
-        Popular: [
+        Sent: [
           {
             id: 1,
-            title: 'Is tech making coffee better or worse?',
-            date: 'Jan 7',
-            commentCount: 29,
-            shareCount: 16,
+            amount: 'Sent 2.5 SOL',
+            from: 'HZsBN4vygsuzDSFvqCcqna4QkFSdxBhyzFsSzSgXZVFW',
+            date: '5h ago',
           },
           {
             id: 2,
-            title: 'The most innovative things happening in coffee',
-            date: 'Mar 19',
-            commentCount: 24,
-            shareCount: 12,
+            amount: 'Sent 2.5 SOL',
+            from: 'HZsBN4vygsuzDSFvqCcqna4QkFSdxBhyzFsSzSgXZVFW',
+            date: '5h ago',
+          },
+          {
+            id: 3,
+            amount: 'Sent 2.5 SOL',
+            from: 'HZsBN4vygsuzDSFvqCcqna4QkFSdxBhyzFsSzSgXZVFW',
+            date: '5h ago',
+          },
+          {
+            id: 4,
+            amount: 'Sent 2.5 SOL',
+            from: 'HZsBN4vygsuzDSFvqCcqna4QkFSdxBhyzFsSzSgXZVFW',
+            date: '5h ago',
+          },
+          {
+            id: 5,
+            amount: 'Sent 2.5 SOL',
+            from: 'HZsBN4vygsuzDSFvqCcqna4QkFSdxBhyzFsSzSgXZVFW',
+            date: '5h ago',
           },
         ],
-        Trending: [
+        Deposit: [
           {
             id: 1,
-            title: 'Ask Me Anything: 10 answers to your questions about coffee',
-            date: '2d ago',
-            commentCount: 9,
-            shareCount: 5,
+            amount: 'Added 1 SOL',
+            from: 'HZsBN4vygsuzDSFvqCcqna4QkFSdxBhyzFsSzSgXZVFW',
+            date: '5h ago',
           },
           {
             id: 2,
-            title: "The worst advice we've ever heard about coffee",
-            date: '4d ago',
-            commentCount: 1,
-            shareCount: 2,
+            amount: 'Added 1 SOL',
+            from: 'HZsBN4vygsuzDSFvqCcqna4QkFSdxBhyzFsSzSgXZVFW',
+            date: '5h ago',
+          },
+          {
+            id: 3,
+            amount: 'Added 1 SOL',
+            from: 'HZsBN4vygsuzDSFvqCcqna4QkFSdxBhyzFsSzSgXZVFW',
+            date: '5h ago',
+          },
+          {
+            id: 4,
+            amount: 'Added 1 SOL',
+            from: 'HZsBN4vygsuzDSFvqCcqna4QkFSdxBhyzFsSzSgXZVFW',
+            date: '5h ago',
+          },
+          {
+            id: 5,
+            amount: 'Added 1 SOL',
+            from: 'HZsBN4vygsuzDSFvqCcqna4QkFSdxBhyzFsSzSgXZVFW',
+            date: '5h ago',
           },
         ],
       })
 
       
     return (
-        <div className="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8">
-            <div className='flex flex-col md:flex-row'>
-                {/* // Filter Area */}
-                <div className="w-full h-16 flex flex-col md:flex-row">
-                    <div className="grow"></div>
+        <div className="max-w-5xl mx-auto px-2 sm:px-6 lg:px-8">
 
-                    {/* Tab Area */}
-
-                    
-
-                    <div className="grow"></div>
-
-                    {/* Button Area */}
-                    <div className="flex-none mr-10">
-                        <div className="flex flex-col gap-x-4 py-[0.75rem] md:flex-row justify-center">
-                            <Button
-                                pill={true}
-                                outline={true}
-                                color="custom"
-                            >
-                                7 Days
-                            </Button>
-
-                            <Button
-                                pill={true}
-                                outline={true}
-                                color="custom"
-                            >
-                                24 Days
-                            </Button>
-
-                            <Button
-                                pill={true}
-                                outline={true}
-                                color="custom"
-                            >
-                                30 Days
-                            </Button>
-                        </div>
-                    </div>
-                </div>
-
-
-                <div className="w-full max-w-md px-2 py-16 sm:px-0">
-      <Tab.Group>
-        <Tab.List className="flex p-1 space-x-1 bg-blue-900/20 rounded-xl">
-          {Object.keys(categories).map((category) => (
-            <Tab
-              key={category}
-              className={({ selected }) =>
-                classNames(
-                  'w-full py-2.5 text-sm leading-5 font-medium text-blue-700 rounded-lg',
-                  'focus:outline-none focus:ring-2 ring-offset-2 ring-offset-blue-400 ring-white ring-opacity-60',
-                  selected
-                    ? 'bg-white shadow'
-                    : 'text-blue-100 hover:bg-white/[0.12] hover:text-white'
-                )
-              }
-            >
-              {category}
-            </Tab>
-          ))}
-        </Tab.List>
-        <Tab.Panels className="mt-2">
-          {Object.values(categories).map((posts, idx) => (
-            <Tab.Panel
-              key={idx}
-              className={classNames(
-                'bg-white rounded-xl p-3',
-                'focus:outline-none focus:ring-2 ring-offset-2 ring-offset-blue-400 ring-white ring-opacity-60'
-              )}
-            >
-              <ul>
-                {posts.map((post) => (
-                  <li
-                    key={post.id}
-                    className="relative p-3 rounded-md hover:bg-gray-100"
+          {/* Tabs - Token | NFT */}
+          <div className="w-full px-2 py-8 mx-auto sm:px-0">
+            <Tab.Group>
+              <Tab.List className="flex max-w-md mx-auto p-1 space-x-1 bg-[#232323] rounded-xl">
+                {/* Token */}
+                <Tab
+                    key="Token"
+                    className={({ selected }) =>
+                      classNames(
+                        'w-full py-2.5 text-sm leading-5 font-medium text-[#FAFAFA] rounded-lg',
+                        'focus:outline-none',
+                        selected
+                          ? 'text-white bg-gradient-to-r from-[#6A00FF] to-[#3C00B7] shadow'
+                          : 'text-[#FAFAFA] hover:bg-white/[0.12] hover:text-[#FAFAFA]'
+                      )
+                    }
                   >
-                    <h3 className="text-sm font-medium leading-5">
-                      {post.title}
-                    </h3>
+                    Token
+                  </Tab>
 
-                    <ul className="flex mt-1 space-x-1 text-xs font-normal leading-4 text-gray-500">
-                      <li>{post.date}</li>
-                      <li>&middot;</li>
-                      <li>{post.commentCount} comments</li>
-                      <li>&middot;</li>
-                      <li>{post.shareCount} shares</li>
-                    </ul>
+                  {/* NFT */}
+                  <Tab
+                    key="NFT"
+                    className={({ selected }) =>
+                      classNames(
+                        'w-full py-2.5 text-sm leading-5 font-medium text-[#FAFAFA] rounded-lg',
+                        'focus:outline-none',
+                        selected
+                          ? 'text-white bg-gradient-to-r from-[#6A00FF] to-[#3C00B7] shadow'
+                          : 'text-[#FAFAFA] hover:bg-white/[0.12] hover:text-[#FAFAFA]'
+                      )
+                    }
+                  >
+                    NFT
+                  </Tab>
 
-                    <a
-                      href="#"
-                      className={classNames(
-                        'absolute inset-0 rounded-md',
-                        'focus:z-10 focus:outline-none focus:ring-2 ring-blue-400'
-                      )}
-                    />
-                  </li>
-                ))}
-              </ul>
-            </Tab.Panel>
-          ))}
-        </Tab.Panels>
-      </Tab.Group>
-    </div>
+                </Tab.List>
+              <Tab.Panels className="mt-2">
 
-            </div>
-        </div>
+                {/* Token Tab Content */}
+                <Tab.Panel>
+                  <div className="w-full px-2 py-8 sm:px-0">
+                    <Tab.Group>
+                      <Tab.List className="flex max-w-sm p-1 pb-0 space-x-1 bg-[#121212] rounded-xl">
+                        {Object.keys(categories).map((category) => (
+                          <Tab
+                            key={category}
+                            className={({ selected }) =>
+                              classNames(
+                                'w-full py-2.5 mb-0 text-sm leading-5 font-medium text-[#FAFAFA] inline-block rounded-t-lg',
+                                'focus:outline-none',
+                                selected
+                                  ? 'text-black bg-gradient-to-r from-[#02FF63] to-[#01B76B] shadow'
+                                  : 'text-[#FAFAFA] hover:bg-white/[0.12] hover:text-[#FAFAFA]'
+                              )
+                            }
+                          >
+                            {category}
+                          </Tab>
+                        ))}
+                        
+                      </Tab.List>
+                      <Tab.Panels className="mt-0">
+
+                        {Object.values(categories).map((txs, idx) => (
+                          <Tab.Panel
+                            key={idx}
+                          >
+                            <div className="flex flex-col gap-y-4">
+                              {txs.map((tx) => (
+                                <div className="bg-[#1E1E1E] px-16 py-4 rounded-xl">
+                                  <div className="flex flex-row">
+
+                                    <div className="flex flex-col">
+                                      <div className="text-xs text-white/40 p-0.5">Amount</div>
+                                      <div className="text-sm text-white p-0.5">{tx.amount}</div>
+                                    </div>
+
+                                    <div className="grow"></div>
+
+                                    <div className="flex flex-col">
+                                      <div className="text-xs text-white/40 p-0.5">From</div>
+                                      <div className="text-sm text-white p-0.5">{tx.from}</div>
+                                    </div>
+
+                                    <div className="grow"></div>
+
+                                    <div className="flex flex-col">
+                                      <div className="text-xs text-white/40 p-0.5">Date</div>
+                                      <div className="text-sm text-white p-0.5">{tx.date}</div>
+                                    </div>
+
+                                  </div>
+                                </div>
+                              ))}
+
+                            </div>
+                          </Tab.Panel>
+                        ))} 
+
+                      </Tab.Panels>
+                    </Tab.Group>
+                  </div>
+
+                </Tab.Panel>
+
+                {/* NFT Tab Content */}
+                <Tab.Panel>
+                  <div className="w-full px-2 py-8 sm:px-0">
+                    <Tab.Group>
+                      <Tab.List className="flex max-w-sm p-1 pb-0 space-x-1 bg-[#121212] rounded-xl">
+                        {Object.keys(categories).map((category) => (
+                          <Tab
+                            key={category}
+                            className={({ selected }) =>
+                              classNames(
+                                'w-full py-2.5 mb-0 text-sm leading-5 font-medium text-[#FAFAFA] inline-block rounded-t-lg',
+                                'focus:outline-none',
+                                selected
+                                  ? 'text-black bg-gradient-to-r from-[#02FF63] to-[#01B76B] shadow'
+                                  : 'text-[#FAFAFA] hover:bg-white/[0.12] hover:text-[#FAFAFA]'
+                              )
+                            }
+                          >
+                            {category}
+                          </Tab>
+                        ))}
+                        
+                      </Tab.List>
+                      <Tab.Panels className="mt-0">
+
+                        {Object.values(categories).map((txs, idx) => (
+                          <Tab.Panel
+                            key={idx}
+                          >
+                            <div className="flex flex-col gap-y-4">
+                              {txs.map((tx) => (
+                                <div className="bg-[#1E1E1E] px-16 py-4 rounded-xl">
+                                  <div className="flex flex-row">
+
+                                    <div className="flex flex-col">
+                                      <div className="text-xs text-white/40 p-0.5">Amount</div>
+                                      <div className="text-sm text-white p-0.5">{tx.amount}</div>
+                                    </div>
+
+                                    <div className="grow"></div>
+
+                                    <div className="flex flex-col">
+                                      <div className="text-xs text-white/40 p-0.5">From</div>
+                                      <div className="text-sm text-white p-0.5">{tx.from}</div>
+                                    </div>
+
+                                    <div className="grow"></div>
+
+                                    <div className="flex flex-col">
+                                      <div className="text-xs text-white/40 p-0.5">Date</div>
+                                      <div className="text-sm text-white p-0.5">{tx.date}</div>
+                                    </div>
+
+                                  </div>
+                                </div>
+                              ))}
+
+                            </div>
+                          </Tab.Panel>
+                        ))} 
+
+                      </Tab.Panels>
+                    </Tab.Group>
+                  </div>
+
+                </Tab.Panel>
+
+              </Tab.Panels>
+            </Tab.Group>
+          </div>
+
+      </div>
     );
 }

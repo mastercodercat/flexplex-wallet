@@ -5,10 +5,12 @@
 /* Start purging... */
 @tailwind components;
 /* Stop purging. */
+@import url('https://fonts.googleapis.com/css2?family=Rubik&display=swap');
 
 html,
 body {
   @apply bg-[#121212] text-white;
+  font-family: 'Rubik', sans-serif;
 }
 
 /* Write your own custom component styles here */
