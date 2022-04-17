@@ -75,6 +75,9 @@ export default (windowName: string, options: BrowserWindowConstructorOptions): B
       contextIsolation: false,
       ...options.webPreferences,
     },
+    titleBarStyle: 'hidden',
+    frame: false,
+    trafficLightPosition: { x: 10, y: 10 },
   };
   win = new BrowserWindow(browserOptions);
 
