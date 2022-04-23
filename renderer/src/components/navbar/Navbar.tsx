@@ -19,13 +19,13 @@ const NavbarComponent: FC<NavbarCompnentProps> = ({ children, menuOpen, fluid, r
   return (
     <NavbarContext.Provider value={{ isOpen, setIsOpen }}>
       <nav
-        className={classNames('border-gray-200 bg-white shadow-md px-2 py-2.5 dark:border-gray-500 dark:bg-[#121212] sm:px-4', {
+        className={classNames('border-gray-200 shadow-md px-2 py-2.5 dark:border-[#1e1e1e] bg-[#1e1e1e] sm:px-4 pt-3', {
           rounded: rounded,
           border: border,
         })}
       >
         <div
-          className={classNames('mx-auto flex flex-wrap items-center justify-between', {
+          className={classNames('mx-auto flex flex-wrap items-center pl-6', {
             container: !fluid,
           })}
         >

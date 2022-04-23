@@ -8,6 +8,8 @@ import MyCollection from "../components/MyCollection";
 const navigation = [
   { name: 'My Collection', href: '/home', active: true },
   { name: 'Swap', href: '/swap', active: false },
+  { name: 'Login', href: '/login', active: false },
+  { name: 'D2', href: '/dashboard2', active: false },
   { name: 'Activity', href: '/activity', active: false },
   { name: 'Settings', href: '/settings', active: false },
 ]
@@ -17,30 +19,101 @@ function Home() {
     <React.Fragment>
       <Head>
         <title>Gameplex</title>
+
       </Head>
-      <div className='w-full min-h-screen'>
+      <div className='h-[100vh] bg-[#1e1e1e]'>
+
+
         {/* Navbar */}
         <NavBar navigation={navigation} showBrand={true}></NavBar>
-
-        {/* Divider */}
-        <div className='w-full h-px bg-[#272727]'></div>
-
         {/* Divide into two sections */}
-        <div className='flex flex-col md:flex-row'>
+        <div className='flex flex-col md:flex-row mx-3 mt-0 pb-3 '>
           {/* Left section */}
-          <div className='w-full md:w-[30%]'>
-            <div className='flex flex-col md:flex-row'>
-              <div className='mx-auto'>
-                Assets Side
+          <div className='w-full lg:w-[30%] min-w-[396px] md:w-[40%] bg-[#121212] rounded-l-xl'>
+            <div className='m-4 bg-[#1e1e1e] rounded-xl'>
+              <div className='mx-auto h-[87vh] overflow-y-auto no-scrollbar'>
+                <div className='card p-3 w-100 bg-[#232323] border-[#383838] border-2 rounded-xl'>
+
+                  <div className="flex justify-start">
+                    <img className='w-20 h-20 rounded-xl mx-auto' src="/images/nft.jpg" alt="" />
+                    <div className='ml-2'>
+                      <h1 className='text-sm mb-2 font-normal flex'>
+                        Wallet 1:&nbsp;&nbsp;<span className='font-light text-sm text-[#FFFFFF99]'>B3r4…THEL</span>&nbsp;<span className="logged-in text-[#FF5C59]">●</span><span className="logged-in text-[#01DB6A]">●</span><span className="ml-5"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" viewBox="0 0 16 16">
+                          <path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z" />
+                        </svg></span>
+                      </h1>
+                      <h1 className='text-lg font-semibold'>
+                        <span className='text-xs opacity-40 font-normal'>Balance</span> <br />
+                        $ 17.890.894,24 <span className='text-[#01DB6A] text-xs px-3 py-2 rounded-xl'>+7.30%</span><span className='text-[#FF5C59] text-xs'>-$0.57</span>
+                      </h1>
+                    </div>
+                  </div>
+                  <div className="grid grid-cols-2 gap-1 content-center px-3">
+                    <button className="focus:outline-none h-11 text-white border-[#383838] border-2 bg-[#2c2c2c] flex-auto transition ease-out hover:-translate-y-1 hover:scale-100 delay-150 focus:ring-4 hover:shadow-lg font-normal rounded-xl text-md py-2 mx-2 mt-5" type="submit">
+                      <span className='inline-flex content-center'>
+
+                        <svg id="import" xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24">
+                          <path id="Vector" d="M0,0,2.56,2.56,5.12,0" transform="translate(9.32 11.68)" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" />
+                          <path id="Vector-2" data-name="Vector" d="M0,0V10.17" transform="translate(11.88 4)" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" />
+                          <path id="Vector-3" data-name="Vector" d="M16,0A7.651,7.651,0,0,1,8,8,7.651,7.651,0,0,1,0,0" transform="translate(4 12.18)" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" />
+                          <path id="Vector-4" data-name="Vector" d="M0,0H24V24H0Z" transform="translate(24 24) rotate(180)" fill="none" opacity="0" />
+                        </svg>
+                        &nbsp;&nbsp;Deposit</span>
+                    </button>
+                    <button className="focus:outline-none h-11 text-white border-[#383838] border-2 bg-[#2c2c2c] flex-auto transition ease-out hover:-translate-y-1 hover:scale-100 delay-150 focus:ring-4 hover:shadow-lg font-normal rounded-xl text-md py-2 mx-2 mt-5" type="submit">
+                      <span className='inline-flex content-center'><svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24">
+                        <g id="vuesax_linear_export" data-name="vuesax/linear/export" transform="translate(-492 -444)">
+                          <g id="export">
+                            <path id="Vector-5" d="M0,2.56,2.56,0,5.12,2.56" transform="translate(501.32 447.94)" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" />
+                            <path id="Vector-6" data-name="Vector" d="M0,10.17V0" transform="translate(503.88 448.01)" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" />
+                            <path id="Vector-7" data-name="Vector" d="M0,0A7.651,7.651,0,0,0,8,8a7.651,7.651,0,0,0,8-8" transform="translate(496 456)" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" />
+                            <path id="Vector-8" data-name="Vector" d="M0,0H24V24H0Z" transform="translate(516 468) rotate(180)" fill="none" opacity="0" />
+                          </g>
+                        </g>
+                      </svg>
+
+                        &nbsp;&nbsp;Send</span>
+                    </button>
+                  </div>
+                </div>
+                <h1 className='m-3 text-md mt-5 font-semibold'>Assets</h1>
+                <div className='w-full py-1 px-3'>
+                  <div className=' overflow-y-auto'>
+                    <div className='card cursor-pointer flex w-full bg-[#232323] border-2 border-[#383838] rounded-xl px-3 py-2 mb-3'>
+                      <img src="/images/nft.jpg" alt="" className="w-12 h-12 rounded-full" />
+                      <h1 className='ml-2'><span className='text-md font-normal '>Avalanche</span>                     <br />
+                        <span className='opacity-40 font-thin text-sm'>AVAX</span></h1>
+                      <h1 className=' text-right w-full'><span className='text-lg font-bold'>790</span>                     <br />
+                        <span className='opacity-40 font-normal text-sm'>$ 65,993.29</span>&nbsp;&nbsp;&nbsp;<span className='text-[#01DB6A] font-bold text-sm'>+ 16%</span></h1>
+                    </div>
+                    <div className='card cursor-pointer flex w-full bg-[#232323] border-2 border-[#383838] rounded-xl px-3 py-2 mb-3'>
+                      <img src="/images/nft.jpg" alt="" className="w-12 h-12 rounded-full" />
+                      <h1 className='ml-2'><span className='text-md font-normal '>Avalanche</span>                     <br />
+                        <span className='opacity-40 font-thin text-sm'>AVAX</span></h1>
+                      <h1 className='text-right w-full'><span className='text-lg font-bold'>790</span>                     <br />
+                        <span className='opacity-40 font-normal text-sm'>$ 65,993.29</span>&nbsp;&nbsp;&nbsp;<span className='text-[#01DB6A] font-bold text-sm'>+ 16%</span></h1>
+                    </div>
+                    <div className='card cursor-pointer flex w-full bg-[#232323] border-2 border-[#383838] rounded-xl px-3 py-2 mb-3'>
+                      <img src="/images/nft.jpg" alt="" className="w-12 h-12 rounded-full" />
+                      <h1 className='ml-2'><span className='text-md font-normal '>Avalanche</span>                     <br />
+                        <span className='opacity-40 font-thin text-sm'>AVAX</span></h1>
+                      <h1 className='text-right w-full'><span className='text-lg font-bold'>790</span>                     <br />
+                        <span className='opacity-40 font-normal text-sm'>$ 65,993.29</span>&nbsp;&nbsp;&nbsp;<span className='text-[#01DB6A] font-bold text-sm'>+ 16%</span></h1>
+                    </div>
+                    <div className='card cursor-pointer flex w-full bg-[#232323] border-2 border-[#383838] rounded-xl px-3 py-2 mb-3'>
+                      <img src="/images/nft.jpg" alt="" className="w-12 h-12 rounded-full" />
+                      <h1 className='ml-2'><span className='text-md font-normal '>Avalanche</span>                     <br />
+                        <span className='opacity-40 font-thin text-sm'>AVAX</span></h1>
+                      <h1 className='text-right w-full'><span className='text-lg font-bold'>790</span>                     <br />
+                        <span className='opacity-40 font-normal text-sm'>$ 65,993.29</span>&nbsp;&nbsp;&nbsp;<span className='text-[#01DB6A] font-bold text-sm'>+ 16%</span></h1>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
-
-          {/* Divider */}
-          <div className='w-px min-h-screen bg-[#272727]'></div>
-
           {/* Right section */}
-          <div className='w-full md:w-[70%]'>
+          <div className='w-full lg:w-[70%] md:w-[60%] mx-auto bg-[#121212] rounded-r-xl'>
             {/* Grid of Cards */}
             <MyCollection Collection={[]}></MyCollection>
           </div>

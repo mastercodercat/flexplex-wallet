@@ -18,7 +18,7 @@ function Swap() {
       </Head>
       <div className='w-full min-h-screen'>
           {/* Navbar */}
-          <NavBar navigation={navigation} showBrand={false}></NavBar>
+          <NavBar navigation={navigation} showBrand={true}></NavBar>
 
           {/* Divider */}
           <div className='w-full h-px bg-[#272727]'></div>

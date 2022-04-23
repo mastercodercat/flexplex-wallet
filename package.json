@@ -26,6 +26,7 @@
     "@types/node": "^14.14.31",
     "@types/react": "^17.0.0",
     "autoprefixer": "^10.4.4",
+    "classnames": "^2.3.1",
     "electron": "^17.1.2",
     "electron-builder": "23.0.2",
     "flowbite": "^1.4.1",
