@@ -1,11 +1,6 @@
-import { Button } from "./Button";
 import { Tab } from '@headlessui/react'
 import { useState } from 'react'
-
-
-function classNames(...classes) {
-    return classes.filter(Boolean).join(' ')
-  }
+import classnames from "classnames";
 
 export default function ActivityView() {
     let [token_categories] = useState({
@@ -217,7 +212,7 @@ export default function ActivityView() {
                 <Tab
                     key="Token"
                     className={({ selected }) =>
-                      classNames(
+                      classnames(
                         'w-full py-2.5 text-sm leading-5 font-medium text-[#FAFAFA] rounded-lg',
                         'focus:outline-none',
                         selected
@@ -233,7 +228,7 @@ export default function ActivityView() {
                   <Tab
                     key="NFT"
                     className={({ selected }) =>
-                      classNames(
+                      classnames(
                         'w-full py-2.5 text-sm leading-5 font-medium text-[#FAFAFA] rounded-lg',
                         'focus:outline-none',
                         selected
@@ -257,7 +252,7 @@ export default function ActivityView() {
                           <Tab
                             key={category}
                             className={({ selected }) =>
-                              classNames(
+                              classnames(
                                 'w-full py-2.5 mb-0 text-sm leading-5 text-[#FAFAFA] inline-block rounded-t-lg',
                                 'focus:outline-none',
                                 selected
@@ -324,7 +319,7 @@ export default function ActivityView() {
                           <Tab
                             key={category}
                             className={({ selected }) =>
-                              classNames(
+                              classnames(
                                 'w-full py-2.5 mb-0 text-sm leading-5 text-[#FAFAFA] inline-block rounded-t-lg',
                                 'focus:outline-none',
                                 selected

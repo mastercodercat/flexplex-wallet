@@ -2,11 +2,10 @@ import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
 import NavBar from '../components/NavBar';
-import ActivityView from '../components/ActivityView';
+import ActivityView from '../views/activityView';
 
 const navigation = [
     { name: 'My Collection', href: '/home', active: false },
-    { name: 'Swap', href: '/swap', active: false },
     { name: 'Activity', href: '/activity', active: true },
     { name: 'Settings', href: '/settings', active: false },
   ]
