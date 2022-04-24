@@ -35,7 +35,7 @@ function CollectionDetailsView() {
                         &nbsp; <span className='pt-2 w-full text-lg'>About Bizarre Platypus Gang</span>
                         <span className='m-2'><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
                         <g id="arrow-down" transform="translate(-236 -252)">
-                            <path id="Vectorx" d="M15.84,0,9.32,6.52a1.986,1.986,0,0,1-2.8,0L0,0" transform="translate(240.08 260.95)" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" strokeWidth="1.5" />
+                            <path id="Vectorx" d="M15.84,0,9.32,6.52a1.986,1.986,0,0,1-2.8,0L0,0" transform="translate(240.08 260.95)" fill="none" stroke="#fff" strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" />
                             <path id="Vectorxx" data-name="Vector" d="M0,0H24V24H0Z" transform="translate(260 276) rotate(180)" fill="none" opacity="0" />
                         </g>
                         </svg>
@@ -61,9 +61,9 @@ function CollectionDetailsView() {
                 <span className='float-right'><button title="search" className="h-10 w-10 mx-2 text-white rounded-lg bg-[#1e1e1e] hover:text-[#212121] border-[#383838] border-2 px-[10px]">
                     <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24">
                     <g id="rotate-left" transform="translate(-236 -316)">
-                        <path id="Vector" d="M5.78.43A10.019,10.019,0,0,1,8.67,0,8.663,8.663,0,1,1,1.46,3.85" transform="translate(239.33 320.65)" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" strokeWidth="1.5" />
-                        <path id="Vector-2" data-name="Vector" d="M0,3.32,2.89,0" transform="translate(243.87 318)" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" strokeWidth="1.5" />
-                        <path id="Vector-3" data-name="Vector" d="M0,0,3.37,2.46" transform="translate(243.87 321.32)" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" strokeWidth="1.5" />
+                        <path id="Vector" d="M5.78.43A10.019,10.019,0,0,1,8.67,0,8.663,8.663,0,1,1,1.46,3.85" transform="translate(239.33 320.65)" fill="none" stroke="#fff" strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" />
+                        <path id="Vector-2" data-name="Vector" d="M0,3.32,2.89,0" transform="translate(243.87 318)" fill="none" stroke="#fff" strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" />
+                        <path id="Vector-3" data-name="Vector" d="M0,0,3.37,2.46" transform="translate(243.87 321.32)" fill="none" stroke="#fff" strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" />
                         <path id="Vector-4" data-name="Vector" d="M0,0H24V24H0Z" transform="translate(260 340) rotate(180)" fill="none" opacity="0" />
                     </g>
                     </svg>
@@ -72,8 +72,8 @@ function CollectionDetailsView() {
                     <button title="search" className="h-10 w-10 mx-2 text-white rounded-lg bg-[#1e1e1e] border-[#383838] hover:text-[#212121] border px-[10px]">
                     <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24">
                         <g id="send" transform="translate(-236 -316)">
-                        <path id="Vector-5" d="M6.46,1.229l8.56,4.28c3.84,1.92,3.84,5.06,0,6.98l-8.56,4.28c-5.76,2.88-8.11.52-5.23-5.23l.87-1.73a2.046,2.046,0,0,0,0-1.61l-.87-1.74C-1.65.709.71-1.651,6.46,1.229Z" transform="translate(239.05 319.001)" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" strokeWidth="1.5" />
-                        <path id="Vector-6" data-name="Vector" d="M0,0H5.4" transform="translate(241.44 328)" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" strokeWidth="1.5" />
+                        <path id="Vector-5" d="M6.46,1.229l8.56,4.28c3.84,1.92,3.84,5.06,0,6.98l-8.56,4.28c-5.76,2.88-8.11.52-5.23-5.23l.87-1.73a2.046,2.046,0,0,0,0-1.61l-.87-1.74C-1.65.709.71-1.651,6.46,1.229Z" transform="translate(239.05 319.001)" fill="none" stroke="#fff" strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" />
+                        <path id="Vector-6" data-name="Vector" d="M0,0H5.4" transform="translate(241.44 328)" fill="none" stroke="#fff" strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" />
                         <path id="Vector-7" data-name="Vector" d="M0,0H24V24H0Z" transform="translate(236 316)" fill="none" opacity="0" />
                         </g>
                     </svg>
@@ -82,9 +82,9 @@ function CollectionDetailsView() {
                     <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24">
                         <g id="vuesax_linear_export" data-name="vuesax/linear/export" transform="translate(-492 -444)">
                         <g id="export">
-                            <path id="Vector-8" d="M0,2.56,2.56,0,5.12,2.56" transform="translate(501.32 447.94)" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" strokeWidth="1.5" />
-                            <path id="Vector-9" data-name="Vector" d="M0,10.17V0" transform="translate(503.88 448.01)" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" strokeWidth="1.5" />
-                            <path id="Vector-10" data-name="Vector" d="M0,0A7.651,7.651,0,0,0,8,8a7.651,7.651,0,0,0,8-8" transform="translate(496 456)" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" strokeWidth="1.5" />
+                            <path id="Vector-8" d="M0,2.56,2.56,0,5.12,2.56" transform="translate(501.32 447.94)" fill="none" stroke="#fff" strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" />
+                            <path id="Vector-9" data-name="Vector" d="M0,10.17V0" transform="translate(503.88 448.01)" fill="none" stroke="#fff" strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" />
+                            <path id="Vector-10" data-name="Vector" d="M0,0A7.651,7.651,0,0,0,8,8a7.651,7.651,0,0,0,8-8" transform="translate(496 456)" fill="none" stroke="#fff" strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" />
                             <path id="Vector-11" data-name="Vector" d="M0,0H24V24H0Z" transform="translate(516 468) rotate(180)" fill="none" opacity="0" />
                         </g>
                         </g>
@@ -121,7 +121,7 @@ function CollectionDetailsView() {
                     &nbsp; <span className='pt-2 w-full text-lg'>Details</span>
                     <span className='m-2'><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
                         <g id="arrow-down" transform="translate(-236 -252)">
-                        <path id="Vectorx" d="M15.84,0,9.32,6.52a1.986,1.986,0,0,1-2.8,0L0,0" transform="translate(240.08 260.95)" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" strokeWidth="1.5" />
+                        <path id="Vectorx" d="M15.84,0,9.32,6.52a1.986,1.986,0,0,1-2.8,0L0,0" transform="translate(240.08 260.95)" fill="none" stroke="#fff" strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" />
                         <path id="Vectorxx" data-name="Vector" d="M0,0H24V24H0Z" transform="translate(260 276) rotate(180)" fill="none" opacity="0" />
                         </g>
                     </svg>
@@ -180,7 +180,7 @@ function CollectionDetailsView() {
                     &nbsp; <span className='pt-2 w-full text-lg'>Attributes</span>
                     <span className='m-2'><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
                         <g id="arrow-down" transform="translate(-236 -252)">
-                        <path id="Vectorx" d="M15.84,0,9.32,6.52a1.986,1.986,0,0,1-2.8,0L0,0" transform="translate(240.08 260.95)" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" strokeWidth="1.5" />
+                        <path id="Vectorx" d="M15.84,0,9.32,6.52a1.986,1.986,0,0,1-2.8,0L0,0" transform="translate(240.08 260.95)" fill="none" stroke="#fff" strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" />
                         <path id="Vectorxx" data-name="Vector" d="M0,0H24V24H0Z" transform="translate(260 276) rotate(180)" fill="none" opacity="0" />
                         </g>
                     </svg>
@@ -254,7 +254,7 @@ function CollectionDetailsView() {
                         &nbsp; <span className='pt-2 w-full text-lg'>Activities</span>
                         <span className='m-2'><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
                         <g id="arrow-down" transform="translate(-236 -252)">
-                            <path id="Vectorx" d="M15.84,0,9.32,6.52a1.986,1.986,0,0,1-2.8,0L0,0" transform="translate(240.08 260.95)" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" strokeWidth="1.5" />
+                            <path id="Vectorx" d="M15.84,0,9.32,6.52a1.986,1.986,0,0,1-2.8,0L0,0" transform="translate(240.08 260.95)" fill="none" stroke="#fff" strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" />
                             <path id="Vectorxx" data-name="Vector" d="M0,0H24V24H0Z" transform="translate(260 276) rotate(180)" fill="none" opacity="0" />
                         </g>
                         </svg>
@@ -322,7 +322,7 @@ function CollectionDetailsView() {
                         &nbsp; <span className='pt-2 w-full text-lg'>Activities</span>
                         <span className='m-2'><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
                         <g id="arrow-down" transform="translate(-236 -252)">
-                            <path id="Vectorx" d="M15.84,0,9.32,6.52a1.986,1.986,0,0,1-2.8,0L0,0" transform="translate(240.08 260.95)" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" strokeWidth="1.5" />
+                            <path id="Vectorx" d="M15.84,0,9.32,6.52a1.986,1.986,0,0,1-2.8,0L0,0" transform="translate(240.08 260.95)" fill="none" stroke="#fff" strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" />
                             <path id="Vectorxx" data-name="Vector" d="M0,0H24V24H0Z" transform="translate(260 276) rotate(180)" fill="none" opacity="0" />
                         </g>
                         </svg>

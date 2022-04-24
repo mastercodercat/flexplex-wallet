@@ -77,8 +77,8 @@ function Home() {
             <AssetsView profileImage={"/images/nfts/"+ randomIntFromInterval(1, 21) +".webp"} 
               walletAddress={"EP8YfUCpbbLVL3zZUZmDWPboFSjpYaSUYYXKc2HRjft9"} 
               walletBalance={"10,000"} 
-              walletBalanceChange={1000.0} 
-              walletBalancePercentChange={10.0} 
+              walletBalanceChange={randomIntFromInterval(-10000, 10000)} 
+              walletBalancePercentChange={randomIntFromInterval(-10.0, 10.0)} 
               assets={assets} onAssetClick={() => {}}></AssetsView>
           </div>
           {/* Right section */}
@@ -90,7 +90,7 @@ function Home() {
 
         {/* Collection Details View */}
         {/* <CollectionDetailsView></CollectionDetailsView> */}
-        
+
       </div>
     </React.Fragment>
   );

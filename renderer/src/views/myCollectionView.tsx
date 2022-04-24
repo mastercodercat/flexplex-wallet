@@ -37,8 +37,8 @@ function FilterSearch({filterOptions}) {
         <div className="flex justify-end items-center mr-3 w-1/2">
             <div className="relative">
                 <div className="static top-5 left-3">
-                    <select className="absolute top-5 h-10 text-white rounded-l-xl focus:outline-none bg-[#313131] border-[#383838] left-0" title="search" name="cars" id="cars">
-                        <option value="volvo" disabled selected>All Filters</option>
+                    <select defaultValue={'DEFAULT'} className="absolute top-5 h-10 text-white rounded-l-xl focus:outline-none bg-[#313131] border-[#383838] left-0" title="search" name="filters" id="filters">
+                        <option value="DEFAULT" disabled>All Filters</option>
                         <option value="saab">Saab</option>
                         <option value="opel">Opel</option>
                         <option value="audi">Audi</option>
