@@ -57,6 +57,7 @@ const collections = [
   {name:"Bizarre Platypus", description:"We came from Cyrus to change the World. Bizarre Platypus is a Collection based on…", image: `/images/nfts/${randomIntFromInterval(1, 21)}.webp`},
 ]
 
+
 function Home() {
   return (
     <React.Fragment>
@@ -87,9 +88,6 @@ function Home() {
             <MyCollectionView Collections={collections}></MyCollectionView>
           </div>
         </div>
-
-        {/* Collection Details View */}
-        {/* <CollectionDetailsView></CollectionDetailsView> */}
 
       </div>
     </React.Fragment>
