@@ -12,7 +12,7 @@ function AssetCard({asset, onAssetClick}) {
             <span className='opacity-40 font-normal text-sm'>$ {asset.assetAmountInUSD}</span>&nbsp;&nbsp;&nbsp;
             <span className={classnames('font-bold text-sm',
                 asset.assetPercentChange > 0 ? 'text-[#01DB6A]' : 'text-[#FF4136]')}>
-                {asset.assetPercentChange > 0 ? '+' : '-'} {asset.assetPercentChange}%</span>
+                {asset.assetPercentChange > 0 ? '+' : '-'} {Math.abs(asset.assetPercentChange)}%</span>
             </h1>
         </div>
     );
