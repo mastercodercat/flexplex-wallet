@@ -361,7 +361,7 @@ export default function ActivityView() {
                             <tbody className=" rounded-xl max-h-[90vh] overflow-y-scroll">
                               {txs.map((tx, id) => (
                                 <tr className={id % 2 == 0 ?'bg-[#232323]' : 'bg-[#2c2c2c]'} key={id}>
-                                  <td className="py-5 px-5"><img className='w-12 h-12 rounded-xl mx-auto' src="/images/nft.jpg" alt="" /></td>
+                                  <td className="py-5 px-5"><img className='w-12 h-12 rounded-xl mx-auto' src="/images/nfts/1.png" alt="" /></td>
                                   <td className="py-5 pr-5">Bizarre Platypus #4688</td>
                                   <td className='py-5 pr-5'>Lmahm … pfB</td>
                                   <td className='py-5 pr-5 text-[#02ff63]'>Sale</td>
