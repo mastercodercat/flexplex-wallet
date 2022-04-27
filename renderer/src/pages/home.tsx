@@ -3,7 +3,7 @@ import Head from 'next/head';
 import Link from 'next/link';
 import NavBar from '../components/NavBar';
 import MyCollectionView from "../views/myCollectionView";
-import CollectionDetailsView from '../views/collectionDEtailsView';
+import CollectionDetailsView from '../views/collectionDetailsView';
 import AssetsView from '../views/assetsView';
 import { randomIntFromInterval } from '../utils/numberUtils';
 
