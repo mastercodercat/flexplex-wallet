@@ -10,10 +10,10 @@ export default function MoreOptions(){
                 <Menu.Button className="inline-flex justify-center w-full p-1.5 text-sm font-medium text-white rounded-xl bg-[#1e1e1e] border border-[#383838] focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-opacity-75">
                   <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24">
                     <g id="more" transform="translate(-556 -188)">
-                      <path id="Vector-5" d="M2,0A2,2,0,1,0,4,2,2.006,2.006,0,0,0,2,0Z" transform="translate(559 198)" fill="none" stroke="#fff" strokeWidth="1.5" />
-                      <path id="Vector-6" data-name="Vector" d="M2,0A2,2,0,1,0,4,2,2.006,2.006,0,0,0,2,0Z" transform="translate(573 198)" fill="none" stroke="#fff" strokeWidth="1.5" />
-                      <path id="Vector-7" data-name="Vector" d="M2,0A2,2,0,1,0,4,2,2.006,2.006,0,0,0,2,0Z" transform="translate(566 198)" fill="none" stroke="#fff" strokeWidth="1.5" />
-                      <path id="Vector-8" data-name="Vector" d="M0,0H24V24H0Z" transform="translate(556 188)" fill="none" opacity="0" />
+                      <path d="M2,0A2,2,0,1,0,4,2,2.006,2.006,0,0,0,2,0Z" transform="translate(559 198)" fill="none" stroke="#fff" strokeWidth="1.5" />
+                      <path data-name="Vector" d="M2,0A2,2,0,1,0,4,2,2.006,2.006,0,0,0,2,0Z" transform="translate(573 198)" fill="none" stroke="#fff" strokeWidth="1.5" />
+                      <path data-name="Vector" d="M2,0A2,2,0,1,0,4,2,2.006,2.006,0,0,0,2,0Z" transform="translate(566 198)" fill="none" stroke="#fff" strokeWidth="1.5" />
+                      <path data-name="Vector" d="M0,0H24V24H0Z" transform="translate(556 188)" fill="none" opacity="0" />
                     </g>
                   </svg>
                 </Menu.Button>

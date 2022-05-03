@@ -9,10 +9,10 @@ export default function Notifications() {
             <div>
                 <Menu.Button className="inline-flex justify-center w-full p-1.5 text-sm font-medium text-white bg-[#1e1e1e] border border-[#383838] rounded-xl focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-opacity-75">
                     <svg id="notification" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24">
-                        <path id="Vector" d="M8.046,0a6,6,0,0,0-6,6V8.89a4.778,4.778,0,0,1-.57,2.06L.326,12.86a1.919,1.919,0,0,0,1.08,2.93,20.921,20.921,0,0,0,13.27,0,2,2,0,0,0,1.08-2.93l-1.15-1.91a4.91,4.91,0,0,1-.56-2.06V6A6.018,6.018,0,0,0,8.046,0Z" transform="translate(3.974 2.91)" fill="none" stroke="#fff" strokeLinecap="round" strokeWidth="1.5" />
-                        <path id="Vector-2" data-name="Vector" d="M3.7,1.26a6.054,6.054,0,0,0-.96-.2A6.754,6.754,0,0,0,0,1.26a1.988,1.988,0,0,1,3.7,0Z" transform="translate(10.17 1.94)" fill="none" stroke="#fff" strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" />
-                        <path id="Vector-3" data-name="Vector" d="M6,0A3.009,3.009,0,0,1,3,3,3.011,3.011,0,0,1,.88,2.12,3.011,3.011,0,0,1,0,0" transform="translate(9.02 19.06)" fill="none" stroke="#fff" strokeWidth="1.5" />
-                        <path id="Vector-4" data-name="Vector" d="M0,0H24V24H0Z" fill="none" opacity="0" />
+                        <path d="M8.046,0a6,6,0,0,0-6,6V8.89a4.778,4.778,0,0,1-.57,2.06L.326,12.86a1.919,1.919,0,0,0,1.08,2.93,20.921,20.921,0,0,0,13.27,0,2,2,0,0,0,1.08-2.93l-1.15-1.91a4.91,4.91,0,0,1-.56-2.06V6A6.018,6.018,0,0,0,8.046,0Z" transform="translate(3.974 2.91)" fill="none" stroke="#fff" strokeLinecap="round" strokeWidth="1.5" />
+                        <path data-name="Vector" d="M3.7,1.26a6.054,6.054,0,0,0-.96-.2A6.754,6.754,0,0,0,0,1.26a1.988,1.988,0,0,1,3.7,0Z" transform="translate(10.17 1.94)" fill="none" stroke="#fff" strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" />
+                        <path data-name="Vector" d="M6,0A3.009,3.009,0,0,1,3,3,3.011,3.011,0,0,1,.88,2.12,3.011,3.011,0,0,1,0,0" transform="translate(9.02 19.06)" fill="none" stroke="#fff" strokeWidth="1.5" />
+                        <path data-name="Vector" d="M0,0H24V24H0Z" fill="none" opacity="0" />
                     </svg>
                 </Menu.Button>
             </div>
@@ -41,10 +41,10 @@ export default function Notifications() {
                                             <h1 className='text-left whitespace-nowrap'>Estimated Balance Changes</h1>
                                             <h1 className='flex justify-end'>
                                                 <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24">
-                                                    <path id="Vector-5" d="M10,20A10,10,0,1,0,0,10,10.029,10.029,0,0,0,10,20Z" transform="translate(2 2)" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" />
-                                                    <path id="Vector-6" data-name="Vector" d="M0,0V5" transform="translate(12 8)" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" />
-                                                    <path id="Vector-7" data-name="Vector" d="M0,0H.009" transform="translate(11.995 16)" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" />
-                                                    <path id="Vector-8" data-name="Vector" d="M0,0H24V24H0Z" fill="none" opacity="0" />
+                                                    <path d="M10,20A10,10,0,1,0,0,10,10.029,10.029,0,0,0,10,20Z" transform="translate(2 2)" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" />
+                                                    <path data-name="Vector" d="M0,0V5" transform="translate(12 8)" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" />
+                                                    <path data-name="Vector" d="M0,0H.009" transform="translate(11.995 16)" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" />
+                                                    <path data-name="Vector" d="M0,0H24V24H0Z" fill="none" opacity="0" />
                                                 </svg>
 
                                             </h1>
@@ -61,10 +61,10 @@ export default function Notifications() {
                                         <h1 className='text-left flex'>
                                             
                                         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24">
-                                                    <path id="Vector-9" d="M10,20A10,10,0,1,0,0,10,10.029,10.029,0,0,0,10,20Z" transform="translate(2 2)" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" />
-                                                    <path id="Vector-10" data-name="Vector" d="M0,0V5" transform="translate(12 8)" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" />
-                                                    <path id="Vector-11" data-name="Vector" d="M0,0H.009" transform="translate(11.995 16)" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" />
-                                                    <path id="Vector-12" data-name="Vector" d="M0,0H24V24H0Z" fill="none" opacity="0" />
+                                                    <path d="M10,20A10,10,0,1,0,0,10,10.029,10.029,0,0,0,10,20Z" transform="translate(2 2)" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" />
+                                                    <path data-name="Vector" d="M0,0V5" transform="translate(12 8)" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" />
+                                                    <path data-name="Vector" d="M0,0H.009" transform="translate(11.995 16)" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" />
+                                                    <path data-name="Vector" d="M0,0H24V24H0Z" fill="none" opacity="0" />
                                                 </svg>
                                             &nbsp;Network Fee</h1>
                                             <h1 className='text-right'>

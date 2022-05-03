@@ -23,10 +23,10 @@ function EnterPasswordView() {
                             <svg className='pointer-events-none absolute top-[42px] text-white transform -translate-y-1/2 left-3' xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24">
                                 <g id="vuesax_linear_unlock" data-name="vuesax/linear/unlock" transform="translate(-236 -252)">
                                     <g id="unlock">
-                                        <path id="Vector" d="M15,12H5c-4,0-5-1-5-5V5C0,1,1,0,5,0H15c4,0,5,1,5,5V7C20,11,19,12,15,12Z" transform="translate(238 262)" fill="none" stroke="#fff" strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" />
-                                        <path id="Vector-2" data-name="Vector" d="M0,8V6C0,2.69,1,0,6,0c4.5,0,6,2,6,5" transform="translate(242 254)" fill="none" stroke="#fff" strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" />
-                                        <path id="Vector-3" data-name="Vector" d="M5,2.5A2.5,2.5,0,1,1,2.5,0,2.5,2.5,0,0,1,5,2.5Z" transform="translate(245.5 265.5)" fill="none" stroke="#fff" strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" />
-                                        <path id="Vector-4" data-name="Vector" d="M0,0H24V24H0Z" transform="translate(260 276) rotate(180)" fill="none" opacity="0" />
+                                        <path d="M15,12H5c-4,0-5-1-5-5V5C0,1,1,0,5,0H15c4,0,5,1,5,5V7C20,11,19,12,15,12Z" transform="translate(238 262)" fill="none" stroke="#fff" strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" />
+                                        <path data-name="Vector" d="M0,8V6C0,2.69,1,0,6,0c4.5,0,6,2,6,5" transform="translate(242 254)" fill="none" stroke="#fff" strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" />
+                                        <path data-name="Vector" d="M5,2.5A2.5,2.5,0,1,1,2.5,0,2.5,2.5,0,0,1,5,2.5Z" transform="translate(245.5 265.5)" fill="none" stroke="#fff" strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" />
+                                        <path data-name="Vector" d="M0,0H24V24H0Z" transform="translate(260 276) rotate(180)" fill="none" opacity="0" />
                                     </g>
                                 </g>
                             </svg>

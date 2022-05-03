@@ -71,10 +71,10 @@ function RightSidebar({details, attributes, activities}) {
                     <button title="refresh" className="h-10 w-10 mx-2 text-white rounded-lg bg-[#1e1e1e] hover:text-[#212121] border-[#383838] border-2 px-[10px]">
                         <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24">
                             <g id="rotate-left" transform="translate(-236 -316)">
-                                <path id="Vector" d="M5.78.43A10.019,10.019,0,0,1,8.67,0,8.663,8.663,0,1,1,1.46,3.85" transform="translate(239.33 320.65)" fill="none" stroke="#fff" strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" />
-                                <path id="Vector-2" data-name="Vector" d="M0,3.32,2.89,0" transform="translate(243.87 318)" fill="none" stroke="#fff" strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" />
-                                <path id="Vector-3" data-name="Vector" d="M0,0,3.37,2.46" transform="translate(243.87 321.32)" fill="none" stroke="#fff" strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" />
-                                <path id="Vector-4" data-name="Vector" d="M0,0H24V24H0Z" transform="translate(260 340) rotate(180)" fill="none" opacity="0" />
+                                <path d="M5.78.43A10.019,10.019,0,0,1,8.67,0,8.663,8.663,0,1,1,1.46,3.85" transform="translate(239.33 320.65)" fill="none" stroke="#fff" strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" />
+                                <path data-name="Vector" d="M0,3.32,2.89,0" transform="translate(243.87 318)" fill="none" stroke="#fff" strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" />
+                                <path data-name="Vector" d="M0,0,3.37,2.46" transform="translate(243.87 321.32)" fill="none" stroke="#fff" strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" />
+                                <path data-name="Vector" d="M0,0H24V24H0Z" transform="translate(260 340) rotate(180)" fill="none" opacity="0" />
                             </g>
                         </svg>
                     </button>
@@ -83,9 +83,9 @@ function RightSidebar({details, attributes, activities}) {
                     <button title="share" className="h-10 w-10 mx-2 text-white rounded-lg bg-[#1e1e1e] border-[#383838] hover:text-[#212121] border px-[10px]">
                         <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24">
                             <g id="send" transform="translate(-236 -316)">
-                            <path id="Vector-5" d="M6.46,1.229l8.56,4.28c3.84,1.92,3.84,5.06,0,6.98l-8.56,4.28c-5.76,2.88-8.11.52-5.23-5.23l.87-1.73a2.046,2.046,0,0,0,0-1.61l-.87-1.74C-1.65.709.71-1.651,6.46,1.229Z" transform="translate(239.05 319.001)" fill="none" stroke="#fff" strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" />
-                            <path id="Vector-6" data-name="Vector" d="M0,0H5.4" transform="translate(241.44 328)" fill="none" stroke="#fff" strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" />
-                            <path id="Vector-7" data-name="Vector" d="M0,0H24V24H0Z" transform="translate(236 316)" fill="none" opacity="0" />
+                            <path d="M6.46,1.229l8.56,4.28c3.84,1.92,3.84,5.06,0,6.98l-8.56,4.28c-5.76,2.88-8.11.52-5.23-5.23l.87-1.73a2.046,2.046,0,0,0,0-1.61l-.87-1.74C-1.65.709.71-1.651,6.46,1.229Z" transform="translate(239.05 319.001)" fill="none" stroke="#fff" strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" />
+                            <path data-name="Vector" d="M0,0H5.4" transform="translate(241.44 328)" fill="none" stroke="#fff" strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" />
+                            <path data-name="Vector" d="M0,0H24V24H0Z" transform="translate(236 316)" fill="none" opacity="0" />
                             </g>
                         </svg>
                     </button>
@@ -95,10 +95,10 @@ function RightSidebar({details, attributes, activities}) {
                         <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24">
                             <g id="vuesax_linear_export" data-name="vuesax/linear/export" transform="translate(-492 -444)">
                             <g id="export">
-                                <path id="Vector-8" d="M0,2.56,2.56,0,5.12,2.56" transform="translate(501.32 447.94)" fill="none" stroke="#fff" strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" />
-                                <path id="Vector-9" data-name="Vector" d="M0,10.17V0" transform="translate(503.88 448.01)" fill="none" stroke="#fff" strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" />
-                                <path id="Vector-10" data-name="Vector" d="M0,0A7.651,7.651,0,0,0,8,8a7.651,7.651,0,0,0,8-8" transform="translate(496 456)" fill="none" stroke="#fff" strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" />
-                                <path id="Vector-11" data-name="Vector" d="M0,0H24V24H0Z" transform="translate(516 468) rotate(180)" fill="none" opacity="0" />
+                                <path d="M0,2.56,2.56,0,5.12,2.56" transform="translate(501.32 447.94)" fill="none" stroke="#fff" strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" />
+                                <path data-name="Vector" d="M0,10.17V0" transform="translate(503.88 448.01)" fill="none" stroke="#fff" strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" />
+                                <path data-name="Vector" d="M0,0A7.651,7.651,0,0,0,8,8a7.651,7.651,0,0,0,8-8" transform="translate(496 456)" fill="none" stroke="#fff" strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" />
+                                <path data-name="Vector" d="M0,0H24V24H0Z" transform="translate(516 468) rotate(180)" fill="none" opacity="0" />
                             </g>
                             </g>
                         </svg>
@@ -115,18 +115,18 @@ function RightSidebar({details, attributes, activities}) {
                             <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24">
                             <g id="vuesax_bulk_document-text" data-name="vuesax/bulk/document-text" transform="translate(-492 -252)">
                                 <g id="document-text">
-                                <path id="Vector-12" d="M0,0H24V24H0Z" transform="translate(492 252)" fill="none" opacity="0" />
-                                <path id="Vector-13" data-name="Vector" d="M18,5V15c0,3-1.5,5-5,5H5c-3.5,0-5-2-5-5V5C0,2,1.5,0,5,0h8C16.5,0,18,2,18,5Z" transform="translate(495 254)" fill="#02ff63" opacity="0.4" />
+                                <path d="M0,0H24V24H0Z" transform="translate(492 252)" fill="none" opacity="0" />
+                                <path data-name="Vector" d="M18,5V15c0,3-1.5,5-5,5H5c-3.5,0-5-2-5-5V5C0,2,1.5,0,5,0h8C16.5,0,18,2,18,5Z" transform="translate(495 254)" fill="#02ff63" opacity="0.4" />
                                 <g id="Group">
-                                    <path id="Vector-14" data-name="Vector" d="M4.75,5.5h-2A2.748,2.748,0,0,1,0,2.75v-2A.755.755,0,0,1,.75,0,.755.755,0,0,1,1.5.75v2A1.25,1.25,0,0,0,2.75,4h2a.75.75,0,0,1,0,1.5Z" transform="translate(505.75 255.75)" fill="#02ff63" />
+                                    <path data-name="Vector" d="M4.75,5.5h-2A2.748,2.748,0,0,1,0,2.75v-2A.755.755,0,0,1,.75,0,.755.755,0,0,1,1.5.75v2A1.25,1.25,0,0,0,2.75,4h2a.75.75,0,0,1,0,1.5Z" transform="translate(505.75 255.75)" fill="#02ff63" />
                                 </g>
                                 <g id="Group-2" data-name="Group">
-                                    <path id="Vector-15" data-name="Vector" d="M4.75,1.5h-4A.755.755,0,0,1,0,.75.755.755,0,0,1,.75,0h4A.755.755,0,0,1,5.5.75.755.755,0,0,1,4.75,1.5Z" transform="translate(499.25 264.25)" fill="#02ff63" />
+                                    <path data-name="Vector" d="M4.75,1.5h-4A.755.755,0,0,1,0,.75.755.755,0,0,1,.75,0h4A.755.755,0,0,1,5.5.75.755.755,0,0,1,4.75,1.5Z" transform="translate(499.25 264.25)" fill="#02ff63" />
                                 </g>
                                 <g id="Group-3" data-name="Group">
-                                    <path id="Vector-16" data-name="Vector" d="M8.75,1.5h-8A.755.755,0,0,1,0,.75.755.755,0,0,1,.75,0h8A.755.755,0,0,1,9.5.75.755.755,0,0,1,8.75,1.5Z" transform="translate(499.25 268.25)" fill="#02ff63" />
+                                    <path data-name="Vector" d="M8.75,1.5h-8A.755.755,0,0,1,0,.75.755.755,0,0,1,.75,0h8A.755.755,0,0,1,9.5.75.755.755,0,0,1,8.75,1.5Z" transform="translate(499.25 268.25)" fill="#02ff63" />
                                 </g>
-                                <path id="Vector-17" data-name="Vector" d="M0,0H24V24H0Z" transform="translate(492 252)" fill="none" opacity="0" />
+                                <path data-name="Vector" d="M0,0H24V24H0Z" transform="translate(492 252)" fill="none" opacity="0" />
                                 </g>
                             </g>
                             </svg>
@@ -165,9 +165,9 @@ function RightSidebar({details, attributes, activities}) {
                     <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24">
                     <g id="vuesax_bulk_shield" data-name="vuesax/bulk/shield" transform="translate(-269 -188)">
                         <g id="shield" transform="translate(33)">
-                        <path id="Vector-18" d="M16.82,4.957V7.8L3.81,17.337l-2.63-1.97A3.317,3.317,0,0,1,0,13.017V4.957a3.162,3.162,0,0,1,1.91-2.75L7.38.157a3.447,3.447,0,0,1,2.06,0l5.47,2.05A3.162,3.162,0,0,1,16.82,4.957Z" transform="translate(239.59 190.003)" fill="#02ff63" opacity="0.4" />
-                        <path id="Vector-19" data-name="Vector" d="M12.09,0V3.85A3.317,3.317,0,0,1,10.91,6.2L5.44,10.29a2.961,2.961,0,0,1-1.76.54,2.961,2.961,0,0,1-1.76-.54L0,8.86Z" transform="translate(244.32 199.17)" fill="#02ff63" />
-                        <path id="Vector-20" data-name="Vector" d="M0,0H24V24H0Z" transform="translate(236 188)" fill="none" opacity="0" />
+                        <path d="M16.82,4.957V7.8L3.81,17.337l-2.63-1.97A3.317,3.317,0,0,1,0,13.017V4.957a3.162,3.162,0,0,1,1.91-2.75L7.38.157a3.447,3.447,0,0,1,2.06,0l5.47,2.05A3.162,3.162,0,0,1,16.82,4.957Z" transform="translate(239.59 190.003)" fill="#02ff63" opacity="0.4" />
+                        <path data-name="Vector" d="M12.09,0V3.85A3.317,3.317,0,0,1,10.91,6.2L5.44,10.29a2.961,2.961,0,0,1-1.76.54,2.961,2.961,0,0,1-1.76-.54L0,8.86Z" transform="translate(244.32 199.17)" fill="#02ff63" />
+                        <path data-name="Vector" d="M0,0H24V24H0Z" transform="translate(236 188)" fill="none" opacity="0" />
                         </g>
                     </g>
                     </svg>
@@ -240,7 +240,7 @@ function RightSidebar({details, attributes, activities}) {
                                 {
                                     activities.map((activity, index) => {
                                         return <tr className={index % 2 == 0 ?'bg-[#232323]' : 'bg-[#2c2c2c]'} key={index}>
-                                                    <td className="py-3 px-2"><img className='w-8 h-8 rounded-xl mx-auto' src="/images/nft.jpg" alt="" /></td>
+                                                    <td className="py-3 px-2"><img className='w-8 h-8 rounded-xl mx-auto' src="/images/nfts/1.png" alt="" /></td>
                                                     <td className="py-3 px-2">Bizarre Platypus #4688</td>
                                                     <td className='py-3 px-2 text-right'>Lmahm … pfB</td>
                                                     <td className='py-3 px-2 text-right text-[#02ff63]'>Sale</td>

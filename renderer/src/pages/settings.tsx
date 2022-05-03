@@ -12,16 +12,17 @@ const navigation = [
 ]
 
 const leftCardOptions = [
-  {optionHeader: "Languages", optionDescription: "English"},
-  {optionHeader: "Languages", optionDescription: "English"},
-  {optionHeader: "Languages", optionDescription: "English"},
-  {optionHeader: "Languages", optionDescription: "English"},
+  {id: "1", optionHeader: "Display language", optionDescription: "Select the language you prefer."},
+  {id: "2", optionHeader: "Address book", optionDescription: "Manage commonly used addresses"},
+  {id: "3", optionHeader: "Trusted applications", optionDescription: "Configure your trusted applications"},
+  {id: "4", optionHeader: "Auto lock timer", optionDescription: "Change auto lock timer"},
 ]
 
 const rightCardOptions = [
-  {optionHeader: "Languages", optionDescription: "English"},
-  {optionHeader: "Languages", optionDescription: "English"},
-  {optionHeader: "Languages", optionDescription: "English"},
+  {id: "5", optionHeader: "Change network", optionDescription: "Configure network settings"},
+  {id: "6", optionHeader: "Show secret phrase", optionDescription: "Do not share your secret phrase with anyone"},
+  {id: "7", optionHeader: "Export private key", optionDescription: "Do not share your secret phrase with anyone"},
+  {id: "8", optionHeader: "Reset secret phrase", optionDescription: "Do not share your secret phrase with anyone"},
 ]
 
 function Settings() {
@@ -36,11 +37,11 @@ function Settings() {
 
         {/* Settings View */}
         <SettingsView walletName={"Wallet 1"} 
-        walletAddress={"EP8YfUCpbbLVL3zZUZmDWPboFSjpYaSUYYXKc2HRjft9"}
-        onChangeWalletAddress={(e) => {console.log(e.target.value)}}
-        onChangeWalletName={(e) => {console.log(e.target.value)}}
-        leftCardOptions={leftCardOptions}
-        rightCardOptions={rightCardOptions}
+          walletAddress={"EP8YfUCpbbLVL3zZUZmDWPboFSjpYaSUYYXKc2HRjft9"}
+          onChangeWalletAddress={(e) => {console.log(e.target.value)}}
+          onChangeWalletName={(e) => {console.log(e.target.value)}}
+          leftCardOptions={leftCardOptions}
+          rightCardOptions={rightCardOptions}
         ></SettingsView>
       </div>
     </React.Fragment>
