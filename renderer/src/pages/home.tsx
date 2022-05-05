@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
 import NavBar from '../components/NavBar';
@@ -6,6 +6,10 @@ import MyCollectionView from "../views/myCollectionView";
 import CollectionDetailsView from '../views/collectionDetailsView';
 import AssetsView from '../views/assetsView';
 import { randomIntFromInterval } from '../utils/numberUtils';
+import { useMetadata } from '../web3/hooks/useMetadata';
+import { publicKey, connection } from '../web3/config';
+import { Metadata } from '../web3/schema/metadata';
+import { useQuery } from 'react-query';
 
 
 const navigation = [
@@ -35,30 +39,28 @@ const assets = coins.map(coin => ({
     assetPercentChange: randomIntFromInterval(-100, 100),
 }));
 
-// Dummy Collections - Replace with real ones
-const collections = [
-  {name:"Bizarre Platypus", description:"We came from Cyrus to change the World. Bizarre Platypus is a Collection based on…", image: `/images/nfts/${randomIntFromInterval(1, 21)}.webp`},
-  {name:"Bizarre Platypus", description:"We came from Cyrus to change the World. Bizarre Platypus is a Collection based on…", image: `/images/nfts/${randomIntFromInterval(1, 21)}.webp`},
-  {name:"Bizarre Platypus", description:"We came from Cyrus to change the World. Bizarre Platypus is a Collection based on…", image: `/images/nfts/${randomIntFromInterval(1, 21)}.webp`},
-  {name:"Bizarre Platypus", description:"We came from Cyrus to change the World. Bizarre Platypus is a Collection based on…", image: `/images/nfts/${randomIntFromInterval(1, 21)}.webp`},
-  {name:"Bizarre Platypus", description:"We came from Cyrus to change the World. Bizarre Platypus is a Collection based on…", image: `/images/nfts/${randomIntFromInterval(1, 21)}.webp`},
-  {name:"Bizarre Platypus", description:"We came from Cyrus to change the World. Bizarre Platypus is a Collection based on…", image: `/images/nfts/${randomIntFromInterval(1, 21)}.webp`},
-  {name:"Bizarre Platypus", description:"We came from Cyrus to change the World. Bizarre Platypus is a Collection based on…", image: `/images/nfts/${randomIntFromInterval(1, 21)}.webp`},
-  {name:"Bizarre Platypus", description:"We came from Cyrus to change the World. Bizarre Platypus is a Collection based on…", image: `/images/nfts/${randomIntFromInterval(1, 21)}.webp`},
-  {name:"Bizarre Platypus", description:"We came from Cyrus to change the World. Bizarre Platypus is a Collection based on…", image: `/images/nfts/${randomIntFromInterval(1, 21)}.webp`},
-  {name:"Bizarre Platypus", description:"We came from Cyrus to change the World. Bizarre Platypus is a Collection based on…", image: `/images/nfts/${randomIntFromInterval(1, 21)}.webp`},
-  {name:"Bizarre Platypus", description:"We came from Cyrus to change the World. Bizarre Platypus is a Collection based on…", image: `/images/nfts/${randomIntFromInterval(1, 21)}.webp`},
-  {name:"Bizarre Platypus", description:"We came from Cyrus to change the World. Bizarre Platypus is a Collection based on…", image: `/images/nfts/${randomIntFromInterval(1, 21)}.webp`},
-  {name:"Bizarre Platypus", description:"We came from Cyrus to change the World. Bizarre Platypus is a Collection based on…", image: `/images/nfts/${randomIntFromInterval(1, 21)}.webp`},
-  {name:"Bizarre Platypus", description:"We came from Cyrus to change the World. Bizarre Platypus is a Collection based on…", image: `/images/nfts/${randomIntFromInterval(1, 21)}.webp`},
-  {name:"Bizarre Platypus", description:"We came from Cyrus to change the World. Bizarre Platypus is a Collection based on…", image: `/images/nfts/${randomIntFromInterval(1, 21)}.webp`},
-  {name:"Bizarre Platypus", description:"We came from Cyrus to change the World. Bizarre Platypus is a Collection based on…", image: `/images/nfts/${randomIntFromInterval(1, 21)}.webp`},
-  {name:"Bizarre Platypus", description:"We came from Cyrus to change the World. Bizarre Platypus is a Collection based on…", image: `/images/nfts/${randomIntFromInterval(1, 21)}.webp`},
-  {name:"Bizarre Platypus", description:"We came from Cyrus to change the World. Bizarre Platypus is a Collection based on…", image: `/images/nfts/${randomIntFromInterval(1, 21)}.webp`},
-]
-
+const collectionMap = (i: Metadata) => ({
+  uri: i.data.uri,
+  address: i.mint
+});
 
 function Home() {
+  const address = process.env.NEXT_PUBLIC_SOL_PUBLIC_KEY;
+  const [metadataList, fetchMetadata] = useMetadata();
+  const [collections, setCollections] = useState([])
+
+  useEffect(() => {
+    fetchMetadata({
+      connection,
+      ownerAddress: publicKey.toBase58()
+    })
+  }, [])
+
+  useEffect(() => {
+    if(!metadataList || !metadataList.length) return;
+    setCollections(metadataList.map(collectionMap))
+  }, [metadataList])
+
   return (
     <React.Fragment>
       <Head>

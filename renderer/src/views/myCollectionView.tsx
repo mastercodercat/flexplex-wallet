@@ -1,9 +1,15 @@
 import Link from "next/link";
+import { useEffect } from "react";
+import { useMetaDetails } from "../web3/hooks/useMetaDetails";
+import { useMetaImage } from "../web3/hooks/useMetaImage";
 
-function CollectionCard({ CollectionName, CollectionDesc, CollectionImage }) {
+function CollectionCard({ CollectionUri, CollectionAddress }) {
+    const {cachedUri, isLoading} = useMetaImage(CollectionUri)
+    const {cachedData} = useMetaDetails(CollectionUri)
+
     return (
-        <Link href="/details">
-            <div className="w-min bg-white mt-3 rounded-lg border border-gray-200 shadow-md dark:bg-[#1E1E1E] dark:border-[#1E1E1E] mx-auto">
+        <Link href={`/details/${CollectionAddress}`}>
+            <div className="w-min h-min bg-white mt-3 rounded-lg border border-gray-200 shadow-md dark:bg-[#1E1E1E] dark:border-[#1E1E1E] mx-auto">
                 {/* <div className="h-56 w-56 relative">
                     <a href="#">
                         <Image
@@ -19,15 +25,15 @@ function CollectionCard({ CollectionName, CollectionDesc, CollectionImage }) {
                     <div className="h-[13rem] w-[13rem] relative">
                         <a title="cardImage" href="#">
                             <div className="rounded-xl h-[13rem] w-[13rem] overflow-hidden">
-                                <div className="rounded-xl h-full w-full child hover:scale-110 transition" style={{ backgroundImage: "url(" + `${CollectionImage}` + ")", backgroundSize: "cover", backgroundPosition: "center" }}></div>
+                                <div className="rounded-xl h-full w-full child hover:scale-110 transition" style={{ backgroundImage: "url(" + `${cachedUri}` + ")", backgroundSize: "cover", backgroundPosition: "center" }}></div>
                             </div>
                         </a>
                     </div>
                     <div className="p-2">
                         <a href="#">
-                            <h5 className="pb-1 text-sm font-bold text-center tracking-tight text-gray-900 dark:text-white">{CollectionName}</h5>
+                            <h5 className="pb-1 text-sm font-semibold text-center tracking-tight text-gray-900 dark:text-white">{cachedData && cachedData.name}</h5>
                         </a>
-                        <p className="text-xs font-normal text-white text-ellipsis line-2-clip overflow-hidden">{CollectionDesc}</p>
+                        <p className="text-xs font-normal text-white text-ellipsis line-2-clip overflow-hidden">{cachedData && cachedData.description}</p>
                     </div>
                 </div>
             </div>
@@ -72,7 +78,7 @@ function MyCollectionView({ Collections }: { Collections: any }) {
             <div className='grid xl:grid-cols-4 lg:grid-cols-3 md:grid-cols-2 grid-cols-2 gap-4 mx-auto sm:mt-24 md:my-3 bg-[#121212] overflow-y-auto h-[80vh] rounded-r-xl no-scrollbar'>
                 {/* Collection Card */}
                 {Collections.map((collection, index) => {
-                    return <CollectionCard key={index} CollectionName={collection.name} CollectionDesc={collection.description} CollectionImage={collection.image} />
+                    return <CollectionCard key={index} CollectionUri={collection.uri} CollectionAddress={collection.address} />
                 })}
             </div>
         </div>

@@ -8,9 +8,9 @@ function AssetCard({asset, onAssetClick}) {
             <img src={asset.assetImage} alt="" className="w-12 h-12 rounded-full" />
             <h1 className='ml-2'><span className='text-md font-normal '>{asset.assetName}</span>                     <br />
             <span className='opacity-40 font-thin text-sm'>{asset.assetSymbol}</span></h1>
-            <h1 className='text-right w-full'><span className='text-lg font-bold'>{asset.assetAmount}</span>                     <br />
+            <h1 className='text-right w-full'><span className='text-lg font-semibold'>{asset.assetAmount}</span>                     <br />
             <span className='opacity-40 font-normal text-sm'>$ {asset.assetAmountInUSD}</span>&nbsp;&nbsp;&nbsp;
-            <span className={classnames('font-bold text-sm',
+            <span className={classnames('font-normal text-sm',
                 asset.assetPercentChange > 0 ? 'text-[#01DB6A]' : 'text-[#FF4136]')}>
                 {asset.assetPercentChange > 0 ? '+' : '-'} {Math.abs(asset.assetPercentChange)}%</span>
             </h1>

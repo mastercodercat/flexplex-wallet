@@ -1,8 +1,12 @@
+import get from 'lodash.get';
 import Link from 'next/link';
+import { useEffect, useState } from 'react';
+import web3 from '@solana/web3.js'
+import { formatDistance, subDays } from 'date-fns'
 
 // Left Sidebar: Collection Details - Image | Collection Details - Description | Swap | Sell 
 
-function LeftSidebar({ CollectionName, CollectionDesc, NFTImage, NFTTag, NFTPrice }) {
+function LeftSidebar({ CollectionName, CollectionDesc, NFTImage, NFTTag, NFTPrice, NFTSymbol }) {
     return (
         <div className="col-span-4">
             <div className="card rounded-xl border-[#383838] border-2 bg-[#1e1e1e] mx-5 p-2 text-center">
@@ -10,9 +14,9 @@ function LeftSidebar({ CollectionName, CollectionDesc, NFTImage, NFTTag, NFTPric
             </div>
             <div className="grid grid-cols-2 gap-3 p-3">
                 <div className='col-span-2 text-center'>
-                    <button className="focus:outline-none inline-flex text-white backdrop-blur-sm bg-[#ffffff66] absolute w-56 h-12 mt-[-42px] ml-[-106px] font-bold rounded-xl border border-[#fafafa] text-2xl py-2 px-3 mb-5 justify-center" type="submit">
+                    {/* <button className="focus:outline-none inline-flex text-white backdrop-blur-sm bg-[#ffffff66] absolute w-56 h-12 mt-[-42px] ml-[-106px] font-bold rounded-xl border border-[#fafafa] text-2xl py-2 px-3 mb-5 justify-center" type="submit">
                     <img className='inline mt-1 rounded-full bg-[#212121] p-1' width="30px" height="30px" src="/images/coins/sol.png" alt="" />
-                    &nbsp;{NFTPrice} SOL</button>
+                    &nbsp;{NFTPrice} SOL</button> */}
 
                     <div className='md:col-span-6 w-full bg-[#232323] border-[#383838] border rounded-xl mb-3 mt-5'>
 
@@ -29,7 +33,7 @@ function LeftSidebar({ CollectionName, CollectionDesc, NFTImage, NFTTag, NFTPric
                             </svg>
 
                             </div>
-                            &nbsp; <span className='pt-2 w-full text-lg'>About {CollectionName} Gang</span>
+                            &nbsp; <span className='pt-2 w-full text-lg'>About {CollectionName} ({NFTSymbol})</span>
                             <span className='m-2'><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
                             <g id="arrow-down" transform="translate(-236 -252)">
                                 <path id="Vectorx" d="M15.84,0,9.32,6.52a1.986,1.986,0,0,1-2.8,0L0,0" transform="translate(240.08 260.95)" fill="none" stroke="#fff" strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" />
@@ -39,7 +43,7 @@ function LeftSidebar({ CollectionName, CollectionDesc, NFTImage, NFTTag, NFTPric
                             </span>
                         </div>
                         <div className='p-3 text-left'>
-                            <h1 className='text-xl font-normal'>{CollectionName} #{NFTTag}</h1>
+                            <h1 className='text-xl font-normal'>{CollectionName} ({NFTSymbol})</h1>
                             <h5 className='font-light py-3 text-xs opacity-40'>
                                 {CollectionDesc}
                             </h5>
@@ -59,7 +63,41 @@ function LeftSidebar({ CollectionName, CollectionDesc, NFTImage, NFTTag, NFTPric
 
 // Right Sidebar: Collection Details - Details | Attributes | Activities
 
-function RightSidebar({details, attributes, activities}) {
+function RightSidebar({attributes, activities, metaData, tokenData, transfers = [], NFTImage}) {
+
+    const [details, setDetails] = useState([])
+
+    useEffect(() => {
+        if(!tokenData) return;
+        setDetails([
+            {
+                key: 'Token Address',
+                value: get(tokenData, 'account', '')
+            },
+            {
+                key: 'Owner Program',
+                value: get(tokenData, 'ownerProgram', '')
+            },
+            {
+                key: 'Mint Authority',
+                value: get(tokenData, 'tokenInfo.tokenAuthority', '')
+            },
+            {
+                key: 'Update Authority',
+                value: get(tokenData, 'metadata.updateAuthority', '')
+            },
+            {
+                key: 'SOL Balance',
+                value: `${get(tokenData, 'lamports', '') / 1000000000} SOL`
+            },
+            {
+                key: 'Max Total Supply',
+                value: get(tokenData, 'tokenInfo.supply', '')
+            },
+        ])
+    }, [tokenData])
+
+
     return (
         <div className="lg:col-span-6">
             <div className='text-md font-bold mb-6'><span className='opacity-30'>My collection / Expanded view</span>
@@ -185,9 +223,9 @@ function RightSidebar({details, attributes, activities}) {
                     {
                         attributes.map((attribute, index) => {
                             return <div className="card rounded-lg border-[#383838] border-2 bg-[#1e1e1e] py-2 text-center" key={index}>
-                                        <h1 className='text-[#FFFFFF66] text-xs'>{attribute.key}</h1>
-                                        <h1 className='text-xs pb-2'>{attribute.value}</h1>
-                                        <h1 className='text-xl text-[#02ff63]'>{attribute.rarity}%</h1>
+                                        <h1 className='text-[#FFFFFF66] text-xs uppercase'>{attribute.trait_type || attribute.Unit_type}</h1>
+                                        {/* <h1 className='text-xs pb-2'>{attribute.value || attribute.Number}</h1> */}
+                                        <h1 className='mt-2 text-xl text-[#02ff63]'>{attribute.value || attribute.Number}</h1>
                                     </div>
                         })
                     }
@@ -227,28 +265,25 @@ function RightSidebar({details, attributes, activities}) {
                             <thead>
                                 <tr>
                                 <th className=''></th>
-                                <th className='text-[#02FF63] font-light'>NAME</th>
-                                <th className='text-[#02FF63] font-light'>TRANSACTION<br/>ID</th>
-                                <th className='text-[#02FF63] font-light' colSpan={2}>TRANSACTION<br/>TYPE</th>
+                                <th className='text-[#02FF63] font-light'>SIGNATURE</th>
                                 <th className='text-[#02FF63] font-light'>TIME</th>
-                                <th className='text-[#02FF63] font-light'>TOTAL<br/>AMOUNT</th>
-                                <th className='text-[#02FF63] font-light'>BUYER</th>
-                                <th className='text-[#02FF63] font-light'>SELLER</th>
+                                <th className='text-[#02FF63] font-light'>TYPE</th>
+                                <th className='text-[#02FF63] font-light'>FROM</th>
+                                <th className='text-[#02FF63] font-light'>TO</th>
+                                <th className='text-[#02FF63] font-light'>AMOUNT</th>
                                 </tr>
                             </thead>
                             <tbody>
                                 {
-                                    activities.map((activity, index) => {
+                                    transfers.map((transfer, index) => {
                                         return <tr className={index % 2 == 0 ?'bg-[#232323]' : 'bg-[#2c2c2c]'} key={index}>
-                                                    <td className="py-3 px-2"><img className='w-8 h-8 rounded-xl mx-auto' src="/images/nfts/1.png" alt="" /></td>
-                                                    <td className="py-3 px-2">Bizarre Platypus #4688</td>
-                                                    <td className='py-3 px-2 text-right'>Lmahm … pfB</td>
-                                                    <td className='py-3 px-2 text-right text-[#02ff63]'>Sale</td>
-                                                    <td className='py-3 px-2 text-right text-[#6A00FF]'>(ME v2)</td>
-                                                    <td className="py-3 px-2">37 min ago</td>
-                                                    <td className='py-3 px-2 text-right'>16.9 SOL</td>
-                                                    <td className="py-3 px-2">DKjHw…jWy</td>
-                                                    <td className='py-3 px-2 text-right'>DKjHw…jWy</td>
+                                                    <td className="py-3 px-2"><img className='w-8 h-8 rounded-xl mx-auto' src={NFTImage} alt="" /></td>
+                                                    <td className='py-3 px-2 max-w-0 text-right text-ellipsis overflow-hidden'>{get(transfer, 'txHash', '')}</td>
+                                                    <td className='py-3 px-2 max-w-0 text-right text-[#02ff63]'>{formatDistance(new Date(get(transfer, 'createdAt', null)), new Date(), { addSuffix: true })}</td>
+                                                    <td className='py-3 px-2 max-w-0 text-right text-[#6A00FF]'>{get(transfer, 'commonType', '')}</td>
+                                                    <td className="py-3 px-2 max-w-0 text-ellipsis overflow-hidden">{get(transfer,'sourceOwnerAccount', '')}</td>
+                                                    <td className='py-3 px-2 max-w-0 text-right text-ellipsis overflow-hidden'>{get(transfer,'destOwnerAccount', '')}</td>
+                                                    <td className="py-3 px-2">{get(transfer,'amount', '')}</td>
                                                 </tr>
                                     })
                                 }
@@ -265,7 +300,7 @@ function RightSidebar({details, attributes, activities}) {
 }
 
 
-function CollectionDetailsView({ collectionDetails, backButtonPath }) {
+function CollectionDetailsView({ collectionDetails, backButtonPath, metaData, tokenData, transfersData }) {
     return (
         <div>
             <Link href={backButtonPath}>
@@ -278,18 +313,22 @@ function CollectionDetailsView({ collectionDetails, backButtonPath }) {
             <div className="grid lg:grid-cols-10 xs:grid-cols-1 gap-1 pl-10 pr-3 py-7 bg-[#121212] mx-3 mb-3 rounded-xl">
 
                 {/* Left Sidebar */}
-                <LeftSidebar 
-                    CollectionName={collectionDetails.name} 
-                    CollectionDesc={collectionDetails.description}
-                    NFTImage={collectionDetails.image}
+                {metaData && <LeftSidebar 
+                    CollectionName={get(tokenData, 'tokenInfo.name', '')} 
+                    NFTSymbol={get(tokenData, 'tokenInfo.symbol', '')}
+                    CollectionDesc={metaData.description}
+                    NFTImage={get(metaData, 'image', '')}
                     NFTPrice={collectionDetails.price}
                     NFTTag={collectionDetails.tag}
-                />
+                />}
                 
                 {/* Right Sidebar */}
                 <RightSidebar
-                    details={collectionDetails.details}
-                    attributes={collectionDetails.attributes}
+                    metaData={metaData}
+                    tokenData={tokenData}
+                    transfers={get(transfersData, 'data.items',[])}
+                    NFTImage={get(metaData, 'image', '')}
+                    attributes={get(metaData, 'attributes', []) || []}
                     activities={collectionDetails.activities}
                 />
 
