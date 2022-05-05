@@ -8,7 +8,7 @@ export default function TrustedSettingsModal({ modalHeader, buttonText }) {
   return (
     <div className="relative inline-block text-left">
       <div>
-        <button onClick={() => { setIsOpen(true) }} className='text-sm w-full p-3 text-[#ffffff66] border border-[#383838] bg-[#232323] rounded-xl'>
+        <button onClick={() => { setIsOpen(true) }} className='focus:border-transparent focus:ring-0 text-sm w-full p-3 text-[#ffffff66] border border-[#383838] bg-[#232323] rounded-xl'>
           <table className="table-auto">
             <tbody>
               <tr>
@@ -58,7 +58,7 @@ export default function TrustedSettingsModal({ modalHeader, buttonText }) {
                     <div className='col-span-2 grid grid-cols-3 bg-[#232323] border border-[#383838] rounded-xl w-100 mb-2'>
                       <h1 className='text-white col-span-2 text-left text-xs py-4 pl-6'>Bizarreplatypus-mint-one.io</h1>
                       <div className='flex justify-end'>
-                        <button type='button' title="Revoke" className='bg-[#272727] p-3 rounded-xl'>
+                        <button type='button' title="Revoke" className='focus:border-transparent focus:ring-0 bg-[#272727] p-3 rounded-xl'>
                           <svg className='' xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24">
                             <g data-name="vuesax/bulk/trash" transform="translate(-108 -188)">
                               <g>
@@ -76,7 +76,7 @@ export default function TrustedSettingsModal({ modalHeader, buttonText }) {
                     <div className='col-span-2 grid grid-cols-3 bg-[#232323] border border-[#383838] rounded-xl w-100 mb-2'>
                       <h1 className='text-white col-span-2 text-left text-xs py-4 pl-6'>Bizarreplatypus-mint-one.io</h1>
                       <div className='flex justify-end'>
-                        <button type='button' title="Revoke" className='bg-[#272727] p-3 rounded-xl'>
+                        <button type='button' title="Revoke" className='focus:border-transparent focus:ring-0 bg-[#272727] p-3 rounded-xl'>
                           <svg className='' xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24">
                             <g data-name="vuesax/bulk/trash" transform="translate(-108 -188)">
                               <g>
@@ -94,7 +94,7 @@ export default function TrustedSettingsModal({ modalHeader, buttonText }) {
                     <div className='col-span-2 grid grid-cols-3 bg-[#232323] border border-[#383838] rounded-xl w-100 mb-2'>
                       <h1 className='text-white col-span-2 text-left text-xs py-4 pl-6'>Bizarreplatypus-mint-one.io</h1>
                       <div className='flex justify-end'>
-                        <button type='button' title="Revoke" className='bg-[#272727] p-3 rounded-xl'>
+                        <button type='button' title="Revoke" className='focus:border-transparent focus:ring-0 bg-[#272727] p-3 rounded-xl'>
                           <svg className='' xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24">
                             <g data-name="vuesax/bulk/trash" transform="translate(-108 -188)">
                               <g>
@@ -112,7 +112,7 @@ export default function TrustedSettingsModal({ modalHeader, buttonText }) {
                     <div className='col-span-2 grid grid-cols-3 bg-[#232323] border border-[#383838] rounded-xl w-100 mb-2'>
                       <h1 className='text-white col-span-2 text-left text-xs py-4 pl-6'>Bizarreplatypus-mint-one.io</h1>
                       <div className='flex justify-end'>
-                        <button type='button' title="Revoke" className='bg-[#272727] p-3 rounded-xl'>
+                        <button type='button' title="Revoke" className='focus:border-transparent focus:ring-0 bg-[#272727] p-3 rounded-xl'>
                           <svg className='' xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24">
                             <g data-name="vuesax/bulk/trash" transform="translate(-108 -188)">
                               <g>
@@ -130,7 +130,7 @@ export default function TrustedSettingsModal({ modalHeader, buttonText }) {
                     <div className='col-span-2 grid grid-cols-3 bg-[#232323] border border-[#383838] rounded-xl w-100 mb-2'>
                       <h1 className='text-white col-span-2 text-left text-xs py-4 pl-6'>Bizarreplatypus-mint-one.io</h1>
                       <div className='flex justify-end'>
-                        <button type='button' title="Revoke" className='bg-[#272727] p-3 rounded-xl'>
+                        <button type='button' title="Revoke" className='focus:border-transparent focus:ring-0 bg-[#272727] p-3 rounded-xl'>
                           <svg className='' xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24">
                             <g data-name="vuesax/bulk/trash" transform="translate(-108 -188)">
                               <g>
@@ -148,7 +148,7 @@ export default function TrustedSettingsModal({ modalHeader, buttonText }) {
                     <div className='col-span-2 grid grid-cols-3 bg-[#232323] border border-[#383838] rounded-xl w-100 mb-2'>
                       <h1 className='text-white col-span-2 text-left text-xs py-4 pl-6'>Bizarreplatypus-mint-one.io</h1>
                       <div className='flex justify-end'>
-                        <button type='button' title="Revoke" className='bg-[#272727] p-3 rounded-xl'>
+                        <button type='button' title="Revoke" className='focus:border-transparent focus:ring-0 bg-[#272727] p-3 rounded-xl'>
                           <svg className='' xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24">
                             <g data-name="vuesax/bulk/trash" transform="translate(-108 -188)">
                               <g>
@@ -165,7 +165,7 @@ export default function TrustedSettingsModal({ modalHeader, buttonText }) {
                     </div>
                   </div>
                   <div className='col-span-2 pb-8 w-full flex justify-center'>
-                    <button className="focus:outline-none w-64 text-black bg-[#02ff63] transition ease-out hover:-translate-y-1 hover:scale-100 delay-150 focus:ring-4 hover:shadow-lg hover:shadow-[#02ff63cc] font-bold rounded-xl text-sm py-3 px-3 mt-3" type="submit">Add</button>
+                    <button className="focus:border-transparent focus:ring-0 w-64 text-black bg-[#02ff63] transition ease-out hover:-translate-y-1 hover:scale-100 delay-150 hover:shadow-lg hover:shadow-[#02ff63cc] font-bold rounded-xl text-sm py-3 px-3 mt-3" type="submit">Add</button>
                   </div>
                 </Dialog.Panel>
               </Transition.Child>

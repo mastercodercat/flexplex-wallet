@@ -17,9 +17,9 @@ function CreateOrExistingWalletView() {
                         <p className="mb-3 self-center text-5xl font-semibold whitespace-nowrap dark:text-white">GamePlex</p>
                         <p className="mb-3 self-center text-sm whitespace-nowrap dark:text-white pb-6">A Crypto Wallet for DeFi & NFT</p>
 
-                        <button className="focus:outline-none text-black bg-[#02ff63] w-full flex-auto transition ease-out hover:-translate-y-1 hover:scale-100 delay-150 focus:ring-4 hover:shadow-lg hover:shadow-[#02ff63cc] focus:ring-green-300 font-bold rounded-md text-sm px-12 py-3 mr-2 my-5" type="submit">Create New Wallet</button>
+                        <button className="focus:border-transparent focus:ring-0 text-black bg-[#02ff63] w-full flex-auto transition ease-out hover:-translate-y-1 hover:scale-100 delay-150 hover:shadow-lg hover:shadow-[#02ff63cc] focus:ring-green-300 font-bold rounded-md text-sm px-12 py-3 mr-2 my-5" type="submit">Create New Wallet</button>
                         <br />
-                        <a href="/create" className="focus:outline-none text-white bg-gradient-to-r from-[#6A00FF] to-[#3C00B7] w-full flex-auto transition ease-out hover:-translate-y-1 hover:scale-100 delay-150 focus:ring-4 hover:shadow-lg hover:shadow-[#3c00b7cc] focus:ring-blue-300 font-bold rounded-md text-sm px-5 py-3 mr-2 mb-2" type="submit">I Have a Wallet</a>
+                        <a href="/create" className="focus:border-transparent focus:ring-0 text-white bg-gradient-to-r from-[#6A00FF] to-[#3C00B7] w-full flex-auto transition ease-out hover:-translate-y-1 hover:scale-100 delay-150 hover:shadow-lg hover:shadow-[#3c00b7cc] focus:ring-blue-300 font-bold rounded-md text-sm px-5 py-3 mr-2 mb-2" type="submit">I Have a Wallet</a>
                     </div>
                 </div>
             </div>

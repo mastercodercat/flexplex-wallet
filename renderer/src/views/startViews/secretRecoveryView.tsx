@@ -28,7 +28,7 @@ function SecretRecoveryView() {
                         <div className="relative">
                             <div  id='viewed' className='backdrop-blur-sm bg-[#ffffff26] h-32 w-full absolute top-5 z-10 rounded-xl'></div>
 
-                            <button title="view" className="z-50 absolute bottom-5 right-0 h-10 w-10 mx-2 text-white rounded-lg backdrop-blur-sm bg-[#ffffff26] border-[#fafafa36] border-2 px-[10px]" onClick={toggle}>
+                            <button title="view" className="focus:border-transparent focus:ring-0 z-50 absolute bottom-5 right-0 h-10 w-10 mx-2 text-white rounded-lg backdrop-blur-sm bg-[#ffffff26] border-[#fafafa36] border-2 px-[10px]" onClick={toggle}>
                                 <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" viewBox="0 0 16 16">
                                     <path d="M13.359 11.238C15.06 9.72 16 8 16 8s-3-5.5-8-5.5a7.028 7.028 0 0 0-2.79.588l.77.771A5.944 5.944 0 0 1 8 3.5c2.12 0 3.879 1.168 5.168 2.457A13.134 13.134 0 0 1 14.828 8c-.058.087-.122.183-.195.288-.335.48-.83 1.12-1.465 1.755-.165.165-.337.328-.517.486l.708.709z" />
                                     <path d="M11.297 9.176a3.5 3.5 0 0 0-4.474-4.474l.823.823a2.5 2.5 0 0 1 2.829 2.829l.822.822zm-2.943 1.299.822.822a3.5 3.5 0 0 1-4.474-4.474l.823.823a2.5 2.5 0 0 0 2.829 2.829z" />
@@ -38,7 +38,7 @@ function SecretRecoveryView() {
                             <textarea rows={5} title='secret' className="focus:outline-none text-white bg-[#313131] w-full border-[#383838] border-2 flex-auto transition ease-out font-bold rounded-xl placeholder:font-thin placeholder:text-[#FFFFFF33] text-sm px-6 py-3 mr-2 mt-5 mb-2" value="hello World How Are You" />
                         </div>
                         <br />
-                        <input placeholder="Accept" className="form-check-input appearance-none h-4 w-4 border border-gray-300 rounded-sm bg-[#313131] checked:bg-blue-600 checked:border-blue-600 focus:outline-none transition duration-200 mt-1 align-top bg-no-repeat bg-center bg-contain mr-2 my-10 cursor-pointer" type="checkbox" value="" />
+                        <input placeholder="Accept" className="focus:border-transparent focus:ring-0 form-check-input appearance-none h-4 w-4 border border-gray-300 rounded-sm bg-[#313131] checked:bg-blue-600 checked:border-blue-600 focus:outline-none transition duration-200 mt-1 align-top bg-no-repeat bg-center bg-contain mr-2 my-10 cursor-pointer" type="checkbox" value="" />
                         <label className="form-check-label inline-block text-xs text-white-800 pb-5">
                             I saved my secret recovery key
                         </label>

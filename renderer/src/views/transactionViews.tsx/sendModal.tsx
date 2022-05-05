@@ -8,7 +8,7 @@ export default function SendModal({ modalHeader, buttonText }){
     return (
         <div className="relative inline-block text-left">
               <div>
-                <button onClick={() => {setIsOpen(true)}} className="focus:outline-none h-11 w-full text-white border-[#383838] border bg-[#2c2c2c] flex-auto transition ease-out hover:-translate-y-1 hover:scale-100 delay-150 focus:ring-4 hover:shadow-lg font-normal rounded-xl text-md py-2 mx-2 mt-5" type="submit">
+                <button onClick={() => {setIsOpen(true)}} className="focus:border-transparent focus:ring-0 h-11 w-full text-white border-[#383838] border bg-[#2c2c2c] flex-auto transition ease-out hover:-translate-y-1 hover:scale-100 delay-150 hover:shadow-lg font-normal rounded-xl text-md py-2 mx-2 mt-5" type="submit">
                     <span className='inline-flex content-center'><svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24">
                         <g id="vuesax_linear_export" data-name="vuesax/linear/export" transform="translate(-492 -444)">
                             <g id="export">

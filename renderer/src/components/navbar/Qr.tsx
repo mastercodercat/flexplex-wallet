@@ -9,7 +9,7 @@ export default function Qr() {
     return (
         <div className="relative inline-block text-left">
             <div>
-                <button title='Scan QR' onClick={() => { setIsOpen(true) }} className="inline-flex justify-center w-full p-1.5 text-sm font-medium text-white rounded-xl bg-[#02FF63] border border-[#383838] focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-opacity-75">
+                <button title='Scan QR' onClick={() => { setIsOpen(true) }} className="focus:border-transparent focus:ring-0 inline-flex justify-center w-full p-1.5 text-sm font-medium text-white rounded-xl bg-[#02FF63] border border-[#383838] focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-opacity-75">
                     <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24">
                         <g id="scan" transform="translate(-364 -252)">
                             <path d="M0,7V4.5A4.494,4.494,0,0,1,4.5,0H7" transform="translate(366 254)" fill="none" stroke="#000" strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" />
@@ -64,14 +64,14 @@ export default function Qr() {
                                                 <img className='w-32 h-32 mx-auto my-auto' src='/icons/qr.svg' alt='QR Code Icon'></img>
                                             </div>
                                             <div className='flex justify-center'>
-                                                <button className="focus:outline-none w-64 text-white bg-gradient-to-r from-[#6A00FF] to-[#3C00B7] transition ease-out hover:-translate-y-1 hover:scale-100 delay-150 focus:ring-4 hover:shadow-lg hover:shadow-[#3c00b7cc] font-bold rounded-xl text-sm py-2 px-6 mr-2 my-3" type="submit">Scan QR Code</button>
+                                                <button className="focus:border-transparent focus:ring-0 w-64 text-white bg-gradient-to-r from-[#6A00FF] to-[#3C00B7] transition ease-out hover:-translate-y-1 hover:scale-100 delay-150 hover:shadow-lg hover:shadow-[#3c00b7cc] font-bold rounded-xl text-sm py-2 px-6 mr-2 my-3" type="submit">Scan QR Code</button>
                                             </div>
                                         </div>
                                         <h1 className='text-center mt-12 mb-3 text-sm'>Or use wallet connect uri</h1>
                                         <div className='grid grid-cols-4 bg-[#1e1e1e] border border-[#383838] rounded-xl w-100 mb-2'>
-                                            <input placeholder='e.g wc:a2875887bb44y7…' type='text' className='col-span-3 rounded-xl bg-[#1e1e1e] border-0 text-[#ffffff] text-left text-xs py-4 pl-6'></input>
+                                            <input placeholder='e.g wc:a2875887bb44y7…' type='text' className='col-span-3 focus:border-transparent focus:ring-0 rounded-xl bg-[#1e1e1e] border-0 text-[#ffffff] text-left text-xs py-4 pl-6'></input>
                                             <div className='flex justify-end rounded-xl'>
-                                                <button type='button' title="Revoke" className='bg-[#272727] p-3 w-full text-sm rounded-xl text-[#ffffff99]'>
+                                                <button type='button' title="Revoke" className='bg-[#272727] p-3 w-full text-sm rounded-xl text-[#ffffff99] focus:border-transparent focus:ring-0'>
                                                     Connect
                                                 </button>
                                             </div>

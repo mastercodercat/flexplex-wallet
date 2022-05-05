@@ -8,7 +8,7 @@ export default function ExportPrivateKeyModal({ modalHeader, buttonText }) {
   return (
     <div className="relative inline-block text-left">
       <div>
-        <button onClick={() => { setIsOpen(true) }} className='text-sm w-full p-3 text-[#ffffff66] border border-[#383838] bg-[#232323] rounded-xl'>
+        <button onClick={() => { setIsOpen(true) }} className='focus:border-transparent focus:ring-0 text-sm w-full p-3 text-[#ffffff66] border border-[#383838] bg-[#232323] rounded-xl'>
           <table className="table-auto">
             <tbody>
               <tr>
@@ -77,15 +77,15 @@ export default function ExportPrivateKeyModal({ modalHeader, buttonText }) {
                                     </g>
                                 </g>
                             </svg>
-                            <input type="password" className="focus:outline-none text-white bg-[#313131] w-full border-[#383838] border-2 flex-auto transition ease-out font-bold rounded-xl placeholder:font-thin placeholder:text-[#FFFFFF33] text-sm px-5 pl-11 py-3 mr-2 mt-5 mb-5" placeholder='Enter Password' />
+                            <input type="password" className="focus:border-transparent focus:ring-0 text-white bg-[#313131] w-full border-[#383838] border-2 flex-auto transition ease-out font-bold rounded-xl placeholder:font-thin placeholder:text-[#FFFFFF33] text-sm px-5 pl-11 py-3 mr-2 mt-5 mb-5" placeholder='Enter Password' />
                         </label>
                         <br />
                         </div>
 
                   </div>
                   <div className='col-span-2 pb-8 px-6 w-full flex justify-center'>
-                    <button className="focus:outline-none w-64 text-white bg-[#383838] border border-[#383838] transition ease-out hover:-translate-y-1 hover:scale-100 delay-150 focus:ring-4 hover:shadow-lg hover:shadow-[#FF5C59cc] font-bold rounded-xl text-sm py-3 px-3 mr-2 mt-3" type="submit">Close</button>
-                    <button className="focus:outline-none w-64 text-black bg-[#02ff63] transition ease-out hover:-translate-y-1 hover:scale-100 delay-150 focus:ring-4 hover:shadow-lg hover:shadow-[#02ff63cc] font-bold rounded-xl text-sm py-3 px-3 ml-2 mt-3" type="submit">Next</button>
+                    <button className="focus:border-transparent focus:ring-0 w-64 text-white bg-[#383838] border border-[#383838] transition ease-out hover:-translate-y-1 hover:scale-100 delay-150 hover:shadow-lg hover:shadow-[#FF5C59cc] font-bold rounded-xl text-sm py-3 px-3 mr-2 mt-3" type="submit">Close</button>
+                    <button className="focus:border-transparent focus:ring-0 w-64 text-black bg-[#02ff63] transition ease-out hover:-translate-y-1 hover:scale-100 delay-150 hover:shadow-lg hover:shadow-[#02ff63cc] font-bold rounded-xl text-sm py-3 px-3 ml-2 mt-3" type="submit">Next</button>
                   </div>
                 </Dialog.Panel>
               </Transition.Child>

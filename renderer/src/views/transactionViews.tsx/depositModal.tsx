@@ -8,7 +8,7 @@ export default function DepositModal({ modalHeader, buttonText }){
     return (
         <div className="relative inline-block text-left">
               <div>
-                <button onClick={() => {setIsOpen(true)}} className="focus:outline-none h-11 w-full text-white border-[#383838] border bg-[#2c2c2c] flex-auto transition ease-out hover:-translate-y-1 hover:scale-100 delay-150 focus:ring-4 hover:shadow-lg font-normal rounded-xl text-md py-2 mx-2 mt-5" type="submit">
+                <button onClick={() => {setIsOpen(true)}} className="focus:border-transparent focus:ring-0 h-11 w-full text-white border-[#383838] border bg-[#2c2c2c] flex-auto transition ease-out hover:-translate-y-1 hover:scale-100 delay-150 hover:shadow-lg font-normal rounded-xl text-md py-2 mx-2 mt-5" type="submit">
                     <span className='inline-flex content-center'>
                     <svg id="import" xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24">
                         <path d="M0,0,2.56,2.56,5.12,0" transform="translate(9.32 11.68)" fill="none" stroke="#fff" strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" />

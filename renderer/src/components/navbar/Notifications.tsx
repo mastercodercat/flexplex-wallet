@@ -71,8 +71,8 @@ export default function Notifications() {
                                             &lt; 0.00001 SOL
                                             </h1>
                                         </div>
-                                        <button className="focus:outline-none w-50 text-white bg-[#383838] transition ease-out hover:-translate-y-1 hover:scale-100 delay-150 focus:ring-4 hover:shadow-lg hover:bg-[#FF5C59] hover:shadow-[#FF5C59cc] font-bold rounded-xl text-sm py-3 px-3 mr-2 mt-3" type="submit">Cancel</button>
-                                        <button className="focus:outline-none w-50 text-black bg-[#02ff63] transition ease-out hover:-translate-y-1 hover:scale-100 delay-150 focus:ring-4 hover:shadow-lg hover:shadow-[#02ff63cc] font-bold rounded-xl text-sm py-3 px-3 mt-3" type="submit">Approve</button>
+                                        <button className="focus:border-transparent focus:ring-0 w-50 text-white bg-[#383838] transition ease-out hover:-translate-y-1 hover:scale-100 delay-150 hover:shadow-lg hover:bg-[#FF5C59] hover:shadow-[#FF5C59cc] font-bold rounded-xl text-sm py-3 px-3 mr-2 mt-3" type="submit">Cancel</button>
+                                        <button className="focus:border-transparent focus:ring-0 text-black bg-[#02ff63] transition ease-out hover:-translate-y-1 hover:scale-100 delay-150 hover:shadow-lg hover:shadow-[#02ff63cc] font-bold rounded-xl text-sm py-3 px-3 mt-3" type="submit">Approve</button>
                                     </div>
                                 </button>
                             )}

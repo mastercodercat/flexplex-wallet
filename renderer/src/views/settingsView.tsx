@@ -70,7 +70,7 @@ function SettingsView({walletName, walletAddress, onChangeWalletName, onChangeWa
 
                 {/* Delete button */}
                 <div className='w-full flex justify-center'>
-                    <button className="focus:outline-none w-64 text-white bg-[#B72C42] transition ease-out hover:-translate-y-1 hover:scale-100 delay-150 focus:ring-4 hover:shadow-lg hover:shadow-[#B72C42cc] font-bold rounded-md text-sm py-2 mr-2 my-5" type="submit">Delete Wallet</button>
+                    <button className="focus:border-transparent focus:ring-0 w-64 text-white bg-[#B72C42] transition ease-out hover:-translate-y-1 hover:scale-100 delay-150 hover:shadow-lg hover:shadow-[#B72C42cc] font-bold rounded-md text-sm py-2 mr-2 my-5" type="submit">Delete Wallet</button>
                 </div>
             </div>
         </div>

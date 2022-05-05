@@ -14,7 +14,7 @@ function LeftSidebar({ CollectionName, CollectionDesc, NFTImage, NFTTag, NFTPric
             </div>
             <div className="grid grid-cols-2 gap-3 p-3">
                 <div className='col-span-2 text-center'>
-                    {/* <button className="focus:outline-none inline-flex text-white backdrop-blur-sm bg-[#ffffff66] absolute w-56 h-12 mt-[-42px] ml-[-106px] font-bold rounded-xl border border-[#fafafa] text-2xl py-2 px-3 mb-5 justify-center" type="submit">
+                    {/* <button className="focus:border-transparent focus:ring-0 inline-flex text-white backdrop-blur-sm bg-[#ffffff66] absolute w-56 h-12 mt-[-42px] ml-[-106px] font-bold rounded-xl border border-[#fafafa] text-2xl py-2 px-3 mb-5 justify-center" type="submit">
                     <img className='inline mt-1 rounded-full bg-[#212121] p-1' width="30px" height="30px" src="/images/coins/sol.png" alt="" />
                     &nbsp;{NFTPrice} SOL</button> */}
 
@@ -48,8 +48,8 @@ function LeftSidebar({ CollectionName, CollectionDesc, NFTImage, NFTTag, NFTPric
                                 {CollectionDesc}
                             </h5>
                             <div className="grid grid-cols-2 text-center mx-16">
-                            <button className="focus:outline-none w-50 text-white bg-gradient-to-r from-[#6A00FF] to-[#3C00B7] transition ease-out hover:-translate-y-1 hover:scale-100 delay-150 focus:ring-4 hover:shadow-lg hover:shadow-[#3c00b7cc] font-bold rounded-md text-sm py-2 px-3 mr-2 my-3" type="submit">Swap</button>
-                            <button className="focus:outline-none w-50 text-black bg-[#02ff63] transition ease-out hover:-translate-y-1 hover:scale-100 delay-150 focus:ring-4 hover:shadow-lg hover:shadow-[#02ff63cc] font-bold rounded-md text-sm py-2 px-3 mr-2 my-3" type="submit">Sell</button>
+                            <button className="focus:border-transparent focus:ring-0 w-50 text-white bg-gradient-to-r from-[#6A00FF] to-[#3C00B7] transition ease-out hover:-translate-y-1 hover:scale-100 delay-150 hover:shadow-lg hover:shadow-[#3c00b7cc] font-bold rounded-md text-sm py-2 px-3 mr-2 my-3" type="submit">Swap</button>
+                            <button className="focus:border-transparent focus:ring-0 w-50 text-black bg-[#02ff63] transition ease-out hover:-translate-y-1 hover:scale-100 delay-150 hover:shadow-lg hover:shadow-[#02ff63cc] font-bold rounded-md text-sm py-2 px-3 mr-2 my-3" type="submit">Sell</button>
                             </div>
 
                         </div>
@@ -106,7 +106,7 @@ function RightSidebar({attributes, activities, metaData, tokenData, transfers = 
                 <span className='float-right'>
                     
                     {/* Refresh */}
-                    <button title="refresh" className="h-10 w-10 mx-2 text-white rounded-lg bg-[#1e1e1e] hover:text-[#212121] border-[#383838] border-2 px-[10px]">
+                    <button title="refresh" className="focus:border-transparent focus:ring-0 h-10 w-10 mx-2 text-white rounded-lg bg-[#1e1e1e] hover:text-[#212121] border-[#383838] border-2 px-[10px]">
                         <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24">
                             <g id="rotate-left" transform="translate(-236 -316)">
                                 <path d="M5.78.43A10.019,10.019,0,0,1,8.67,0,8.663,8.663,0,1,1,1.46,3.85" transform="translate(239.33 320.65)" fill="none" stroke="#fff" strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" />
@@ -118,7 +118,7 @@ function RightSidebar({attributes, activities, metaData, tokenData, transfers = 
                     </button>
 
                     {/* Share */}
-                    <button title="share" className="h-10 w-10 mx-2 text-white rounded-lg bg-[#1e1e1e] border-[#383838] hover:text-[#212121] border px-[10px]">
+                    <button title="share" className="focus:border-transparent focus:ring-0 h-10 w-10 mx-2 text-white rounded-lg bg-[#1e1e1e] border-[#383838] hover:text-[#212121] border px-[10px]">
                         <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24">
                             <g id="send" transform="translate(-236 -316)">
                             <path d="M6.46,1.229l8.56,4.28c3.84,1.92,3.84,5.06,0,6.98l-8.56,4.28c-5.76,2.88-8.11.52-5.23-5.23l.87-1.73a2.046,2.046,0,0,0,0-1.61l-.87-1.74C-1.65.709.71-1.651,6.46,1.229Z" transform="translate(239.05 319.001)" fill="none" stroke="#fff" strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" />
@@ -129,7 +129,7 @@ function RightSidebar({attributes, activities, metaData, tokenData, transfers = 
                     </button>
 
                     {/* Send */}
-                    <button title="send" className="h-10 w-10 mx-2 text-white rounded-lg bg-[#1e1e1e] border-[#383838] hover:text-[#212121] border px-[10px]">
+                    <button title="send" className="focus:border-transparent focus:ring-0 h-10 w-10 mx-2 text-white rounded-lg bg-[#1e1e1e] border-[#383838] hover:text-[#212121] border px-[10px]">
                         <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24">
                             <g id="vuesax_linear_export" data-name="vuesax/linear/export" transform="translate(-492 -444)">
                             <g id="export">
@@ -304,7 +304,7 @@ function CollectionDetailsView({ collectionDetails, backButtonPath, metaData, to
     return (
         <div>
             <Link href={backButtonPath}>
-                <button title="back" className="h-12 w-12 ml-3 mx-2 text-white rounded-lg bg-[#1e1e1e] hover:bg-[#02FF63] hover:text-[#212121] border-[#383838] border absolute top-[86px] left-1 px-3">
+                <button title="back" className="focus:border-transparent focus:ring-0 h-12 w-12 ml-3 mx-2 text-white rounded-lg bg-[#1e1e1e] hover:bg-[#02FF63] hover:text-[#212121] border-[#383838] border absolute top-[86px] left-1 px-3">
                     <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" viewBox="0 0 16 16">
                         <path fillRule="evenodd" d="M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0 .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8z" />
                     </svg>
