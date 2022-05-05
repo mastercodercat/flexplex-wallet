@@ -275,7 +275,7 @@ export default function ActivityView() {
                         <div className='w-full relative top-[-1.9rem] bg-[#1e1e1e] rounded-xl p-5'>
                           {/* Filter Buttons */}
                           <div className="text-right mb-2">
-                            <button className="focus:outline-none text-white mx-3 transition ease-out hover:-translate-y-1 hover:scale-100 delay-150 focus:ring-4 hover:shadow-lg hover:text-black hover:shadow-[#02ff63cc] hover:bg-[#02ff63] bg-[#02ff63] text-black font-bold rounded-md text-sm py-2 px-3 mr-2 my-3">7 Days</button>
+                            <button className="focus:outline-none text-white mx-3 transition ease-out hover:-translate-y-1 hover:scale-100 delay-150 focus:ring-4 hover:shadow-lg hover:text-black hover:shadow-[#02ff63cc] hover:bg-[#02ff63] bg-[#02ff63] font-bold rounded-md text-sm py-2 px-3 mr-2 my-3">7 Days</button>
                             <button className="focus:outline-none text-white mx-3 transition ease-out hover:-translate-y-1 hover:scale-100 delay-150 focus:ring-4 hover:shadow-lg hover:text-black hover:shadow-[#02ff63cc] hover:bg-[#02ff63] font-bold rounded-md text-sm py-2 px-3 mr-2 my-3">24 Days</button>
                             <button className="focus:outline-none text-white mx-3 transition ease-out hover:-translate-y-1 hover:scale-100 delay-150 focus:ring-4 hover:shadow-lg hover:text-black hover:shadow-[#02ff63cc] hover:bg-[#02ff63] font-bold rounded-md text-sm py-2 px-3 mr-2 my-3">30 Days</button>
                           </div>
@@ -340,7 +340,7 @@ export default function ActivityView() {
                         <div className='w-full relative top-[-1.9rem] bg-[#1e1e1e] rounded-xl p-5'>
                           {/* Filter Buttons */}
                           <div className="text-right mb-2">
-                            <button className="focus:outline-none text-white mx-3 transition ease-out hover:-translate-y-1 hover:scale-100 delay-150 focus:ring-4 hover:shadow-lg hover:text-black hover:shadow-[#02ff63cc] hover:bg-[#02ff63] bg-[#02ff63] text-black font-bold rounded-md text-sm py-2 px-3 mr-2 my-3">7 Days</button>
+                            <button className="focus:outline-none text-white mx-3 transition ease-out hover:-translate-y-1 hover:scale-100 delay-150 focus:ring-4 hover:shadow-lg hover:text-black hover:shadow-[#02ff63cc] hover:bg-[#02ff63] bg-[#02ff63] font-bold rounded-md text-sm py-2 px-3 mr-2 my-3">7 Days</button>
                             <button className="focus:outline-none text-white mx-3 transition ease-out hover:-translate-y-1 hover:scale-100 delay-150 focus:ring-4 hover:shadow-lg hover:text-black hover:shadow-[#02ff63cc] hover:bg-[#02ff63] font-bold rounded-md text-sm py-2 px-3 mr-2 my-3">24 Days</button>
                             <button className="focus:outline-none text-white mx-3 transition ease-out hover:-translate-y-1 hover:scale-100 delay-150 focus:ring-4 hover:shadow-lg hover:text-black hover:shadow-[#02ff63cc] hover:bg-[#02ff63] font-bold rounded-md text-sm py-2 px-3 mr-2 my-3">30 Days</button>
                           </div>

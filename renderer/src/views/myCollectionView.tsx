@@ -23,7 +23,7 @@ function CollectionCard({ CollectionName, CollectionDesc, CollectionImage }) {
                             </div>
                         </a>
                     </div>
-                    <div className="p-2 xl:mt-4">
+                    <div className="p-2">
                         <a href="#">
                             <h5 className="pb-1 text-sm font-bold text-center tracking-tight text-gray-900 dark:text-white">{CollectionName}</h5>
                         </a>

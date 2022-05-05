@@ -2,6 +2,11 @@ import NetworkSettingsModal from "./settingsViews.tsx/networkSettingsModal";
 import BlankSettingsModal from "./settingsViews.tsx/blankSettingsModal";
 import TrustedSettingsModal from "./settingsViews.tsx/trustedSettingsModal";
 import LanguageSettingsModal from "./settingsViews.tsx/languageSettingsModal";
+import AddressBookModal from "./settingsViews.tsx/addressBookModal";
+import AutolockerModal from "./settingsViews.tsx/autolockerModal";
+import SecretPhraseModal from "./settingsViews.tsx/secretPhraseModal";
+import ResetSecretPhraseModal from "./settingsViews.tsx/resetSecretPhraseModal";
+import ExportPrivateKeyModal from "./settingsViews.tsx/exportPrivateKeyModal";
 
 function SettingOptionItem({optionIndex, optionHeader, optionDescription}) {
     return (
@@ -15,13 +20,13 @@ function SettingOptionItem({optionIndex, optionHeader, optionDescription}) {
             </table>
             {/* Adding Modals based on Index */}
             {optionIndex === "1" && <LanguageSettingsModal modalHeader={optionHeader} buttonText={optionDescription}/>}
-            {optionIndex === "2" && <BlankSettingsModal modalHeader={optionHeader} buttonText={optionDescription}/>}
+            {optionIndex === "2" && <AddressBookModal modalHeader={optionHeader} buttonText={optionDescription}/>}
             {optionIndex === "3" && <TrustedSettingsModal modalHeader={optionHeader} buttonText={optionDescription}/>}
-            {optionIndex === "4" && <BlankSettingsModal modalHeader={optionHeader} buttonText={optionDescription}/>}
+            {optionIndex === "4" && <AutolockerModal modalHeader={optionHeader} buttonText={optionDescription}/>}
             {optionIndex === "5" && <NetworkSettingsModal modalHeader={optionHeader} buttonText={optionDescription}/>}
-            {optionIndex === "6" && <BlankSettingsModal modalHeader={optionHeader} buttonText={optionDescription}/>}
-            {optionIndex === "7" && <BlankSettingsModal modalHeader={optionHeader} buttonText={optionDescription}/>}
-            {optionIndex === "8" && <BlankSettingsModal modalHeader={optionHeader} buttonText={optionDescription}/>}
+            {optionIndex === "6" && <SecretPhraseModal modalHeader={optionHeader} buttonText={optionDescription}/>}
+            {optionIndex === "7" && <ExportPrivateKeyModal modalHeader={optionHeader} buttonText={optionDescription}/>}
+            {optionIndex === "8" && <ResetSecretPhraseModal modalHeader={optionHeader} buttonText={optionDescription}/>}
         </div>
     );
 }

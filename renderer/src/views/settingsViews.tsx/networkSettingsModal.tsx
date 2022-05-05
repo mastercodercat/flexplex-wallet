@@ -45,7 +45,7 @@ export default function NetworkSettingsModal({ modalHeader, buttonText }){
                             leaveFrom="opacity-100 scale-100"
                             leaveTo="opacity-0 scale-95"
                         >
-                            <Dialog.Panel className="w-full max-w-md transform overflow-hidden rounded-xl bg-[#1e1e1e] border border-[#383838] text-left align-middle shadow-xl ring-1 ring-black ring-opacity-5 focus:outline-none transition-all">
+                            <Dialog.Panel className="w-full max-w-[30rem] transform overflow-hidden rounded-xl bg-[#1e1e1e] border border-[#383838] text-left align-middle shadow-xl ring-1 ring-black ring-opacity-5 focus:outline-none transition-all">
                             <Dialog.Title
                                 as="h1"
                                 className="text-white text-lg font-bold text-center bg-[#232323] py-6 px-3 rounded-xl w-100"
