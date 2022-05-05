@@ -2,21 +2,21 @@ import { Dialog, Transition } from '@headlessui/react'
 import { Fragment, useState } from 'react'
 
 
-export default function BlankSettingsModal({ modalHeader, buttonText }){
+export default function DepositModal({ modalHeader, buttonText }){
     let [isOpen, setIsOpen] = useState(false);
 
     return (
         <div className="relative inline-block text-left">
               <div>
-                <button onClick={() => {setIsOpen(true)}} className='text-sm w-full p-3 text-[#ffffff66] border border-[#383838] bg-[#232323] rounded-xl'>
-                    <table className="table-auto">
-                        <tbody>
-                            <tr>
-                            <td><h1 className='text-sm whitespace-nowrap'>{buttonText}</h1></td>
-                            <td className='text-right w-full'>&gt;</td>
-                            </tr>
-                        </tbody>
-                    </table>
+                <button onClick={() => {setIsOpen(true)}} className="focus:outline-none h-11 w-full text-white border-[#383838] border bg-[#2c2c2c] flex-auto transition ease-out hover:-translate-y-1 hover:scale-100 delay-150 focus:ring-4 hover:shadow-lg font-normal rounded-xl text-md py-2 mx-2 mt-5" type="submit">
+                    <span className='inline-flex content-center'>
+                    <svg id="import" xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24">
+                        <path d="M0,0,2.56,2.56,5.12,0" transform="translate(9.32 11.68)" fill="none" stroke="#fff" strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" />
+                        <path data-name="Vector" d="M0,0V10.17" transform="translate(11.88 4)" fill="none" stroke="#fff" strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" />
+                        <path data-name="Vector" d="M16,0A7.651,7.651,0,0,1,8,8,7.651,7.651,0,0,1,0,0" transform="translate(4 12.18)" fill="none" stroke="#fff" strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" />
+                        <path data-name="Vector" d="M0,0H24V24H0Z" transform="translate(24 24) rotate(180)" fill="none" opacity="0" />
+                    </svg>
+                    &nbsp;&nbsp;{buttonText}</span>
                 </button>
               </div>
               <Transition appear show={isOpen} as={Fragment}>
@@ -55,7 +55,7 @@ export default function BlankSettingsModal({ modalHeader, buttonText }){
 
                             <div className='mb-5 py-6 px-12'>
                                 
-
+                            {/* Deposit Modal Body */}
                             </div>
                             </Dialog.Panel>
                         </Transition.Child>

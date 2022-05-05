@@ -1,5 +1,4 @@
 import NetworkSettingsModal from "./settingsViews.tsx/networkSettingsModal";
-import BlankSettingsModal from "./settingsViews.tsx/blankSettingsModal";
 import TrustedSettingsModal from "./settingsViews.tsx/trustedSettingsModal";
 import LanguageSettingsModal from "./settingsViews.tsx/languageSettingsModal";
 import AddressBookModal from "./settingsViews.tsx/addressBookModal";
