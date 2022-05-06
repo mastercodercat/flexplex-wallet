@@ -10,6 +10,8 @@ import { useMetadata } from '../web3/hooks/useMetadata';
 import { publicKey, connection } from '../web3/config';
 import { Metadata } from '../web3/schema/metadata';
 import { useQuery } from 'react-query';
+import { getTokens } from '../web3/solscan/api';
+import get from 'lodash.get';
 
 
 const navigation = [
@@ -30,14 +32,14 @@ const coins = [
   "/images/coins/tether.png"
 ]
 
-const assets = coins.map(coin => ({
-    assetImage: coin,
-    assetName: coin.split("/")[3].split(".")[0],
-    assetSymbol: coin.split("/")[3].split(".")[0].toUpperCase(),
-    assetAmount: randomIntFromInterval(1, 100),
-    assetAmountInUSD: randomIntFromInterval(1000, 10000),
-    assetPercentChange: randomIntFromInterval(-100, 100),
-}));
+// const assets = coins.map(coin => ({
+//     assetImage: coin,
+//     assetName: coin.split("/")[3].split(".")[0],
+//     assetSymbol: coin.split("/")[3].split(".")[0].toUpperCase(),
+//     assetAmount: randomIntFromInterval(1, 100),
+//     assetAmountInUSD: randomIntFromInterval(1000, 10000),
+//     assetPercentChange: randomIntFromInterval(-100, 100),
+// }));
 
 const collectionMap = (i: Metadata) => ({
   uri: i.data.uri,
@@ -48,6 +50,22 @@ function Home() {
   const address = process.env.NEXT_PUBLIC_SOL_PUBLIC_KEY;
   const [metadataList, fetchMetadata] = useMetadata();
   const [collections, setCollections] = useState([])
+  const [assets, setAssets] = useState([])
+  const { data: tokensData } = useQuery(["getTransfers", { address }], getTokens, { enabled: !!address });
+
+  useEffect(() => {
+    setAssets(
+      get(tokensData, "data", []).filter(t => get(t, 'tokenIcon', false) && get(t, "tokenName", false) && get(t, "tokenSymbol", false)).map((token, i) => ({
+        assetImage: get(token, "tokenIcon", ""),
+        assetAddress: get(token, "tokenAddress", ""),
+        assetName: get(token, "tokenName", ""),
+        assetSymbol: get(token, "tokenSymbol", ""),
+        assetAmount: get(token, "tokenAmount.uiAmount", 0),
+        assetAmountInUSD: randomIntFromInterval(1000, 10000),
+        assetPercentChange: randomIntFromInterval(-100, 100),
+      }))
+    );
+  }, [tokensData])
 
   useEffect(() => {
     fetchMetadata({

@@ -1,18 +1,26 @@
 // Left Side Assets View (My Collection)
 import { ellipseAddress } from '../utils/textUtils';
 import classnames from 'classnames';
+import { useQuery } from 'react-query';
+import get from 'lodash.get';
+import { getMarket, getAccount } from '../web3/solscan/api';
 
 function AssetCard({asset, onAssetClick}) {
+    const { data: assetData } = useQuery(["assetData", { address: get(asset, 'assetAddress', '') }], getAccount, { enabled: !!get(asset, 'assetAddress', '') });
+    const amountInUSD =  Math.round(get(assetData, 'data.tokenInfo.price', 0) * get(asset, 'assetAmount', 1) * 100) / 100
+
+    if(!Boolean(asset.assetAmount)) return null;
+
     return (
         <div className='card cursor-pointer flex w-full bg-[#232323] border border-[#383838] rounded-xl px-3 py-2 mb-3' onClick={onAssetClick}>
             <img src={asset.assetImage} alt="" className="w-12 h-12 rounded-full" />
             <h1 className='ml-2'><span className='text-md font-normal '>{asset.assetName}</span>                     <br />
             <span className='opacity-40 font-thin text-sm'>{asset.assetSymbol}</span></h1>
             <h1 className='text-right w-full'><span className='text-lg font-semibold'>{asset.assetAmount}</span>                     <br />
-            <span className='opacity-40 font-normal text-sm'>$ {asset.assetAmountInUSD}</span>&nbsp;&nbsp;&nbsp;
-            <span className={classnames('font-normal text-sm',
+            {Boolean(amountInUSD) && <span className='opacity-40 font-normal text-sm'>$ {amountInUSD}</span>}
+            {/* <span className={classnames('font-normal text-sm',
                 asset.assetPercentChange > 0 ? 'text-[#01DB6A]' : 'text-[#FF4136]')}>
-                {asset.assetPercentChange > 0 ? '+' : '-'} {Math.abs(asset.assetPercentChange)}%</span>
+                {asset.assetPercentChange > 0 ? '+' : '-'} {Math.abs(asset.assetPercentChange)}%</span> */}
             </h1>
         </div>
     );
