@@ -75,17 +75,17 @@ function Home() {
         {/* Divide into two sections */}
         <div className='flex flex-col md:flex-row mx-3 mt-0 pb-3 '>
           {/* Left section */}
-          <div className='w-full lg:w-[30%] min-w-[396px] md:w-[40%] bg-[#121212] rounded-l-xl'>
+          <div className='w-full bg-[#121212] rounded-t-xl md:rounded-l-xl md:rounded-r-none lg:w-[420px] min-w-[420px] max-w-[420px] md:w-[40%]'>
             {/* Assets View */}
             <AssetsView profileImage={"/images/nfts/"+ randomIntFromInterval(1, 21) +".webp"} 
               walletAddress={"EP8YfUCpbbLVL3zZUZmDWPboFSjpYaSUYYXKc2HRjft9"} 
-              walletBalance={"10,000"} 
+              walletBalance={"17.890.894,24"} 
               walletBalanceChange={randomIntFromInterval(-10000, 10000)} 
               walletBalancePercentChange={randomIntFromInterval(-10.0, 10.0)} 
               assets={assets} onAssetClick={() => {}}></AssetsView>
           </div>
           {/* Right section */}
-          <div className='w-full lg:w-[70%] md:w-[60%] mx-auto bg-[#121212] rounded-r-xl'>
+          <div className='w-full lg:w-full mx-auto bg-[#121212] rounded-b-xl md:rounded-r-xl'>
             {/* Grid of Cards */}
             <MyCollectionView Collections={collections}></MyCollectionView>
           </div>

@@ -28,8 +28,8 @@ function AssetsView({profileImage, walletAddress, walletBalance, walletBalanceCh
         <div className='card p-3 w-100 bg-[#232323] border-[#383838] border rounded-xl'>
 
             <div className="flex justify-start">
-            <img className='w-20 h-20 rounded-xl mx-auto' src={profileImage} alt="profileImage" />
-            <div className='ml-2'>
+            <img className='w-20 h-20 rounded-xl' src={profileImage} alt="profileImage" />
+            <div className='ml-3'>
                 <h1 className='text-sm mb-2 font-normal flex'>
                 Wallet 1:&nbsp;&nbsp;<span className='font-light text-sm text-[#FFFFFF99]'>{ellipseAddress(walletAddress, 4)}</span>&nbsp;<span className="logged-in text-[#FF5C59]">●</span><span className="logged-in text-[#01DB6A]">●</span><span className="ml-5"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" viewBox="0 0 16 16">
                     <path fillRule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z" />
@@ -37,7 +37,7 @@ function AssetsView({profileImage, walletAddress, walletBalance, walletBalanceCh
                 </h1>
                 <h1 className='text-lg font-semibold'>
                 <span className='text-xs opacity-40 font-normal'>Balance</span> <br />
-                $ {walletBalance} 
+                <span className='text-xl font-semibold'>$ {walletBalance}</span> 
                 <span className={classnames('text-xs px-3 py-2 rounded-xl', 
                     walletBalancePercentChange > 0 ? 'text-[#01DB6A]' : 'text-[#FF4136]'
                 )}>{walletBalancePercentChange > 0 ? '+' : '-'}{Math.abs(walletBalancePercentChange)}%</span>
