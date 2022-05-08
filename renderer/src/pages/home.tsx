@@ -75,7 +75,7 @@ function Home() {
         {/* Divide into two sections */}
         <div className='flex flex-col md:flex-row mx-3 mt-0 pb-3 '>
           {/* Left section */}
-          <div className='w-full bg-[#121212] rounded-t-xl md:rounded-l-xl md:rounded-r-none lg:w-[420px] min-w-[420px] max-w-[420px] md:w-[40%]'>
+          <div className='w-full bg-[#121212] rounded-t-xl md:rounded-l-xl md:rounded-r-none lg:w-[420px] lg:min-w-[420px] lg:max-w-[420px]'>
             {/* Assets View */}
             <AssetsView profileImage={"/images/nfts/"+ randomIntFromInterval(1, 21) +".webp"} 
               walletAddress={"EP8YfUCpbbLVL3zZUZmDWPboFSjpYaSUYYXKc2HRjft9"} 
