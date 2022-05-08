@@ -1,5 +1,5 @@
 // Left Side Assets View (My Collection)
-import { ellipseAddress } from '../utils/textUtils';
+import { ellipseAddress } from '@/utils/textUtils';
 import classnames from 'classnames';
 import { useQuery } from 'react-query';
 import get from 'lodash.get';

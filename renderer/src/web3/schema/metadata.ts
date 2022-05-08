@@ -1,4 +1,4 @@
-import { MetadataKey, StringPublicKey } from "../types";
+import { MetadataKey, StringPublicKey } from "@/web3/types";
 
 export class Creator {
   address: StringPublicKey;

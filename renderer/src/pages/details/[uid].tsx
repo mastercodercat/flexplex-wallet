@@ -1,18 +1,11 @@
 import React, { useEffect } from "react";
-import Head from "next/head";
-import Link from "next/link";
-import NavBar from "../../components/NavBar";
-import CollectionDetailsView from "../../views/collectionDetailsView";
+import NavigationStore from '@/store/NavigationStore'
+import CollectionDetailsView from "@/views/collectionDetailsView";
 import { useRouter } from "next/router";
 import { useQuery } from "react-query";
-import { getAccount, getMetadata, getTransfers } from "../../web3/solscan/api";
+import { getAccount, getMetadata, getTransfers } from "@/web3/solscan/api";
 import get from 'lodash.get'
 
-const navigation = [
-  { name: "My Collection", href: "/home", active: true },
-  { name: "Activity", href: "/activity", active: false },
-  { name: "Settings", href: "/settings", active: false },
-];
 
 // Dummy Detailed COllection
 const collectionDetails = {
@@ -58,15 +51,10 @@ function Details() {
   const uri = get(tokenData, 'data.metadata.data.uri', false);
   const { data: metaData } = useQuery(["getMetadata", { uri }], getMetadata, { enabled: !!uri });
 
+  NavigationStore.inactive();
+
   return (
     <React.Fragment>
-      <Head>
-        <title>Gameplex</title>
-      </Head>
-
-      <div className="h-[100vh] bg-[#1e1e1e]">
-        {/* Navbar */}
-        <NavBar navigation={navigation} showBrand={true}></NavBar>
 
         {/* Collection Details View */}
         {tokenData && metaData && <CollectionDetailsView
@@ -76,7 +64,7 @@ function Details() {
           tokenData={get(tokenData, 'data' ,{})}
           backButtonPath={"/home"}
         />}
-      </div>
+      
     </React.Fragment>
   );
 }

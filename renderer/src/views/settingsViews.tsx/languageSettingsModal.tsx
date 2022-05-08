@@ -2,7 +2,7 @@ import { Dialog, Transition } from '@headlessui/react'
 import { Fragment, useState } from 'react'
 
 
-export default function NetworkSettingsModal({ modalHeader, buttonText }) {
+export default function LanguageSettingsModal({ modalHeader, buttonText }) {
     let [isOpen, setIsOpen] = useState(false);
 
     return (

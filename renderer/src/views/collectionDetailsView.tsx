@@ -2,6 +2,7 @@ import get from 'lodash.get';
 import Link from 'next/link';
 import { useEffect, useState } from 'react';
 import web3 from '@solana/web3.js'
+import { truncate } from '@/utils/HelperUtil'
 import { formatDistance, subDays } from 'date-fns'
 
 // Left Sidebar: Collection Details - Image | Collection Details - Description | Swap | Sell 
@@ -186,7 +187,7 @@ function RightSidebar({attributes, activities, metaData, tokenData, transfers = 
                                 details.map((detail, index) => {
                                     return <tr className={index % 2 == 0 ?'bg-[#232323]' : 'bg-[#2c2c2c]'} key={index}>
                                                 <td className="py-3 px-2">{detail.key}</td>
-                                                <td className='py-3 px-2 text-right text-[#02ff63]'>{detail.value}</td>
+                                                <td className='py-3 px-2 text-right text-[#02ff63]'>{truncate(detail.value, 19)}</td>
                                             </tr>
                                 })
                             }
@@ -264,13 +265,13 @@ function RightSidebar({attributes, activities, metaData, tokenData, transfers = 
                         <table className="table-auto w-full text-xs text-center">
                             <thead>
                                 <tr>
-                                <th className=''></th>
-                                <th className='text-[#02FF63] font-light'>SIGNATURE</th>
-                                <th className='text-[#02FF63] font-light'>TIME</th>
-                                <th className='text-[#02FF63] font-light'>TYPE</th>
-                                <th className='text-[#02FF63] font-light'>FROM</th>
-                                <th className='text-[#02FF63] font-light'>TO</th>
-                                <th className='text-[#02FF63] font-light'>AMOUNT</th>
+                                    <th className=''></th>
+                                    <th className='text-[#02FF63] font-light'>SIGNATURE</th>
+                                    <th className='text-[#02FF63] font-light'>TIME</th>
+                                    <th className='text-[#02FF63] font-light'>TYPE</th>
+                                    <th className='text-[#02FF63] font-light'>FROM</th>
+                                    <th className='text-[#02FF63] font-light'>TO</th>
+                                    <th className='text-[#02FF63] font-light'>AMOUNT</th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -278,11 +279,11 @@ function RightSidebar({attributes, activities, metaData, tokenData, transfers = 
                                     transfers.map((transfer, index) => {
                                         return <tr className={index % 2 == 0 ?'bg-[#232323]' : 'bg-[#2c2c2c]'} key={index}>
                                                     <td className="py-3 px-2"><img className='w-8 h-8 rounded-xl mx-auto' src={NFTImage} alt="" /></td>
-                                                    <td className='py-3 px-2 max-w-0 text-right text-ellipsis overflow-hidden'>{get(transfer, 'txHash', '')}</td>
-                                                    <td className='py-3 px-2 max-w-0 text-right text-[#02ff63]'>{formatDistance(new Date(get(transfer, 'createdAt', null)), new Date(), { addSuffix: true })}</td>
-                                                    <td className='py-3 px-2 max-w-0 text-right text-[#6A00FF]'>{get(transfer, 'commonType', '')}</td>
-                                                    <td className="py-3 px-2 max-w-0 text-ellipsis overflow-hidden">{get(transfer,'sourceOwnerAccount', '')}</td>
-                                                    <td className='py-3 px-2 max-w-0 text-right text-ellipsis overflow-hidden'>{get(transfer,'destOwnerAccount', '')}</td>
+                                                    <td className='py-3 px-2 text-right overflow-hidden'>{truncate(get(transfer, 'txHash', ''),19)}</td>
+                                                    <td className='py-3 px-2 text-right text-[#02ff63]'>{formatDistance(new Date(get(transfer, 'createdAt', null)), new Date(), { addSuffix: true })}</td>
+                                                    <td className='py-3 px-2 text-right text-[#6A00FF]'>{get(transfer, 'commonType', '')}</td>
+                                                    <td className="py-3 px-2 overflow-hidden">{truncate(get(transfer,'sourceOwnerAccount', ''),19)}</td>
+                                                    <td className='py-3 px-2 text-right overflow-hidden'>{truncate(get(transfer,'destOwnerAccount', ''),19)}</td>
                                                     <td className="py-3 px-2">{get(transfer,'amount', '')}</td>
                                                 </tr>
                                     })

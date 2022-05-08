@@ -1,7 +1,7 @@
 import React from 'react';
 import { Navbar } from './navbar/Navbar';
 
-function NavBar({ navigation, showBrand }) {
+function NavBar({ navigation, showBrand, active }) {
     return (
         <Navbar fluid>
             <Navbar.Brand href="/home">
@@ -20,9 +20,9 @@ function NavBar({ navigation, showBrand }) {
                 <Navbar.Toggle />
             </div>
             <Navbar.Collapse>
-                {navigation.map((item, index) => (
-                    <Navbar.Link key={index} href={item.href} active={item.active}>{item.name}</Navbar.Link>
-                ))}
+                {Object.keys(navigation).map(function(key, index) {
+                    return <Navbar.Link key={index} href={navigation[key].href} active={key == active}>{navigation[key].name}</Navbar.Link>
+                })}
             </Navbar.Collapse>
         </Navbar>
     );
