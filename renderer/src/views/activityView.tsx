@@ -1,8 +1,16 @@
 import { Tab } from '@headlessui/react'
 import { useState } from 'react'
 import classNames from 'classnames'
+import { useQuery } from 'react-query';
+import { getAccountTransactions } from '@/web3/solscan/api';
+import get from 'lodash.get';
+import { formatDistance } from 'date-fns';
+import { truncate } from '@/utils/HelperUtil';
 
 export default function ActivityView() {
+  const address = process.env.NEXT_PUBLIC_SOL_PUBLIC_KEY;
+  const { data: transactionsData } = useQuery(["getAccountTransactions", { address }], getAccountTransactions, { enabled: !!address });
+
   let [token_categories] = useState({
     Received: [
       {
@@ -282,20 +290,35 @@ export default function ActivityView() {
                           <table className="rounded-xl w-full text-sm mb-3">
                             <thead className="">
                               <tr>
-                                <th className='text-[#02FF63] font-light pb-5 pt-2 text-left pl-16'>AMOUNT</th>
-                                <th className='text-[#02FF63] font-light pb-5 pt-2 text-left'>FROM</th>
-                                <th className='text-[#02FF63] font-light pb-5 pt-2 text-left pr-16'>DATE</th>
+                                <th className='text-[#02FF63] font-light pb-5 pt-2 text-left pl-16'>SIGNATURE</th>
+                                <th className='text-[#02FF63] font-light pb-5 pt-2 text-left'>BLOCK</th>
+                                <th className='text-[#02FF63] font-light pb-5 pt-2 text-left'>TIME</th>
+                                <th className='text-[#02FF63] font-light pb-5 pt-2 text-left pr-16'>INSTRUCTIONS</th>
+                                <th className='text-[#02FF63] font-light pb-5 pt-2 text-left pr-16'>BY</th>
+                                <th className='text-[#02FF63] font-light pb-5 pt-2 text-left pr-16'>FEE (SOL)</th>
                               </tr>
                             </thead>
                             <tbody className="rounded-xl overflow-y-scroll">
-                              {txs.map((tx, id) => (
+
+                              {get(transactionsData, 'data', []).map((transaction, id) => (
+                                <tr className={classNames(id % 2 == 0 ?'bg-[#232323]' : 'bg-[#2c2c2c]',
+                                id == 0 ? 'rounded-t-lg': '')} key={id}>
+                                  <td className="pl-16 py-5 px-5">{truncate(get(transaction, 'txHash', ''), 19)}</td>
+                                  <td className="py-3 px-2">#{get(transaction, 'slot', '')}</td>
+                                  <td className="pr-16 py-3 px-2">{formatDistance(new Date(get(transaction, 'blockTime', 0) * 1000), new Date(), { addSuffix: true })}</td>
+                                  <td className="py-3 px-2 text-ellipsis overflow-hidden">{get(transaction, 'parsedInstruction', []).map(i => i.type).join(', ')}</td>
+                                  <td className="pl-16 py-5 px-5">{truncate(get(transaction, 'signer[0]', ''), 19)}</td>
+                                  <td className="pr-16 py-3 px-2">{get(transaction, 'fee', 0) / 1000000000}</td>
+                                </tr>
+                              ))}
+                              {/* {txs.map((tx, id) => (
                                 <tr className={classNames(id % 2 == 0 ?'bg-[#232323]' : 'bg-[#2c2c2c]',
                                 id == 0 ? 'rounded-t-lg': '')} key={id}>
                                   <td className="pl-16 py-5 px-5">{tx.amount}</td>
                                   <td className="py-3 px-2">{tx.from}</td>
                                   <td className="pr-16 py-3 px-2">{tx.date}</td>
                                 </tr>
-                              ))}
+                              ))} */}
                             </tbody>
                           </table>
                         </div>

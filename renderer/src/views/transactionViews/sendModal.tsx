@@ -1,9 +1,15 @@
+import { getAccount } from '@/web3/solscan/api';
 import { Dialog, Transition } from '@headlessui/react'
+import get from 'lodash.get';
 import { Fragment, useState } from 'react'
+import { useQuery } from 'react-query';
 
 
 export default function SendModal({ modalHeader, buttonText }) {
     let [isOpen, setIsOpen] = useState(false);
+    const address = process.env.NEXT_PUBLIC_SOL_PUBLIC_KEY;
+    const { data: accountData } = useQuery(["getAccount", { address }], getAccount, { enabled: !!address });
+
 
     return (
         <div className="relative inline-block text-left">
@@ -87,7 +93,7 @@ export default function SendModal({ modalHeader, buttonText }) {
 
                                         <h1 className='text-sm mb-3 font-light'>Select an amount</h1>
                                         <div className='bg-[#1e1e1e] border border-[#383838] rounded-xl h-24'>
-                                            <input title='Value' value={"2250.03 SOL"} type='text' className='w-full focus:border-transparent focus:ring-0 rounded-xl bg-[#1e1e1e] border-0 text-[#ffffff] text-right text-3xl pt-3 pb-0'></input>
+                                            <input title='Value' value={`${get(accountData, 'data.lamports', 0) / 1000000000} SOL`} type='text' className='w-full focus:border-transparent focus:ring-0 rounded-xl bg-[#1e1e1e] border-0 text-[#ffffff] text-right text-3xl pt-3 pb-0'></input>
                                             <input title='Value' value={"- $ 22,7115,67"} type='text' className='w-full focus:border-transparent focus:ring-0 rounded-xl bg-[#1e1e1e] border-0 text-[#ffffff] opacity-60 text-right font-light text-lg pb-3'></input>
                                         </div>
 

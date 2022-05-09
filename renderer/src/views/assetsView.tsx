@@ -31,11 +31,12 @@ function AssetCard({asset, onAssetClick}) {
 
 
 function AssetsView({profileImage, walletAddress, walletBalance, walletBalanceChange, walletBalancePercentChange, assets, onAssetClick}) {
+  const { data: accountData } = useQuery(["getAccount", { address:walletAddress }], getAccount, { enabled: !!walletAddress });
+
     return (
       <div className='m-4 bg-[#1e1e1e] rounded-xl'>
           <div className='mx-auto h-[87vh] overflow-y-auto no-scrollbar'>
           <div className='card p-3 w-100 bg-[#232323] border-[#383838] border rounded-xl'>
-  
               <div className="flex justify-start">
               <img className='w-20 h-20 rounded-xl' src={profileImage} alt="profileImage" />
               <div className='ml-3'>
@@ -46,13 +47,13 @@ function AssetsView({profileImage, walletAddress, walletBalance, walletBalanceCh
                   </h1>
                   <h1 className='text-lg font-semibold'>
                   <span className='text-xs opacity-40 font-normal'>Balance</span> <br />
-                  <span className='text-xl font-semibold'>$ {walletBalance}</span> 
-                  <span className={classnames('text-xs px-3 py-2 rounded-xl', 
+                  <span className='text-xl font-semibold'>{get(accountData, 'data.lamports', 0) / 1000000000} SOL</span> 
+                  {/* <span className={classnames('text-xs px-3 py-2 rounded-xl', 
                       walletBalancePercentChange > 0 ? 'text-[#01DB6A]' : 'text-[#FF4136]'
                   )}>{walletBalancePercentChange > 0 ? '+' : '-'}{Math.abs(walletBalancePercentChange)}%</span>
                   <span className={classnames('text-xs', 
                       walletBalanceChange > 0 ? 'text-[#01DB6A]' : 'text-[#FF4136]'
-                  )}>{walletBalanceChange > 0 ? '+' : '-'}${Math.abs(walletBalanceChange)}</span>
+                  )}>{walletBalanceChange > 0 ? '+' : '-'}${Math.abs(walletBalanceChange)}</span> */}
                   </h1>
               </div>
               </div>
