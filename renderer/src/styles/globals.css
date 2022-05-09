@@ -43,3 +43,11 @@ html,.no-scrollbar {
   -webkit-line-clamp: 2;
   -webkit-box-orient: vertical;
 }
+
+.qrVideoMask {
+  width: 100%;
+  border-radius: 15px;
+  overflow: hidden !important;
+  position: relative;
+}
+

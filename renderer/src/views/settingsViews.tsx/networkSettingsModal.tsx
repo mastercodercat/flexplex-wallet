@@ -56,22 +56,22 @@ export default function NetworkSettingsModal({ modalHeader, buttonText }){
                             <div className='mb-5 py-3 px-0'>
                                 <div className='min-h-[32rem] py-6 px-12'>
                                     <div className='col-span-2 grid grid-cols-4 bg-[#232323] border border-[#383838] rounded-xl w-100 mb-4'>
-                                    <div className='col-span-3'>
-                                        <h1 className='text-white text-left text-xs pt-4 pb-1 pl-6'>Bizarreplatypus-mint-one.io</h1>
-                                        <h1 className='text-[#ffffff66] text-left text-xs pb-4 pl-6'>Https:/solana-mainnet.phantom.tech</h1>
-                                    </div>
-                                    <div className='flex justify-end'>
-                                        <button type='button' title="Revoke" className='focus:border-transparent focus:ring-0 bg-[#272727] p-3 px-6 w-[4.2rem] rounded-xl'>
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24">
-                                            <g transform="translate(-748 -188)">
-                                            <path d="M10,20A10,10,0,1,0,0,10,10.029,10.029,0,0,0,10,20Z" transform="translate(750 190)" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" />
-                                            <path data-name="Vector" d="M0,2.83,2.83,5.66,8.5,0" transform="translate(755.75 197.17)" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" />
-                                            <path data-name="Vector" d="M0,0H24V24H0Z" transform="translate(748 188)" fill="none" opacity="0" />
-                                            </g>
-                                        </svg>
+                                        <div className='col-span-3'>
+                                            <h1 className='text-white text-left text-xs pt-4 pb-1 pl-6'>Bizarreplatypus-mint-one.io</h1>
+                                            <h1 className='text-[#ffffff66] text-left text-xs pb-4 pl-6'>Https:/solana-mainnet.phantom.tech</h1>
+                                        </div>
+                                        <div className='flex justify-end'>
+                                            <button type='button' title="Revoke" className='bg-[#272727] p-3 px-6 w-[4.2rem] rounded-xl'>
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24">
+                                                <g transform="translate(-748 -188)">
+                                                <path d="M10,20A10,10,0,1,0,0,10,10.029,10.029,0,0,0,10,20Z" transform="translate(750 190)" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" />
+                                                <path data-name="Vector" d="M0,2.83,2.83,5.66,8.5,0" transform="translate(755.75 197.17)" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" />
+                                                <path data-name="Vector" d="M0,0H24V24H0Z" transform="translate(748 188)" fill="none" opacity="0" />
+                                                </g>
+                                            </svg>
 
-                                        </button>
-                                    </div>
+                                            </button>
+                                        </div>
                                     </div>
                                     <div className='col-span-2 grid grid-cols-4 bg-[#232323] border border-[#383838] rounded-xl w-100 mb-4'>
                                     <div className='col-span-3'>
