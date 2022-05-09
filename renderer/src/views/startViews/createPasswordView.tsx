@@ -16,11 +16,11 @@ function CreatePasswordView() {
                         <p className="mb-3 self-center text-3xl font-semibold whitespace-nowrap dark:text-white">Create password</p>
                         <p className="mb-3 self-center text-sm whitespace-nowrap dark:text-white pb-6">Essential when unlocking the wallet</p>
 
-                        <input type="password" className="focus:outline-none text-white bg-[#313131] w-full border-[#383838] border-2 flex-auto transition ease-out font-bold rounded-xl placeholder:font-thin placeholder:text-[#FFFFFF33] text-sm px-6 py-3 mr-2 mt-5 mb-2" placeholder='Password' />
+                        <input type="password" className="focus:border-transparent focus:ring-0 text-white bg-[#313131] w-full border-[#383838] border-2 flex-auto transition ease-out font-bold rounded-xl placeholder:font-thin placeholder:text-[#FFFFFF33] text-sm px-6 py-3 mr-2 mt-5 mb-2" placeholder='Password' />
                         <br />
-                        <input type="password" className="focus:outline-none text-white bg-[#313131] w-full border-[#383838] border-2 flex-auto transition ease-out font-bold rounded-xl placeholder:font-thin placeholder:text-[#FFFFFF33] text-sm px-6 py-3 mr-2 my-5" placeholder='Confirm Password' />
+                        <input type="password" className="focus:border-transparent focus:ring-0 text-white bg-[#313131] w-full border-[#383838] border-2 flex-auto transition ease-out font-bold rounded-xl placeholder:font-thin placeholder:text-[#FFFFFF33] text-sm px-6 py-3 mr-2 my-5" placeholder='Confirm Password' />
                         <br />
-                        <input placeholder="Accept" className="form-check-input appearance-none h-4 w-4 border border-gray-300 rounded-sm bg-[#313131] checked:bg-blue-600 checked:border-blue-600 focus:outline-none transition duration-200 mt-1 align-top bg-no-repeat bg-center bg-contain mr-2 cursor-pointer" type="checkbox" value="" />
+                        <input placeholder="Accept" className="focus:border-transparent focus:ring-0 form-check-input appearance-none h-4 w-4 border border-gray-300 rounded-sm bg-[#313131] checked:bg-blue-600 checked:border-blue-600 focus:outline-none transition duration-200 mt-1 align-top bg-no-repeat bg-center bg-contain mr-2 cursor-pointer" type="checkbox" value="" />
                         <label className="form-check-label inline-block text-white-800 pb-5">
                             I agree to <a className='text-[#3c00b7]' href='#'>terms</a>
                         </label>

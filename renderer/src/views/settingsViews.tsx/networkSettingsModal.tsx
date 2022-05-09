@@ -8,7 +8,7 @@ export default function NetworkSettingsModal({ modalHeader, buttonText }){
     return (
         <div className="relative inline-block text-left">
               <div>
-                <button onClick={() => {setIsOpen(true)}} className='text-sm w-full p-3 text-[#ffffff66] border border-[#383838] bg-[#232323] rounded-xl'>
+                <button onClick={() => {setIsOpen(true)}} className='focus:border-transparent focus:ring-0 text-sm w-full p-3 text-[#ffffff66] border border-[#383838] bg-[#232323] rounded-xl'>
                     <table className="table-auto">
                         <tbody>
                             <tr>
@@ -79,7 +79,7 @@ export default function NetworkSettingsModal({ modalHeader, buttonText }){
                                         <h1 className='text-[#ffffff66] text-left text-xs pb-4 pl-6'>Https:/solana-mainnet.phantom.tech</h1>
                                     </div>
                                     <div className='flex justify-end'>
-                                        <button type='button' title="Revoke" className='bg-[#272727] p-3 px-6 w-[4.2rem] rounded-xl'>
+                                        <button type='button' title="Revoke" className='focus:border-transparent focus:ring-0 bg-[#272727] p-3 px-6 w-[4.2rem] rounded-xl'>
                                         
                                         </button>
                                     </div>
@@ -90,7 +90,7 @@ export default function NetworkSettingsModal({ modalHeader, buttonText }){
                                         <h1 className='text-[#ffffff66] text-left text-xs pb-4 pl-6'>Https:/solana-mainnet.phantom.tech</h1>
                                     </div>
                                     <div className='flex justify-end'>
-                                        <button type='button' title="Revoke" className='bg-[#272727] p-3 px-6 w-[4.2rem] rounded-xl'>
+                                        <button type='button' title="Revoke" className='focus:border-transparent focus:ring-0 bg-[#272727] p-3 px-6 w-[4.2rem] rounded-xl'>
                                         
                                         </button>
                                     </div>
@@ -101,14 +101,14 @@ export default function NetworkSettingsModal({ modalHeader, buttonText }){
                                         <h1 className='text-[#ffffff66] text-left text-xs pb-4 pl-6'>Https:/solana-mainnet.phantom.tech</h1>
                                     </div>
                                     <div className='flex justify-end'>
-                                        <button type='button' title="Revoke" className='bg-[#272727] p-3 px-6 w-[4.2rem] rounded-xl'>
+                                        <button type='button' title="Revoke" className='focus:border-transparent focus:ring-0 bg-[#272727] p-3 px-6 w-[4.2rem] rounded-xl'>
                                         
                                         </button>
                                     </div>
                                     </div>
                                 </div>
                                 <div className='col-span-2 pb-8 w-full flex justify-center'>
-                                    <button className="focus:outline-none w-64 text-white bg-[#272727] border-[#383838] border transition ease-out hover:-translate-y-1 hover:scale-100 delay-150 focus:ring-4 hover:shadow-lg font-bold rounded-xl text-sm py-3 px-3 mt-3" type="submit">Done</button>
+                                    <button className="focus:border-transparent focus:ring-0 w-64 text-white bg-[#272727] border-[#383838] border transition ease-out hover:-translate-y-1 hover:scale-100 delay-150 hover:shadow-lg font-bold rounded-xl text-sm py-3 px-3 mt-3" type="submit">Done</button>
                                 </div>
 
                             </div>

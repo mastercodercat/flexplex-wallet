@@ -53,7 +53,7 @@ export default function Qr() {
     return (
         <div className="relative inline-block text-left">
             <div>
-                <button title='Scan QR' onClick={() => { setIsOpen(true) }} className="inline-flex justify-center w-full p-1.5 text-sm font-medium text-white rounded-xl bg-[#02FF63] border border-[#383838] focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-opacity-75">
+                <button title='Scan QR' onClick={() => { setIsOpen(true) }} className="focus:border-transparent focus:ring-0 inline-flex justify-center w-full p-1.5 text-sm font-medium text-white rounded-xl bg-[#02FF63] border border-[#383838] focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-opacity-75">
                     <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24">
                         <g id="scan" transform="translate(-364 -252)">
                             <path d="M0,7V4.5A4.494,4.494,0,0,1,4.5,0H7" transform="translate(366 254)" fill="none" stroke="#000" strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" />

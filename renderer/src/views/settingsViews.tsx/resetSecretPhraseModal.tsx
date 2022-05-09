@@ -8,7 +8,7 @@ export default function ResetSecretPhraseModal({ modalHeader, buttonText }) {
   return (
     <div className="relative inline-block text-left">
       <div>
-        <button onClick={() => { setIsOpen(true) }} className='text-sm w-full p-3 text-[#ffffff66] border border-[#383838] bg-[#232323] rounded-xl'>
+        <button onClick={() => { setIsOpen(true) }} className='focus:border-transparent focus:ring-0 text-sm w-full p-3 text-[#ffffff66] border border-[#383838] bg-[#232323] rounded-xl'>
           <table className="table-auto">
             <tbody>
               <tr>
@@ -66,8 +66,8 @@ export default function ResetSecretPhraseModal({ modalHeader, buttonText }) {
 
                   </div>
                   <div className='col-span-2 pb-8 px-6 w-full flex justify-center'>
-                    <button className="focus:outline-none w-64 text-white bg-[#383838] border border-[#383838] transition ease-out hover:-translate-y-1 hover:scale-100 delay-150 focus:ring-4 hover:shadow-lg hover:shadow-[#FF5C59cc] font-bold rounded-xl text-sm py-3 px-3 mr-2 mt-3" type="submit">Cancel</button>
-                    <button className="focus:outline-none w-64 text-black bg-[#02ff63] transition ease-out hover:-translate-y-1 hover:scale-100 delay-150 focus:ring-4 hover:shadow-lg hover:shadow-[#02ff63cc] font-bold rounded-xl text-sm py-3 px-3 ml-2 mt-3" type="submit">Continue</button>
+                    <button className="focus:border-transparent focus:ring-0 w-64 text-white bg-[#383838] border border-[#383838] transition ease-out hover:-translate-y-1 hover:scale-100 delay-150 hover:shadow-lg hover:shadow-[#FF5C59cc] font-bold rounded-xl text-sm py-3 px-3 mr-2 mt-3" type="submit">Cancel</button>
+                    <button className="focus:border-transparent focus:ring-0 w-64 text-black bg-[#02ff63] transition ease-out hover:-translate-y-1 hover:scale-100 delay-150 hover:shadow-lg hover:shadow-[#02ff63cc] font-bold rounded-xl text-sm py-3 px-3 ml-2 mt-3" type="submit">Continue</button>
                   </div>
                 </Dialog.Panel>
               </Transition.Child>

@@ -8,7 +8,7 @@ export default function AutoLockerModal({ modalHeader, buttonText }) {
   return (
     <div className="relative inline-block text-left">
       <div>
-        <button onClick={() => { setIsOpen(true) }} className='text-sm w-full p-3 text-[#ffffff66] border border-[#383838] bg-[#232323] rounded-xl'>
+        <button onClick={() => { setIsOpen(true) }} className='focus:border-transparent focus:ring-0 text-sm w-full p-3 text-[#ffffff66] border border-[#383838] bg-[#232323] rounded-xl'>
           <table className="table-auto">
             <tbody>
               <tr>
@@ -61,7 +61,7 @@ export default function AutoLockerModal({ modalHeader, buttonText }) {
                     </div>
                     <h1 className='text-center mb-12 mt-3 text-sm'>How long should we wait to lock your <br/>Wallet after it has been idle?</h1>
                     <div className='grid grid-cols-4 bg-[#1e1e1e] border border-[#383838] rounded-xl w-100 mb-2'>
-                      <input placeholder='15' type='text' className='col-span-3 rounded-xl bg-[#1e1e1e] border-0 text-[#ffffff] text-left text-sm py-3 pl-6'></input>
+                      <input placeholder='15' type='text' className='col-span-3 focus:border-transparent focus:ring-0 rounded-xl bg-[#1e1e1e] border-0 text-[#ffffff] text-left text-sm py-3 pl-6'></input>
                       <div className='flex justify-end rounded-xl'>
                         <button type='button' title="Revoke" className='bg-[#272727] p-3 w-full text-sm rounded-xl text-[#ffffff99]'>
                           minutes
@@ -71,8 +71,8 @@ export default function AutoLockerModal({ modalHeader, buttonText }) {
 
                   </div>
                   <div className='col-span-2 pb-8 px-6 w-full flex justify-center'>
-                    <button className="focus:outline-none w-64 text-white bg-[#383838] border border-[#383838] transition ease-out hover:-translate-y-1 hover:scale-100 delay-150 focus:ring-4 hover:shadow-lg hover:shadow-[#FF5C59cc] font-bold rounded-xl text-sm py-3 px-3 mr-2 mt-3" type="submit">Close</button>
-                    <button className="focus:outline-none w-64 text-black bg-[#02ff63] transition ease-out hover:-translate-y-1 hover:scale-100 delay-150 focus:ring-4 hover:shadow-lg hover:shadow-[#02ff63cc] font-bold rounded-xl text-sm py-3 px-3 ml-2 mt-3" type="submit">Save</button>
+                    <button className="focus:border-transparent focus:ring-0 w-64 text-white bg-[#383838] border border-[#383838] transition ease-out hover:-translate-y-1 hover:scale-100 delay-150 hover:shadow-lg hover:shadow-[#FF5C59cc] font-bold rounded-xl text-sm py-3 px-3 mr-2 mt-3" type="submit">Close</button>
+                    <button className="focus:border-transparent focus:ring-0 w-64 text-black bg-[#02ff63] transition ease-out hover:-translate-y-1 hover:scale-100 delay-150 hover:shadow-lg hover:shadow-[#02ff63cc] font-bold rounded-xl text-sm py-3 px-3 ml-2 mt-3" type="submit">Save</button>
                   </div>
                 </Dialog.Panel>
               </Transition.Child>

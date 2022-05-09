@@ -47,15 +47,15 @@ function FilterSearch({filterOptions}) {
         <div className="flex justify-end items-center mr-3 w-1/2">
             <div className="relative">
                 <div className="static top-5 left-3">
-                    <select defaultValue={'DEFAULT'} className="absolute top-5 h-10 text-white rounded-l-xl focus:outline-none bg-[#313131] border-[#383838] left-0" title="search" name="filters" id="filters">
+                    <select defaultValue={'DEFAULT'} className="absolute focus:border-transparent focus:ring-0 top-5 h-10 text-white rounded-l-xl bg-[#313131] border-[#383838] left-0" title="search" name="filters" id="filters">
                         <option value="DEFAULT" disabled>All Filters</option>
                         <option value="saab">Saab</option>
                         <option value="opel">Opel</option>
                         <option value="audi">Audi</option>
                     </select>
                 </div>
-                <input type="text" className="h-10 w-full pl-32 pr-20 focus:outline-none text-white bg-[#313131] border-[#383838] flex-auto transition ease-out font-bold rounded-xl placeholder:font-thin placeholder:text-[#FFFFFF33] text-sm px-5 py-3 mr-2 mt-5 mb-5" placeholder="Search collections and creators" />
-                <div className="absolute top-5 right-0"> <button title="search" className="h-10 w-10 text-black rounded-xl bg-[#02FF63] hover:bg-[#02FF63] px-[10px]"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" viewBox="0 0 16 16">
+                <input type="text" className="h-10 focus:border-transparent focus:ring-0 w-full pl-32 pr-20 text-white bg-[#313131] border-[#383838] flex-auto transition ease-out font-bold rounded-xl placeholder:font-thin placeholder:text-[#FFFFFF33] text-sm px-5 py-3 mr-2 mt-5 mb-5" placeholder="Search collections and creators" />
+                <div className="absolute top-5 right-0"> <button title="search" className="focus:border-transparent focus:ring-0 h-10 w-10 text-black rounded-xl bg-[#02FF63] hover:bg-[#02FF63] px-[10px]"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" viewBox="0 0 16 16">
                     <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z" />
                 </svg></button> </div>
             </div>

@@ -30,7 +30,7 @@ function EnterPasswordView() {
                                     </g>
                                 </g>
                             </svg>
-                            <input type="password" className="focus:outline-none text-white bg-[#313131] w-full border-[#383838] border-2 flex-auto transition ease-out font-bold rounded-xl placeholder:font-thin placeholder:text-[#FFFFFF33] text-sm px-5 pl-11 py-3 mr-2 mt-5 mb-5" placeholder='Password' />
+                            <input type="password" className="focus:border-transparent focus:ring-0 text-white bg-[#313131] w-full border-[#383838] border-2 flex-auto transition ease-out font-bold rounded-xl placeholder:font-thin placeholder:text-[#FFFFFF33] text-sm px-5 pl-11 py-3 mr-2 mt-5 mb-5" placeholder='Password' />
                         </label>
                         <br />
                         <a href="/create" className="focus:outline-none text-white bg-gradient-to-r from-[#6A00FF] to-[#3C00B7] w-full flex-auto transition ease-out hover:-translate-y-1 hover:scale-100 delay-150 focus:ring-4 hover:shadow-lg hover:shadow-[#3c00b7cc] focus:ring-blue-300 font-bold rounded-md text-sm px-5 py-3 mr-2 mb-12" type="submit">Unlock</a>

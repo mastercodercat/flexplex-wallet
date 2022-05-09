@@ -1,7 +1,6 @@
 import { Dialog, Transition } from '@headlessui/react'
 import { Fragment, useState } from 'react'
 import { truncate } from '@/utils/HelperUtil'
-import Link from 'next/link'
 import { walletConnectClient } from '@/utils/WalletConnectUtil'
 import { ERROR } from '@walletconnect/utils'
 
@@ -23,12 +22,12 @@ import { ERROR } from '@walletconnect/utils'
 function PairingCard({ logo, name, url, onDelete }: IProps) {
   return (
     <div className='col-span-2 flex flex-row justify-between bg-[#232323] border border-[#383838] rounded-xl w-100 mb-4'>
-      <div className='flex flex-col pl-4 justify-center '>
+      <div className='flex flex-col p-2 pl-4 justify-center '>
         <img className="w-10 h-10 mx-auto rounded-full" src={logo} alt="Rounded avatar" />
         </div>  
-        <div>
-            <h1 className='text-white text-left text-xs pt-4 pb-1'>{name}</h1>
-            <Link href={url} className='text-[#ffffff66] text-left text-xs pb-4'>{truncate(url?.split('https://')[1] ?? 'Unknown', 23)}</Link>
+        <div className='flex flex-col p-2 gap gap-1'>
+            <h1 className='text-white text-left text-xs'>{name}</h1>
+            <a href={url} className='text-[#ffffff66] text-left text-xs'>{truncate(url?.split('https://')[1] ?? 'Unknown', 23)}</a>
         </div>
         <div className='flex justify-end'>
             <button onClick={onDelete} type='button' title="Revoke" className='bg-[#272727] p-3 px-6 w-[4.2rem] rounded-xl'>
