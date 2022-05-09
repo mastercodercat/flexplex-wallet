@@ -7,6 +7,11 @@ export const getAccount = async ({ queryKey }) => {
   return fetcher('account', address)
 };
 
+export const getAccountTransactions = async ({ queryKey }) => {
+  const [_key, { address }] = queryKey;
+  return fetcher('account/transaction', address)
+};
+
 export const getTransfers = async ({ queryKey }) => {
   const [_key, { address }] = queryKey;
   return transfersFetcher('transfer/token', address)
