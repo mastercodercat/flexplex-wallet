@@ -75,7 +75,7 @@ function MyCollectionView({ collections }: { collections: any }) {
                 <FilterSearch filterOptions={[]} />
                 
             </header>
-            <div className='grid xl:grid-cols-4 lg:grid-cols-3 md:grid-cols-2 grid-cols-2 gap-4 mx-auto sm:mt-24 md:my-3 bg-[#121212] overflow-y-auto h-[80vh] rounded-r-xl no-scrollbar'>
+            <div className='grid 2xl:grid-cols-5 xl:grid-cols-4 lg:grid-cols-3 md:grid-cols-2 grid-cols-2 gap-4 mx-auto sm:mt-24 md:my-3 bg-[#121212] overflow-y-auto h-[80vh] rounded-r-xl no-scrollbar'>
                 {/* Collection Card */}
                 {collections.map((collection, index) => {
                     return <CollectionCard key={index} collectionUri={collection.uri} collectionAddress={collection.address} />
