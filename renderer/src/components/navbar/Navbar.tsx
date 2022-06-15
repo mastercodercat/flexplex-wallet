@@ -7,7 +7,7 @@ import { NavbarLink } from './NavbarLink';
 import { NavbarToggle } from './NavbarToggle';
 import MoreOptions from './MoreOptions';
 import Notifications from './Notifications';
-import Qr from './Qr';
+import QrModal from './QrModal';
 
 
 export type NavbarCompnentProps = {
@@ -38,7 +38,7 @@ const NavbarComponent: FC<NavbarCompnentProps> = ({ children, menuOpen, fluid, r
           <div className='hidden md:block order-3 text-right pr-4 py-1'>
 
             {/* Qr Wallet Connect */}
-            <Qr></Qr>
+            <QrModal></QrModal>
             
             {/* Notifications */}
             <Notifications></Notifications>

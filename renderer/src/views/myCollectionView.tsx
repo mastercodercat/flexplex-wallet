@@ -68,7 +68,7 @@ function MyCollectionView({ collections }: { collections: any }) {
     return (
         <div className="rounded-xl px-3">
             {/* // Filter Area */}
-            <header className="w-100 h-16 flex flex-col-2 md:flex-row sticky z-10 bg-[#121212] pt-3 rounded-xl">
+            <header className="w-100 h-16 flex flex-col-2 md:flex-row sticky z-[5] bg-[#121212] pt-3 rounded-xl">
                 <h1 className="text-md text-white font-normal px-4 pt-5 w-1/2">NFT Collection&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;<span className="text-md opacity-40 mt-1">{collections.length} items</span></h1>
 
                 {/* Filter Area */}

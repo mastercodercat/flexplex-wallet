@@ -34,6 +34,7 @@ const initialState: NavigationDataWrapper = {
 type Active = keyof typeof initialState
 
 interface State {
+  initialState: NavigationDataWrapper
   active?: Active
   data?: NavigationDataWrapper
 }
@@ -42,6 +43,7 @@ interface State {
  * State
  */
 const state = proxy<State>({
+  initialState: initialState,
   active: '',
   data: initialState
 })

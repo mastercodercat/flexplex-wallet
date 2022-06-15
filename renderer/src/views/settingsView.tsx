@@ -1,5 +1,5 @@
 import NetworkSettingsModal from "./settingsViews.tsx/networkSettingsModal";
-import PairingsSettingsModal from "./settingsViews.tsx/pairingsSettingsModal";
+import TrustedAppsSettingsModal from "./settingsViews.tsx/trustedAppsSettingsModal";
 import LanguageSettingsModal from "./settingsViews.tsx/languageSettingsModal";
 import AddressBookModal from "./settingsViews.tsx/addressBookModal";
 import AutolockerModal from "./settingsViews.tsx/autolockerModal";
@@ -20,7 +20,7 @@ function SettingOptionItem({optionIndex, optionHeader, optionDescription}) {
             {/* Adding Modals based on Index */}
             {optionIndex === "LanguageSettingsModal" && <LanguageSettingsModal modalHeader={optionHeader} buttonText={optionDescription}/>}
             {optionIndex === "AddressBookModal" && <AddressBookModal modalHeader={optionHeader} buttonText={optionDescription}/>}
-            {optionIndex === "PairingsSettingsModal" && <PairingsSettingsModal modalHeader={optionHeader} buttonText={optionDescription}/>}
+            {optionIndex === "TrustedAppsSettingsModal" && <TrustedAppsSettingsModal modalHeader={optionHeader} buttonText={optionDescription}/>}
             {optionIndex === "AutoLockerModal" && <AutolockerModal modalHeader={optionHeader} buttonText={optionDescription}/>}
             {optionIndex === "NetworkSettingsModal" && <NetworkSettingsModal modalHeader={optionHeader} buttonText={optionDescription}/>}
             {optionIndex === "SecretPhraseModal" && <SecretPhraseModal modalHeader={optionHeader} buttonText={optionDescription}/>}

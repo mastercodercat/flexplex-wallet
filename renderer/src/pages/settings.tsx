@@ -6,7 +6,7 @@ import NavigationStore from '@/store/NavigationStore'
 const leftCardOptions = [
   {id: "LanguageSettingsModal", optionHeader: "Display language", optionDescription: "Select the language you prefer."},
   {id: "AddressBookModal", optionHeader: "Address book", optionDescription: "Manage commonly used addresses"},
-  {id: "PairingsSettingsModal", optionHeader: "Pairings", optionDescription: "Manage your wallet pairings"},
+  {id: "TrustedAppsSettingsModal", optionHeader: "Trusted Apps", optionDescription: "Manage your trusted Applications"},
   {id: "AutoLockerModal", optionHeader: "Auto lock timer", optionDescription: "Change auto lock timer"},
 ]
 

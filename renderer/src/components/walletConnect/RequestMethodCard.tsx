@@ -1,4 +1,3 @@
-import { Col, Row, Text } from '@nextui-org/react'
 
 /**
  * Types
@@ -12,11 +11,9 @@ interface IProps {
  */
 export default function RequestMethodCard({ methods }: IProps) {
   return (
-    <Row>
-      <Col>
-        <Text h5>Methods</Text>
-        <Text color="$gray400">{methods.map(method => method).join(', ')}</Text>
-      </Col>
-    </Row>
+    <div className='mb-4'>
+      <h1 className='mt-4 text-sm'>Methods</h1>
+      <h1 className='mt-2 text-xs opacity-50'>{methods.map(method => method).join(', ')}</h1>
+    </div>
   )
 }

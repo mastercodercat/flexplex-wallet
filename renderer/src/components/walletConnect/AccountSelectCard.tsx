@@ -16,20 +16,13 @@ interface IProps {
  */
 export default function AccountSelectCard({ address, selected, index, onSelect }: IProps) {
   return (
-    <Card
+    <div 
+      className='grid grid-cols-4 p-4 my-4 mt-3 rounded-xl bg-[#232323] border border-[#383838]'
       onClick={onSelect}
-      clickable
       key={address}
-      css={{
-        marginTop: '$5',
-        backgroundColor: selected ? 'rgba(23, 200, 100, 0.2)' : '$accents2'
-      }}
     >
-      <Row justify="space-between" align="center">
-        <Checkbox size="lg" color="success" checked={selected} />
-
-        <Text>{`${truncate(address, 14)} - Account ${index + 1}`} </Text>
-      </Row>
-    </Card>
+      <input title='1' type="checkbox" checked={selected} className='mt-[0.1rem] rounded-sm text-[#02FF6380] ring-[#02FF6380] accent-[#02FF6380] bg-[#00000000] border border-[#ffffff]' name={`Account${index + 1}`} value={address} />
+      <h1 className='text-sm text-right col-span-3 select-none'><label htmlFor={`Account${index + 1}`}>{`${truncate(address, 14)} - Account ${index + 1}`}</label></h1>
+    </div>
   )
 }

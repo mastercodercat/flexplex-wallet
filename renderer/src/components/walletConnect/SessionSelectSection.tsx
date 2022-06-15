@@ -26,28 +26,22 @@ export default function SessionSelectSection({
   onAdd
 }: IProps) {
   return (
-    <Fragment>
-      <Divider y={2} />
+    <div className='mb-3'>
+      <h1 className='mt-3 text-sm'>{`${name} Accounts`}</h1>
+      {addresses.map((address, index) => {
+        const fullAddress = `${chain}:${address}`
+        const selected = selectedAddresses.includes(fullAddress)
 
-      <Row>
-        <Col>
-          <Text h5>{`${name} Accounts`}</Text>
-          {addresses.map((address, index) => {
-            const fullAddress = `${chain}:${address}`
-            const selected = selectedAddresses.includes(fullAddress)
-
-            return (
-              <AccountSelectCard
-                key={address}
-                address={address}
-                index={index}
-                onSelect={() => (selected ? onDelete(fullAddress) : onAdd(fullAddress))}
-                selected={selected}
-              />
-            )
-          })}
-        </Col>
-      </Row>
-    </Fragment>
+        return (
+          <AccountSelectCard
+            key={address}
+            address={address}
+            index={index}
+            onSelect={() => (selected ? onDelete(fullAddress) : onAdd(fullAddress))}
+            selected={selected}
+          />
+        )
+      })}
+    </div>
   )
 }

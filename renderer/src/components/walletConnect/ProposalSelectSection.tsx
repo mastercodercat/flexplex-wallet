@@ -1,6 +1,4 @@
 import AccountSelectCard from '@/components/walletConnect/AccountSelectCard'
-import { Col, Divider, Row, Text } from '@nextui-org/react'
-import { Fragment } from 'react'
 
 /**
  * Types
@@ -24,23 +22,17 @@ export default function ProposalSelectSection({
   onSelect
 }: IProps) {
   return (
-    <Fragment>
-      <Divider y={2} />
-
-      <Row>
-        <Col>
-          <Text h5>{`Select ${name} Accounts`}</Text>
-          {addresses.map((address, index) => (
-            <AccountSelectCard
-              key={address}
-              address={address}
-              index={index}
-              onSelect={() => onSelect(`${chain}:${address}`)}
-              selected={selectedAddresses.includes(`${chain}:${address}`)}
-            />
-          ))}
-        </Col>
-      </Row>
-    </Fragment>
+    <div className='mb-3'>
+      <h1 className='mt-3 text-sm'>{`Select ${name} Accounts`}</h1>
+      {addresses.map((address, index) => (
+        <AccountSelectCard
+          key={`${address}-${index}`}
+          address={address}
+          index={index}
+          onSelect={() => onSelect(`${chain}:${address}`)}
+          selected={selectedAddresses.includes(`${chain}:${address}`)}
+        />
+      ))}
+    </div>
   )
 }

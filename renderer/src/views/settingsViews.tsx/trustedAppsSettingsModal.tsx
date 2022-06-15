@@ -1,8 +1,6 @@
 import { Dialog, Transition } from '@headlessui/react'
 import { Fragment, useState } from 'react'
 import { truncate } from '@/utils/HelperUtil'
-import { walletConnectClient } from '@/utils/WalletConnectUtil'
-import { ERROR } from '@walletconnect/utils'
 
 
 /**
@@ -12,14 +10,14 @@ import { ERROR } from '@walletconnect/utils'
   logo?: string
   name?: string
   url?: string
-  onDelete: () => Promise<void>
+  onDelete: () => void
 }
 
 
 /**
  * Component
  */
-function PairingCard({ logo, name, url, onDelete }: IProps) {
+function TrustedAppCard({ logo, name, url, onDelete }: IProps) {
   return (
     <div className='col-span-2 flex flex-row justify-between bg-[#232323] border border-[#383838] rounded-xl w-100 mb-4'>
       <div className='flex flex-col p-2 pl-4 justify-center '>
@@ -52,18 +50,8 @@ function PairingCard({ logo, name, url, onDelete }: IProps) {
 
 
 
-export default function PairingsSettingsModal({ modalHeader, buttonText }) {
+export default function TrustedAppsSettingsModal({ modalHeader, buttonText }) {
   const [isOpen, setIsOpen] = useState(false);
-  const [pairings, setPairings] = useState(walletConnectClient.pairing.values)
-
-  async function onDelete(topic: string) {
-    await walletConnectClient.pairing.delete({
-      topic,
-      reason: ERROR.DELETED.format()
-    })
-    const newPairings = pairings.filter(pairing => pairing.topic !== topic)
-    setPairings(newPairings)
-  }
 
   return (
     <div className="relative inline-block text-left">
@@ -116,23 +104,17 @@ export default function PairingsSettingsModal({ modalHeader, buttonText }) {
 
                   <div className='col-span-2 min-h-[32rem] py-6 px-12'>
 
-                    {/* Pairings */}
-                    {pairings.length ? (
-                      pairings.map(pairing => {
-                        const { metadata } = pairing.state
-
-                        return (
-                          <PairingCard
-                            key={pairing.topic}
-                            logo={metadata?.icons[0]}
-                            url={metadata?.url}
-                            name={metadata?.name}
-                            onDelete={() => onDelete(pairing.topic)}
-                          />
-                        )
-                      })
+                    {/* Trusted Apps */}
+                    {true ? (
+                      <TrustedAppCard
+                        key={'some-key'}
+                        logo={'/icons/sol.svg'}
+                        url={'https://trusted-app.com'}
+                        name={'Trusted App'}
+                        onDelete={() => { console.log('delete') }}
+                        />
                     ) : (
-                      <div className='text-center '>No pairings</div>
+                      <div className='text-center '>No Trusted Apps</div>
                     )}
                     
                   </div>

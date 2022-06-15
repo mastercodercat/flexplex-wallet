@@ -6,6 +6,7 @@ import useInitialization from '@/hooks/useInitialization'
 import useWalletConnectEventsManager from '@/hooks/useWalletConnectEventsManager'
 import Layout from '@/components/Layout';
 import Modal from '@/components/walletConnect/Modal';
+import OptionsModal from '@/views/MoreOptionsViews/OptionsModal';
 import '@/styles/globals.css';
 
 const queryClient = new QueryClient();
@@ -23,8 +24,10 @@ function MyApp({ Component, pageProps }: AppProps) {
           <Layout initialized={initialized}>
             <Component {...pageProps} />
           </Layout>
-
-          <Modal />
+          {/* WalletConnect Modals */}
+          {initialized && <Modal />}
+          {/* [...] More Options Modal */}
+          {initialized && <OptionsModal />}
         </QueryClientProvider>
       </ThemeProvider>
     </React.Fragment>

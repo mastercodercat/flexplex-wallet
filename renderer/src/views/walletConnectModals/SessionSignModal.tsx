@@ -52,37 +52,39 @@ export default function SessionSignModal() {
   return (
     <Fragment>
       <RequestModalContainer title="Sign Message">
-        <ProjectInfoCard metadata={requestSession.peer.metadata} />
+        <div className='col-span-2 min-h-[32rem] py-6 px-12'>
+          <div className='divide-y divide-[#ffffff26]'>
+            <ProjectInfoCard metadata={requestSession.peer.metadata} />
 
-        <Divider y={2} />
+            <RequesDetailsCard
+              chains={[requestEvent.chainId ?? '']}
+              protocol={requestSession.relay.protocol}
+            />
 
-        <RequesDetailsCard
-          chains={[requestEvent.chainId ?? '']}
-          protocol={requestSession.relay.protocol}
-        />
+            <Row>
+              <Col>
+                <Text h5>Message</Text>
+                <Text color="$gray400">{message}</Text>
+              </Col>
+            </Row>
 
-        <Divider y={2} />
-
-        <Row>
-          <Col>
-            <Text h5>Message</Text>
-            <Text color="$gray400">{message}</Text>
-          </Col>
-        </Row>
-
-        <Divider y={2} />
-
-        <RequestMethodCard methods={[method]} />
+            <RequestMethodCard methods={[method]} />
+          </div>
+        </div>
+        
+        <div className='grid grid-cols-2 px-6'>
+          <div className='pb-8 w-full flex justify-center pr-2'>
+            <button onClick={onReject} className="focus:outline-none focus:ring-0 w-64 text-[#FF5C59] bg-[#B72C4226] border border-[#B72C42] transition ease-out hover:-translate-y-1 hover:scale-100 delay-150 hover:shadow-lg hover:shadow-[#B72C42cc] font-bold rounded-xl text-sm py-3 px-3 mt-3" type="submit">
+              Reject
+            </button>
+          </div>
+          <div className='pb-8 w-full flex justify-center pr-2'>
+            <button onClick={onApprove} className="focus:outline-none focus:ring-0 w-64 text-[#000] bg-[#02FF63] border border-[#02FF63] transition ease-out hover:-translate-y-1 hover:scale-100 delay-150 hover:shadow-lg hover:shadow-[#02FF63cc] font-bold rounded-xl text-sm py-3 px-3 mt-3" type="submit">
+              Approve
+            </button>
+          </div>
+        </div>
       </RequestModalContainer>
-
-      <Modal.Footer>
-        <Button auto flat color="error" onClick={onReject}>
-          Reject
-        </Button>
-        <Button auto flat color="success" onClick={onApprove}>
-          Approve
-        </Button>
-      </Modal.Footer>
     </Fragment>
   )
 }

@@ -12,7 +12,7 @@ import { eip155Addresses } from '@/utils/EIP155WalletUtil'
 import { isCosmosChain, isEIP155Chain, isSolanaChain } from '@/utils/HelperUtil'
 import { solanaAddresses } from '@/utils/SolanaWalletUtil'
 import { walletConnectClient } from '@/utils/WalletConnectUtil'
-import { Button, Divider, Modal, Text } from '@nextui-org/react'
+import { Text } from '@nextui-org/react'
 import { Fragment, useState } from 'react'
 
 export default function SessionProposalModal() {
@@ -89,69 +89,64 @@ export default function SessionProposalModal() {
   return (
     <Fragment>
       <RequestModalContainer title="Session Proposal">
-        <ProjectInfoCard metadata={proposer.metadata} />
+        <div className='col-span-2 min-h-[32rem] py-6 px-12'>
+          <div className='divide-y divide-[#ffffff26]'>
 
-        <Divider y={2} />
+            <ProjectInfoCard metadata={proposer.metadata} />
 
-        <RequesDetailsCard chains={chains} protocol={relay.protocol} />
+            <RequesDetailsCard chains={chains} protocol={relay.protocol} />
 
-        <Divider y={2} />
+            <RequestMethodCard methods={methods} />
 
-        <RequestMethodCard methods={methods} />
+            {chains.map(chain => {
+              if (isEIP155Chain(chain)) {
+                return (
+                  <ProposalSelectSection
+                    key={chain}
+                    name={EIP155_CHAINS[chain as TEIP155Chain]?.name}
+                    addresses={eip155Addresses}
+                    selectedAddresses={selectedEIP155}
+                    onSelect={onSelectEIP155}
+                    chain={chain}
+                  />
+                )
+              } else if (isCosmosChain(chain)) {
+                return (
+                  <ProposalSelectSection
+                    key={chain}
+                    name={COSMOS_MAINNET_CHAINS[chain as TCosmosChain]?.name}
+                    addresses={cosmosAddresses}
+                    selectedAddresses={selectedCosmos}
+                    onSelect={onSelectCosmos}
+                    chain={chain}
+                  />
+                )
+              } else if (isSolanaChain(chain)) {
+                return (
+                  <ProposalSelectSection
+                    key={chain}
+                    name={SOLANA_CHAINS[chain as TSolanaChain]?.name}
+                    addresses={solanaAddresses}
+                    selectedAddresses={selectedSolana}
+                    onSelect={onSelectSolana}
+                    chain={chain}
+                  />
+                )
+              }
+            })}
+      
+          </div>
+        </div>
 
-        {chains.map(chain => {
-          if (isEIP155Chain(chain)) {
-            return (
-              <ProposalSelectSection
-                name={EIP155_CHAINS[chain as TEIP155Chain]?.name}
-                addresses={eip155Addresses}
-                selectedAddresses={selectedEIP155}
-                onSelect={onSelectEIP155}
-                chain={chain}
-              />
-            )
-          } else if (isCosmosChain(chain)) {
-            return (
-              <ProposalSelectSection
-                name={COSMOS_MAINNET_CHAINS[chain as TCosmosChain]?.name}
-                addresses={cosmosAddresses}
-                selectedAddresses={selectedCosmos}
-                onSelect={onSelectCosmos}
-                chain={chain}
-              />
-            )
-          } else if (isSolanaChain(chain)) {
-            return (
-              <ProposalSelectSection
-                name={SOLANA_CHAINS[chain as TSolanaChain]?.name}
-                addresses={solanaAddresses}
-                selectedAddresses={selectedSolana}
-                onSelect={onSelectSolana}
-                chain={chain}
-              />
-            )
-          }
-        })}
+        <div className='grid grid-cols-2 px-6'>
+          <div className='pb-8 w-full flex justify-center pr-2'>
+            <button onClick={onReject} className="focus:outline-none focus:ring-0 w-64 text-[#FF5C59] bg-[#B72C4226] border border-[#B72C42] transition ease-out hover:-translate-y-1 hover:scale-100 delay-150 hover:shadow-lg hover:shadow-[#B72C42cc] font-bold rounded-xl text-sm py-3 px-3 mt-3" type="submit">Reject</button>
+          </div>
+          <div className='pb-8 w-full flex justify-center pr-2'>
+            <button onClick={onApprove} disabled={!allSelected.length} className="focus:outline-none focus:ring-0 w-64 text-[#000] bg-[#02FF63] border border-[#02FF63] transition ease-out hover:-translate-y-1 hover:scale-100 delay-150 hover:shadow-lg hover:shadow-[#02FF63cc] font-bold rounded-xl text-sm py-3 px-3 mt-3" type="submit">Approve</button>
+          </div>
+        </div>
       </RequestModalContainer>
-
-      <Modal.Footer>
-        <Button auto flat color="error" onClick={onReject}>
-          Reject
-        </Button>
-
-        <Button
-          auto
-          flat
-          color="success"
-          onClick={onApprove}
-          disabled={!allSelected.length}
-          css={{
-            opacity: allSelected.length ? 1 : 0.4
-          }}
-        >
-          Approve
-        </Button>
-      </Modal.Footer>
     </Fragment>
   )
 }

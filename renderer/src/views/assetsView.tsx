@@ -19,7 +19,8 @@ function AssetCard({asset, onAssetClick}) {
             <img src={asset.assetImage} alt="" className="w-12 h-12 rounded-full" />
             <h1 className='ml-2'><span className='text-md font-normal '>{asset.assetName}</span>                     <br />
             <span className='opacity-40 font-thin text-sm'>{asset.assetSymbol}</span></h1>
-            <h1 className='text-right w-full'><span className='text-lg font-semibold'>{asset.assetAmount}</span>                     <br />
+            <div className='flex-grow'></div>
+            <h1 className='text-right w-auto'><span className='text-lg font-semibold'>{asset.assetAmount}</span>                     <br />
             {Boolean(amountInUSD) && <span className='opacity-40 font-normal text-sm'>$ {amountInUSD}</span>}
             {/* <span className={classnames('font-normal text-sm',
                 asset.assetPercentChange > 0 ? 'text-[#01DB6A]' : 'text-[#FF4136]')}>

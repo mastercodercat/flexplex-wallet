@@ -14,10 +14,10 @@ if (isProd) {
   await app.whenReady();
 
   // We cannot require the screen module until the app is ready.
-  const { screen } = require('electron')
+  const electron = require('electron')
 
   // Create a window that fills the screen's available work area.
-  const primaryDisplay = screen.getPrimaryDisplay()
+  const primaryDisplay = electron.screen.getPrimaryDisplay()
   const { width, height } = primaryDisplay.workAreaSize
 
   console.debug(`Creating window with size ${width} x ${height}`)
@@ -26,6 +26,16 @@ if (isProd) {
     width: Math.round(width * 0.8),
     height: Math.round(height * 0.8),
   });
+
+//   // Modify the origin for all requests to the following urls.
+//   const filter = {
+//     urls: []
+//   };
+//   const session = electron.session
+//   session.defaultSession.webRequest.onBeforeSendHeaders(filter, (details, callback) => {
+//     details.requestHeaders['Origin'] = null;
+//     callback({ requestHeaders: details.requestHeaders })
+// });
 
   if (isProd) {
     await mainWindow.loadURL('app://./home.html');

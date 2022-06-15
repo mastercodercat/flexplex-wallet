@@ -14,7 +14,7 @@ import { Spinner } from 'flowbite-react'
  /**
   * Component
   */
-export default function Qr() {
+export default function QrModal() {
     const [isOpen, setIsOpen] = useState(false);
     const [show, setShow] = useState(false)
     const [uri, setUri] = useState('')

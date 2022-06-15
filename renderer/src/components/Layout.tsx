@@ -19,24 +19,7 @@ interface Props {
  * Container
  */
 export default function Layout({ children, initialized }: Props) {
-  const { active, data } = useSnapshot(NavigationStore.state)
-  const initialState = {
-    MyCollection: {
-        name: 'My Collection',
-        href: '/home', 
-        active: true
-    },
-    Activity: {
-        name: 'Activity', 
-        href: '/activity', 
-        active: false 
-    },
-    Settings: {
-        name: 'Settings',
-        href: '/settings',
-        active: false
-    }
-} 
+  const { initialState, active, data } = useSnapshot(NavigationStore.state)
   
   return (
     <Fragment>
