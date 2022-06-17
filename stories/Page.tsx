@@ -19,9 +19,9 @@ export const Page: React.VFC = () => {
         onCreateAccount={() => setUser({ name: 'Jane Doe' })}
       />
 
-      <section>
+      <section className='max-w-2xl px-12 py-5 text-white mx-auto text-sm'>
         <h2>Pages in Storybook</h2>
-        <p>
+        <p className='text-2xl'>
           We recommend building UIs with a{' '}
           <a href="https://componentdriven.org" target="_blank" rel="noopener noreferrer">
             <strong>component-driven</strong>
