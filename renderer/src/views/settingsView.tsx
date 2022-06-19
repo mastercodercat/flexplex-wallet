@@ -1,11 +1,11 @@
-import NetworkSettingsModal from "./settingsViews.tsx/networkSettingsModal";
-import TrustedAppsSettingsModal from "./settingsViews.tsx/trustedAppsSettingsModal";
-import LanguageSettingsModal from "./settingsViews.tsx/languageSettingsModal";
-import AddressBookModal from "./settingsViews.tsx/addressBookModal";
-import AutolockerModal from "./settingsViews.tsx/autolockerModal";
-import SecretPhraseModal from "./settingsViews.tsx/secretPhraseModal";
-import ResetSecretPhraseModal from "./settingsViews.tsx/resetSecretPhraseModal";
-import ExportPrivateKeyModal from "./settingsViews.tsx/exportPrivateKeyModal";
+import NetworkSettingsModal from "./settingsViews/networkSettingsModal";
+import TrustedAppsSettingsModal from "./settingsViews/trustedAppsSettingsModal";
+import LanguageSettingsModal from "./settingsViews/languageSettingsModal";
+import AddressBookModal from "./settingsViews/addressBookModal";
+import AutolockerModal from "./settingsViews/autolockerModal";
+import SecretPhraseModal from "./settingsViews/secretPhraseModal";
+import ResetSecretPhraseModal from "./settingsViews/resetSecretPhraseModal";
+import ExportPrivateKeyModal from "./settingsViews/exportPrivateKeyModal";
 
 function SettingOptionItem({optionIndex, optionHeader, optionDescription}) {
     return (

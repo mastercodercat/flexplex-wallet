@@ -1,5 +1,6 @@
-import { app } from 'electron';
+import { app, ipcMain } from 'electron';
 import serve from 'electron-serve';
+import Store from 'electron-store';
 import { createWindow } from './helpers';
 
 const isProd: boolean = process.env.NODE_ENV === 'production';
@@ -48,4 +49,27 @@ if (isProd) {
 
 app.on('window-all-closed', () => {
   app.quit();
+});
+
+// Store Address Book Addresss
+
+const store = new Store({
+  encryptionKey: 'todo-app-encryption-key'
+});
+
+ipcMain.on('get-addresses', (event, arg) => {
+  event.returnValue = store.get('address', []);
+});
+
+type addAddressProps = {
+  address: string,
+  label: string
+}
+
+ipcMain.on('add-address', (event, arg: addAddressProps) => {
+  store.set(`address.${arg.address}`, arg.label);
+});
+
+ipcMain.on('delete-address', (event, address: string) => {
+  store.delete(`address.${address}`);
 });
