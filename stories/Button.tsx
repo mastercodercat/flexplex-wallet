@@ -28,7 +28,7 @@ interface ButtonProps {
  * Primary UI component for user interaction
  */
 export const Button = ({
-  primary = false,
+  primary = true,
   size = 'medium',
   backgroundColor,
   label,

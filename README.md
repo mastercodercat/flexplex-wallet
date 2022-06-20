@@ -1,5 +1,8 @@
 # Gameplex Wallet
 
+<a href="https://www.chromatic.com/library?appId=62affb5a59a0afbdd86c13fc" target="_blank"><img src="https://raw.githubusercontent.com/storybooks/brand/master/badge/badge-storybook.svg"></a>
+
+
 A Gaming Community Focused wallet with integrations with Unity and Unreal Engine. Uses a Secure backend infrastraucture to communicate with any application.
 
 ![](Banner.png)
