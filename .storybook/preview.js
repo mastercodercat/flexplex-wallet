@@ -1,4 +1,4 @@
-import '../renderer/src/styles/globals.css';
+import "../renderer/src/styles/globals.css";
 
 export const parameters = {
   actions: { argTypesRegex: "^on[A-Z].*" },
@@ -8,4 +8,7 @@ export const parameters = {
       date: /Date$/,
     },
   },
-}
+};
+export const globalTypes = {
+  darkMode: true,
+};

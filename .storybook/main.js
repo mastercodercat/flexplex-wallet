@@ -1,14 +1,15 @@
 module.exports = {
-  "stories": [
+  stories: [
     "../stories/**/*.stories.mdx",
-    "../stories/**/*.stories.@(js|jsx|ts|tsx)"
+    "../stories/**/*.stories.@(js|jsx|ts|tsx)",
   ],
-  "addons": [
+  addons: [
     "@storybook/addon-links",
     "@storybook/addon-essentials",
     "@storybook/addon-interactions",
+    "storybook-tailwind-dark-mode",
     {
-      name: '@storybook/addon-postcss',
+      name: "@storybook/addon-postcss",
       options: {
         cssLoaderOptions: {
           // When you have splitted your css over multiple files
@@ -17,13 +18,17 @@ module.exports = {
         },
         postcssLoaderOptions: {
           // When using postCSS 8
-          implementation: require('postcss'),
+          implementation: require("postcss"),
         },
       },
     },
   ],
-  "framework": "@storybook/react",
-  "core": {
-    "builder": "@storybook/builder-webpack5"
-  }
-}
+  framework: "@storybook/react",
+  core: {
+    builder: "@storybook/builder-webpack5",
+  },
+  env: (config) => ({
+    ...config,
+    NEXT_PUBLIC_STORYBOOK: true,
+  }),
+};
