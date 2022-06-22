@@ -26,8 +26,18 @@ function NetworkCard({network, rpcName, rpcEndpoint, currRpcEndpoint, setRpcEndp
 }
 
 
-export default function NetworkSettingsModal({ modalHeader, buttonText }) {
-    let [isOpen, setIsOpen] = useState(false);
+type NetworkSettingsModalProps = {
+    modalHeader: string;
+    buttonText: string;
+    isModalOpen?: boolean;
+  };
+  
+export default function NetworkSettingsModal({
+    modalHeader,
+    buttonText,
+    isModalOpen = false,
+  }: NetworkSettingsModalProps) {
+    const [isOpen, setIsOpen] = useState(isModalOpen);
     const [network, setNetwork] = useState('mainnet-beta')
     const [rpcEndpoint, setRpcEndpoint] = useState('')
 
