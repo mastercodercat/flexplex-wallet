@@ -57,6 +57,21 @@ const store = new Store({
   encryptionKey: 'todo-app-encryption-key'
 });
 
+// Store Network Selections
+ipcMain.on('get-network', (event, arg) => {
+  event.returnValue = store.get('network', 'mainnet-beta');
+});
+
+ipcMain.on('set-network', (event, arg) => {
+  store.set('network', arg);
+});
+
+ipcMain.on('delete-network', (event, arg) => {
+  store.delete('network');
+});
+
+// Store Address Book Addresss
+
 ipcMain.on('get-addresses', (event, arg) => {
   event.returnValue = store.get('address', []);
 });
