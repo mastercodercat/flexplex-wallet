@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { Key, useEffect, useState } from "react";
-import { useMetaDetails } from "@/web3/hooks/useMetaDetails";
-import { useMetaImage } from "@/web3/hooks/useMetaImage";
+import { useMetaDetails } from "../web3/hooks/useMetaDetails";
+import { useMetaImage } from "../web3/hooks/useMetaImage";
 import debounce from 'lodash.debounce';
 
 
