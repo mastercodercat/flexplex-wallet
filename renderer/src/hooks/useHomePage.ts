@@ -7,10 +7,26 @@ import { useMetadata } from "@/web3/hooks/useMetadata";
 import { connection, publicKey } from "@/web3/config";
 import { Metadata } from "@/web3/schema/metadata";
 
-const collectionMap = (i: Metadata) => ({
-  uri: i.data.uri,
-  address: i.mint,
-});
+
+/**
+ * const {cachedUri, isLoading} = useMetaImage(i.data.uri)
+ * const {cachedData} = useMetaDetails(i.data.uri)
+ * @param i : Metadata
+ * @returns 
+ *     collectionName: i.data.name,
+ *     collectionImage: cachedUri,
+ *     collectionDescription: i.data.description,
+ *     collectionDetails: cachedData,
+ *     collectionId: i.data.id,
+ *     collectionIsLoading: isLoading,
+ */
+const collectionMap = (i: Metadata) => {
+    return ({
+      name:i.data.name,
+      uri: i.data.uri,
+      address: i.mint
+    })
+  };
 
 const useHomePage = () => {
   const address = process.env.NEXT_PUBLIC_SOL_PUBLIC_KEY;

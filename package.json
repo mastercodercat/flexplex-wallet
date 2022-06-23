@@ -67,6 +67,7 @@
     "flowbite": "^1.4.4",
     "flowbite-react": "^0.0.20",
     "framer-motion": "6.2.8",
+    "lodash.debounce": "^4.0.8",
     "lodash.get": "^4.4.2",
     "mnemonic-keyring": "1.4.0",
     "next": "^12.1.0",
