@@ -59,6 +59,7 @@ function SettingOptionItem({
         <NetworkSettingsModal
           modalHeader={optionHeader}
           buttonText={optionDescription}
+          ipcRenderer={ipcRenderer}
         />
       )}
       {optionIndex === "SecretPhraseModal" && (

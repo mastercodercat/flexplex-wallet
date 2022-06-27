@@ -14,4 +14,8 @@ Primary.args = {
   modalHeader: "Change network",
   buttonText: "Configure network settings",
   isModalOpen: true,
+  ipcRenderer: {
+    send: (a: any, b: any) => a,
+    sendSync: (a: any) => ["address 1", "address 2", "address 3"],
+  },
 };
